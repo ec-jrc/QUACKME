@@ -1,0 +1,66 @@
+﻿<?xml version="1.0"?>
+<Messages>
+	<Message>
+		<Property>TX</Property>
+		<Code>001</Code>
+		<Values>TN, TX</Values>
+		<Text>Difference in the mean temperature of two consecutive days greater than the 99th percentile value associated with the season #2# under analysis. (Values MeanDiff:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Code>002</Code>
+		<Values>TN, TX</Values>
+		<Text>Difference in the mean temperature of two consecutive days lower than the 1st percentile value associated with the season #2# under analysis.(Values MeanDiff:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+	
+	<Message>
+		<Property>TX</Property>
+		<Code>003</Code>
+		<Values>TN, TX</Values>
+		<Text>Difference in the maximum temperature of two consecutive days greater than the 99th percentile value associated with the season #2# under analysis(Values TMaxDiff:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Code>004</Code>
+		<Values>TX</Values>
+		<Text>Difference in the maximum temperature of two consecutive days lower than the 1st percentile value associated with the season #2# under analysis(Values TMaxDiff:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>	
+		 
+	<Message>
+		<Property>TN</Property>
+		<Code>001</Code>
+		<Values>TN</Values>
+		<Text>Difference in the minimum temperature of two consecutive days greater than the 99th percentile value associated with the season #2# under analysis(Values TMinDiff:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TN</Property>
+		<Code>002</Code>
+		<Values>TN</Values>
+		<Text>Difference in the minimum temperature of two consecutive days lower than the 1st percentile value associated with the season #2# under analysis(Values TminDiff:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>		
+	
+	<Message>
+		<Property>RRR</Property>
+		<Code>001</Code>
+		<Values>RRR</Values>
+		<Text>Daily precipitation greater than the 10-year return levels of the season #2# under analysis(Values RRR:#0# Thresold:#1#)</Text>
+		<Level>W</Level>
+	</Message>		
+	
+	<Message>
+		<Property>FF</Property>
+		<Code>001</Code>
+		<Values>FF</Values>
+		<Text>Daily wind intensity greater than the 10-year return levels of the season #2# under analysis(Values FF:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>		
+</Messages>

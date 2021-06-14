@@ -1,0 +1,133 @@
+@import "../../../styles/variables.scss";
+
+.component {
+
+  &__table {
+    display: flex;
+  }
+
+  &__filtering {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+
+    @media (min-width: $tablet-breake-point) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &--run {
+      flex-direction: row;
+      display: flex;
+
+      @media (min-width: $tablet-breake-point) {
+        width: 50%
+      }
+    }
+
+    &-item {
+
+      &--button {
+        align-self: flex-end;
+        display: flex;
+        flex-grow: 1;
+        height: 65px;
+        line-height: 65px;
+
+        .send__action {
+          height: 40px;
+          margin: auto 0;
+        }
+      }
+
+      &--first {
+        margin: auto 15px auto 2px;
+        width: 120px;
+      }
+    }
+
+    label {
+      margin-right: $global-margin;
+      line-height: 65px;
+    }
+  }
+}
+
+
+.date-filter {
+  display: flex;
+}
+
+.flow--select {
+  min-width: 300px;
+}
+
+:host {
+  @media (min-width: $tablet-breake-point) {
+    // width: $tablet-breake-point;
+    margin: auto;
+  }
+}
+
+.arrow {
+  &__wrapper {
+    height: 65px;
+    position: relative;
+    width: 40px;
+  }
+
+  &__image {
+    width: 40px;
+    margin: auto;
+    text-align: center;
+    position: absolute;
+    top: calc(50% - 20px);
+
+    &--down {
+      transform: rotate(0);
+      -webkit-transform: rotate(0);
+    }
+
+    &--top {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+  }
+
+  &__item {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    position: absolute;
+    padding: 12px;
+    top: 25%;
+
+    &--down {
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+
+    &--top {
+      transform: rotate(225deg);
+      -webkit-transform: rotate(225deg);
+    }
+  }
+}
+
+.legend {
+  position: relative;
+
+  &__tooltip {
+    width: 600px;
+
+    &--bottom {
+      margin-left: -175px;
+      top: 100%;
+    }
+
+  }
+}
+
+.picker {
+  min-width: 250px;
+}

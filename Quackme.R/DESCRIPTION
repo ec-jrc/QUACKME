@@ -1,0 +1,11 @@
+Package: Quackme
+Type: Package
+Title: Quality Checks of Meteorological Data
+Version: 2.0.0
+Author: Andrea Toretti, Marian Bratu
+Maintainer: EU JRC Ispra
+Description: Acquired and analyze meteorological data, using specific configuration. 
+    Aggregate hourly observation to daily data 
+License: GPL-2
+Encoding: UTF-8
+LazyData: true

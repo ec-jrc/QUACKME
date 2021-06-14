@@ -1,0 +1,198 @@
+﻿<?xml version="1.0"?>
+<Messages>
+	<Message>
+		<Property>N</Property>
+		<Code>001</Code>
+		<Values>TN, TX</Values>
+		<Text>Daily Mean of total cloud outside of interval #0# - #1# Oktas  (#Code# #2#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>N</Property>
+		<Code>002</Code>
+		<Values>RRR</Values>
+		<Text>Cloud cover EQUAL to #0# and precipitation GREATER than #1# (#Code# RRR #2#) </Text>
+		<Level>S</Level>
+	</Message>	
+	
+	<Message>
+		<Property>N</Property>
+		<Code>003</Code>
+		<Values>MSUN</Values>
+		<Text>Cloud cover EQUAL to #0# and measured sunshine duration GREATER than #1# (#Code# CC #2# Sunshine #3#)</Text>
+		<Level>S</Level>
+	</Message>	
+	
+	<Message>
+		<Property>NDT</Property>
+		<Code>001</Code>
+		<Values>TN, TX</Values>
+		<Text>Daily Mean of total cloud outside of interval #0# - #1# Oktas  (#Code# #2#)</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>MSUN</Property>
+		<Code>001</Code>
+		<Text>Measured Sunshine outside of interval #0# - #1# hours (#Code# - #2# hours) </Text>
+		<Level>W</Level>
+	</Message>
+	
+	<Message>
+		<Property>MSUN</Property>
+		<Code>002</Code>
+		<Text>Measured Sunshine GREATER than #0# and Measured Radiation EQUAL to #1# (#Code# Sunshine #2# Radiation #3#) </Text>
+		<Level>S</Level>
+	</Message>	
+
+	<Message>
+		<Property>MRAD</Property>
+		<Code>001</Code>
+		<Text>Measured Radiation outside of interval #0# - #1# MJ/m2 (#Code# #2# MJ/m2)</Text>
+		<Level>W</Level>
+	</Message>
+	
+	<Message>
+		<Property>TN</Property>
+		<Code>001</Code>
+		<Text>Minimum temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Code>001</Code>
+		<Text>Maximum temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Values>TN</Values>
+		<Code>002</Code>
+		<Text>Difference between maximum and minimum temperature outside of interval #0# - #1# Celsius degrees (Temp. Diff #2# Celsius degrees)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>MVP</Property>
+		<Code>001</Code>
+		<Text>Daily mean vapor pressure outside of interval #0# - #1# hPa  (#Code# #2# hPa)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>FF</Property>
+		<Code>001</Code>
+		<Text>Daily mean wind speed at 10 meters outside of interval #0# - #1# m/s (#Code# Wind Speed #2# m/s)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>RRR</Property>
+		<Code>001</Code>
+		<Text>Precipitation outside of interval #0# - #1# mm (#Code# #2# mm)</Text>
+		<Level>W</Level>
+	</Message>
+	
+	<Message>
+		<Property>TT06</Property>
+		<Code>001</Code>
+		<Text>Air temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees</Text>
+		<Level>W</Level>
+	</Message>	
+
+	<Message>
+		<Property>TT09</Property>
+		<Code>001</Code>
+		<Text>Air temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees</Text>
+		<Level>W</Level>
+	</Message>	
+
+	<Message>
+		<Property>TT12</Property>
+		<Code>001</Code>
+		<Text>Air temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>TT15</Property>
+		<Code>001</Code>
+		<Text>Air temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>TT18</Property>
+		<Code>001</Code>
+		<Text>Air temperature outside of interval #0# - #1# Celsius degrees (#Code# #2# Celsius degrees</Text>
+		<Level>W</Level>
+	</Message>	
+		
+	<Message>
+		<Property>RH06</Property>
+		<Code>001</Code>
+		<Text>Relative humidity outside of interval #0# - #1#% (#Code# #2#%)</Text>
+		<Level>W</Level>
+	</Message>	
+
+	<Message>
+		<Property>RH09</Property>
+		<Code>001</Code>
+		<Text>Relative humidity outside of interval #0# - #1#% (#Code# #2#%)</Text>
+		<Level>W</Level>
+	</Message>	
+
+	<Message>
+		<Property>RH12</Property>
+		<Code>001</Code>
+		<Text>Relative humidity outside of interval #0# - #1#% (#Code# #2#%)</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>RH15</Property>
+		<Code>001</Code>
+		<Text>Relative humidity outside of interval #0# - #1#% (#Code# #2#%)</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>RH18</Property>
+		<Code>001</Code>
+		<Text>Relative humidity outside of interval #0# - #1#% (#Code# #2#%)</Text>
+		<Level>W</Level>
+	</Message>	
+
+	<Message>
+		<Property>VPD</Property>
+		<Code>001</Code>
+		<Text>Daily mean vapor pressure deficit outside of interval #0# - #1# hPa (#Code# #2# hPa)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>SLOPE</Property>
+		<Code>001</Code>
+		<Text>Daily mean slope of saturation vapor pressure vs temperature curve outside of interval #0# - #1# hPa/Celsius degree (#Code# #2# hPa/Celsius degree)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>ETP</Property>
+		<Code>001</Code>
+		<Text>Penman evaporation outside of interval #0# - #1# mm/day (#Code# #2# mm/day)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>SNOW</Property>
+		<Values>TN, TX</Values>
+		<Code>001</Code>
+		<Text>Snow value not allowed (#Code# (#0#+#1#)/2 = #2# > #3#</Text>
+		<Level>W</Level>
+	</Message>
+
+</Messages>

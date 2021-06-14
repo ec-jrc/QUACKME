@@ -1,0 +1,25 @@
+$inputHeight: 70px;
+
+.alert {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  &__values {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    position: absolute;
+    top: calc(50% - (#{$inputHeight} / 2));
+  }
+
+  &__wrapper {
+    margin-top: 5px;
+  }
+
+  &__inputs {
+    min-width: 190px;
+    position: relative;
+  }
+}

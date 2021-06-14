@@ -1,0 +1,20 @@
+<div class="header" [ngClass]="{'header-chn': !isEUSelected}">
+  <a class="header__logo" href="#">
+    <img class="header__logo-image" src="assets/images/logo.png" type="image/png" alt="">
+  </a>
+
+  <div class="header__label" [ngClass]="{'header-chn__label': !isEUSelected}" href="#">
+    <h2>QCSWeb 2.0</h2>
+  </div>
+
+  <!-- <a href="" target="_blank"
+    class=" legend">
+    <span class="legend__tooltip legend__tooltip--bottom">Link to confluence</span>
+    <img src="assets/images/questions-circular-button.png" class="legend__icon" alt="confluence Link">
+  </a> -->
+  <nav class="navigation">
+    <!-- <a class="navigation__link" routerLink="/dashboard">dashboard</a> -->
+    <!-- <a href="/" class="header__logout" (click)="logout()">logout</a> -->
+  </nav>
+
+</div>

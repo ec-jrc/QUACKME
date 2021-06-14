@@ -1,0 +1,19 @@
+/**
+ * @license
+ * Copyright Google LLC All Rights Reserved.
+ *
+ * Use of this source code is governed by an MIT-style license that can be
+ * found in the LICENSE file at https://angular.io/license
+ */
+export * from './datepicker-module';
+export * from './calendar';
+export * from './calendar-body';
+export * from './datepicker';
+export * from './datepicker-animations';
+export * from './datepicker-input';
+export * from './datepicker-intl';
+export * from './datepicker-toggle';
+export * from './month-view';
+export * from './year-view';
+export { SatMultiYearView, yearsPerPage, yearsPerRow } from './multi-year-view';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljLWFwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL3NhdHVybi1kYXRlcGlja2VyLyIsInNvdXJjZXMiOlsiZGF0ZXBpY2tlci9wdWJsaWMtYXBpLnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7R0FNRztBQUVILGNBQWMscUJBQXFCLENBQUM7QUFDcEMsY0FBYyxZQUFZLENBQUM7QUFDM0IsY0FBYyxpQkFBaUIsQ0FBQztBQUNoQyxjQUFjLGNBQWMsQ0FBQztBQUM3QixjQUFjLHlCQUF5QixDQUFDO0FBQ3hDLGNBQWMsb0JBQW9CLENBQUM7QUFDbkMsY0FBYyxtQkFBbUIsQ0FBQztBQUNsQyxjQUFjLHFCQUFxQixDQUFDO0FBQ3BDLGNBQWMsY0FBYyxDQUFDO0FBQzdCLGNBQWMsYUFBYSxDQUFDO0FBQzVCLE9BQU8sRUFBQyxnQkFBZ0IsRUFBRSxZQUFZLEVBQUUsV0FBVyxFQUFDLE1BQU0sbUJBQW1CLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBsaWNlbnNlXG4gKiBDb3B5cmlnaHQgR29vZ2xlIExMQyBBbGwgUmlnaHRzIFJlc2VydmVkLlxuICpcbiAqIFVzZSBvZiB0aGlzIHNvdXJjZSBjb2RlIGlzIGdvdmVybmVkIGJ5IGFuIE1JVC1zdHlsZSBsaWNlbnNlIHRoYXQgY2FuIGJlXG4gKiBmb3VuZCBpbiB0aGUgTElDRU5TRSBmaWxlIGF0IGh0dHBzOi8vYW5ndWxhci5pby9saWNlbnNlXG4gKi9cblxuZXhwb3J0ICogZnJvbSAnLi9kYXRlcGlja2VyLW1vZHVsZSc7XG5leHBvcnQgKiBmcm9tICcuL2NhbGVuZGFyJztcbmV4cG9ydCAqIGZyb20gJy4vY2FsZW5kYXItYm9keSc7XG5leHBvcnQgKiBmcm9tICcuL2RhdGVwaWNrZXInO1xuZXhwb3J0ICogZnJvbSAnLi9kYXRlcGlja2VyLWFuaW1hdGlvbnMnO1xuZXhwb3J0ICogZnJvbSAnLi9kYXRlcGlja2VyLWlucHV0JztcbmV4cG9ydCAqIGZyb20gJy4vZGF0ZXBpY2tlci1pbnRsJztcbmV4cG9ydCAqIGZyb20gJy4vZGF0ZXBpY2tlci10b2dnbGUnO1xuZXhwb3J0ICogZnJvbSAnLi9tb250aC12aWV3JztcbmV4cG9ydCAqIGZyb20gJy4veWVhci12aWV3JztcbmV4cG9ydCB7U2F0TXVsdGlZZWFyVmlldywgeWVhcnNQZXJQYWdlLCB5ZWFyc1BlclJvd30gZnJvbSAnLi9tdWx0aS15ZWFyLXZpZXcnO1xuIl19

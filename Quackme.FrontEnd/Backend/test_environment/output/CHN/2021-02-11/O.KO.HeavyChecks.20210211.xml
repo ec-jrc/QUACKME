@@ -1,0 +1,383 @@
+<Observations>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="C">-15.5</TN>
+	<TX Status="C">-11.6</TX>
+	<FF Status="C">0.4</FF>
+	<MVP Status="C">1.76</MVP>
+	<TT06 Status="C">-12.8</TT06>
+	<TT09 Status="C">-13</TT09>
+	<TT12 Status="C">-12.4</TT12>
+	<TT15 Status="C">-18</TT15>
+	<TT18 Status="C">-20.3</TT18>
+	<RH06 Status="C">92.19</RH06>
+	<RH09 Status="C">89.96</RH09>
+	<RH12 Status="C">90.74</RH12>
+	<RH15 Status="C">89.55</RH15>
+	<RH18 Status="C">85.49</RH18>
+	<VPD Status="C">0.19</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">0.16</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0.2</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">2216.72</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">1870.63</HGVRAD>
+	<CRAD Status="C">1.87</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.2</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">-22.4</TND>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="W">-36.9</TN>
+	<TX Status="C">-17</TX>
+	<FF Status="C">0.79</FF>
+	<MVP Status="C">0.38</MVP>
+	<TT06 Status="C">-36.6</TT06>
+	<TT09 Status="C">-32.7</TT09>
+	<TT12 Status="C">-23.8</TT12>
+	<TT15 Status="C">-20.2</TT15>
+	<TT18 Status="C">-29.3</TT18>
+	<RH06 Status="C">69.14</RH06>
+	<RH09 Status="C">69.66</RH09>
+	<RH12 Status="C">69.05</RH12>
+	<RH15 Status="C">67.95</RH15>
+	<RH18 Status="C">74.62</RH18>
+	<VPD Status="C">0.16</VPD>
+	<SNOW Status="C">33</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">0.05</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">5983.18</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">3888.64</HGVRAD>
+	<CRAD Status="C">3.89</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.15</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">-36.9</TND>
+	<ALERT Level="W" Property="TN" Code="001" Message="Minimum temperature outside of interval -35 - 35 Celsius degrees (TN -36.9 Celsius degrees)" Values=""></ALERT>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">0.4</L>
+	<TN Status="C">-6.9</TN>
+	<TX Status="C">0.2</TX>
+	<FF Status="C">2.34</FF>
+	<MVP Status="C">2.04</MVP>
+	<TT06 Status="C">-3.6</TT06>
+	<TT09 Status="C">-6.2</TT09>
+	<TT12 Status="C">-0.6</TT12>
+	<TT15 Status="C">-3.9</TT15>
+	<TT18 Status="C">-7.4</TT18>
+	<RH06 Status="C">39.42</RH06>
+	<RH09 Status="C">56.79</RH09>
+	<RH12 Status="C">34.92</RH12>
+	<RH15 Status="C">37.44</RH15>
+	<RH18 Status="C">50.36</RH18>
+	<VPD Status="C">2.07</VPD>
+	<SNOW Status="C">10</SNOW>
+	<VIS Status="C">63</VIS>
+	<SLOPE Status="C">0.312</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">7280.72</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">2992.41</HGVRAD>
+	<CRAD Status="C">2.99</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">1.05</ET0>
+	<NDT Status="C">0.4</NDT>
+	<TND Status="C">-10.2</TND>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="C">-15.5</TN>
+	<TX Status="C">-7</TX>
+	<FF Status="C">6.41</FF>
+	<MVP Status="C">2.83</MVP>
+	<TT06 Status="C">-11.4</TT06>
+	<TT09 Status="C">-10.8</TT09>
+	<TT12 Status="C">-9.5</TT12>
+	<TT15 Status="C">-8.1</TT15>
+	<TT18 Status="C">-7.4</TT18>
+	<RH06 Status="C">90.09</RH06>
+	<RH09 Status="C">90.14</RH09>
+	<RH12 Status="C">90.95</RH12>
+	<RH15 Status="C">93.22</RH15>
+	<RH18 Status="C">94.01</RH18>
+	<VPD Status="C">0.27</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">0.244</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">NA</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">4152.52</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">3196.86</HGVRAD>
+	<CRAD Status="C">3.2</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.04</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">-13.6</TND>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">0.89</N>
+	<L Status="C">1.6</L>
+	<TN Status="C">-16.9</TN>
+	<TX Status="C">-3.8</TX>
+	<FF Status="C">3.17</FF>
+	<MVP Status="C">2.1</MVP>
+	<TT06 Status="C">-12.5</TT06>
+	<TT09 Status="C">-9.3</TT09>
+	<TT12 Status="C">-4.2</TT12>
+	<TT15 Status="C">-6.8</TT15>
+	<TT18 Status="C">-9.2</TT18>
+	<RH06 Status="C">76.99</RH06>
+	<RH09 Status="C">70.97</RH09>
+	<RH12 Status="C">57.35</RH12>
+	<RH15 Status="C">68.15</RH15>
+	<RH18 Status="C">75.12</RH18>
+	<VPD Status="C">0.82</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">50</VIS>
+	<SLOPE Status="C">0.23</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">4570.7</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">2827.88</SVKRAD>
+	<HGVRAD Status="C">3412.12</HGVRAD>
+	<CRAD Status="C">2.83</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.53</ET0>
+	<NDT Status="C">1.6</NDT>
+	<TND Status="C">-14</TND>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">2.44</N>
+	<L Status="C">2.2</L>
+	<TN Status="C">-8.1</TN>
+	<TX Status="C">-4.4</TX>
+	<FF Status="C">6.54</FF>
+	<MVP Status="C">2.77</MVP>
+	<TT06 Status="C">-8.1</TT06>
+	<TT09 Status="C">-6.9</TT09>
+	<TT12 Status="C">-5.6</TT12>
+	<TT15 Status="C">-5.3</TT15>
+	<TT18 Status="C">-6.2</TT18>
+	<RH06 Status="C">82.21</RH06>
+	<RH09 Status="C">83</RH09>
+	<RH12 Status="C">71.16</RH12>
+	<RH15 Status="C">70.11</RH15>
+	<RH18 Status="C">67.2</RH18>
+	<VPD Status="C">0.99</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">49.2</VIS>
+	<SLOPE Status="C">0.289</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">8938.82</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">3982.43</SVKRAD>
+	<HGVRAD Status="C">4611.42</HGVRAD>
+	<CRAD Status="C">3.98</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.72</ET0>
+	<NDT Status="C">2.2</NDT>
+	<TND Status="C">-8.1</TND>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="C">-22.8</TN>
+	<TX Status="C">-17.3</TX>
+	<FF Status="C">1.18</FF>
+	<MVP Status="C">1.14</MVP>
+	<TT06 Status="C">-21.8</TT06>
+	<TT09 Status="C">-20.8</TT09>
+	<TT12 Status="C">-18.4</TT12>
+	<TT15 Status="C">-19.5</TT15>
+	<TT18 Status="C">-19.2</TT18>
+	<RH06 Status="C">82.39</RH06>
+	<RH09 Status="C">82.5</RH09>
+	<RH12 Status="C">83.56</RH12>
+	<RH15 Status="C">84.08</RH15>
+	<RH18 Status="C">84.19</RH18>
+	<VPD Status="C">0.21</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">0.116</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">NA</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">5853.11</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">2720.89</HGVRAD>
+	<CRAD Status="C">2.72</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.12</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">-21.9</TND>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="C">-28.7</TN>
+	<TX Status="C">-18.2</TX>
+	<FF Status="C">0.22</FF>
+	<MVP Status="C">0.69</MVP>
+	<TT06 Status="C">-28.7</TT06>
+	<TT09 Status="C">-21.8</TT09>
+	<TT12 Status="C">-20</TT12>
+	<TT15 Status="C">-26.1</TT15>
+	<TT18 Status="C">-29.5</TT18>
+	<RH06 Status="C">76.92</RH06>
+	<RH09 Status="C">80.87</RH09>
+	<RH12 Status="C">81.91</RH12>
+	<RH15 Status="C">78.01</RH15>
+	<RH18 Status="C">75.87</RH18>
+	<VPD Status="C">0.17</VPD>
+	<SNOW Status="C">58</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">0.077</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0.2</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">3397.54</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">1997.86</HGVRAD>
+	<CRAD Status="C">2</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.1</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">-30</TND>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="C">2</TN>
+	<TX Status="C">24.8</TX>
+	<FF Status="C">2.57</FF>
+	<MVP Status="C">1.82</MVP>
+	<TT06 Status="C">2</TT06>
+	<TT09 Status="C">13.7</TT09>
+	<TT12 Status="C">23.4</TT12>
+	<TT15 Status="C">24.7</TT15>
+	<TT18 Status="C">20.6</TT18>
+	<RH06 Status="C">17.24</RH06>
+	<RH09 Status="C">10.46</RH09>
+	<RH12 Status="C">7.42</RH12>
+	<RH15 Status="C">6.02</RH15>
+	<RH18 Status="C">9.39</RH18>
+	<VPD Status="C">16.56</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">1.158</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">0</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">27590.79</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">22985.86</HGVRAD>
+	<CRAD Status="C">22.99</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">3.79</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">2</TND>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>20210211</DayTime>
+	<N Status="C">NA</N>
+	<L Status="C">NA</L>
+	<TN Status="C">-18.3</TN>
+	<TX Status="C">-18.1</TX>
+	<FF Status="C">2.98</FF>
+	<MVP Status="C">1.13</MVP>
+	<TT06 Status="C">-18.2</TT06>
+	<TT09 Status="C">-19.9</TT09>
+	<TT12 Status="C">-19.9</TT12>
+	<TT15 Status="C">-21.6</TT15>
+	<TT18 Status="C">-23.3</TT18>
+	<RH06 Status="C">85.01</RH06>
+	<RH09 Status="C">83.35</RH09>
+	<RH12 Status="C">83.35</RH12>
+	<RH15 Status="C">81.67</RH15>
+	<RH18 Status="C">79.96</RH18>
+	<VPD Status="C">0.2</VPD>
+	<SNOW Status="C">NA</SNOW>
+	<VIS Status="C">NA</VIS>
+	<SLOPE Status="C">0.114</SLOPE>
+	<MRAD Status="C">NA</MRAD>
+	<MSUN Status="C">NA</MSUN>
+	<RRR Status="C">NA</RRR>
+	<SOIL Status="C">NA</SOIL>
+	<ANGRAD Status="C">15429.14</ANGRAD>
+	<APRAD Status="C">NA</APRAD>
+	<SVKRAD Status="C">NA</SVKRAD>
+	<HGVRAD Status="C">3132.25</HGVRAD>
+	<CRAD Status="C">3.13</CRAD>
+	<E0 Status="C">NA</E0>
+	<ES0 Status="C">NA</ES0>
+	<ET0 Status="C">0.24</ET0>
+	<NDT Status="C">NA</NDT>
+	<TND Status="C">-23.8</TND>
+</Observation>
+</Observations>

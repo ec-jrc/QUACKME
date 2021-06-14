@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<Messages>
+	<Message>
+		<Property>TT</Property>
+		<Code>001</Code>
+		<Text>#Code#:Air Temperature values outside #0# Celsius degrees (TT #1# C)</Text>
+		<TextOLD>Air Temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TT</Property>
+		<Code>002</Code>
+		<Text>#Code#:Air temperature difference between two consecutive records LESS than #0# degree (#Code# #1# C, #Code# Prev #2# C,#Code# Diff #3# C)</Text>
+		<TextOLD>Air temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree</TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TT</Property>
+		<Code>003</Code>
+		<Text>#Code#:Air temperature difference between two consecutive records GREATER than #0# degree (#Code# #1# C, #Code# Prev #2# C, #Code# Diff #3# C)</Text>
+		<TextOLD>Air temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree</TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>TT</Property>
+		<Code>004</Code>
+		<Text>Absolute difference between observed air temperature and MOS air temperature GREATER than #0# degree (TTobs= #1# C, TTmos= #2# C )</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>TT</Property>
+		<Code>005</Code>
+		<Text>Absolute difference between observed air temperature and MOS air temperature GREATER than #0# degree and less or equal to #1# degree(TTobs= #2# C, TTmos= #3# C )</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+
+	<Message>
+		<Property>TN1</Property>
+		<Code>001</Code>
+		<Text>#Code#:1-Hourly minimum temperature values outside #0# Celsius degrees (#Code# #1# C)</Text>
+		<TextOLD>Hourly minimum temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TN1</Property>
+		<Code>002</Code>
+		<Text>#Code#:1-Hourly minimum temperature difference between two consecutive records LESS than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>Hourly minimum temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TN1</Property>
+		<Code>003</Code>
+		<Text>#Code#:1-Hourly minimum temperature difference between two consecutive records GREATER than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>Hourly minimum temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>TN6</Property>
+		<Code>001</Code>
+		<Text>#Code#:6-Hourly minimum temperature values outside #0# Celsius degrees (#Code# #1# C)</Text>
+		<TextOLD>6 Hours minimum temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TN6</Property>
+		<Code>002</Code>
+		<Text>#Code#:6-Hourly minimum temperature difference between two consecutive records LESS than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>6 Hours minimum temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TN6</Property>
+		<Code>003</Code>
+	  <Text>#Code#:6-Hourly minimum temperature between two consecutive records GREATER than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>6 Hours minimum temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>TN12</Property>
+		<Code>001</Code>
+		<Text>#Code#:12-Hourly minimum temperature values outside #0# Celsius degrees (#Code# #1# C)</Text>
+		<TextOLD>12 Hours minimum temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TN12</Property>
+		<Code>002</Code>
+		<Text>#Code#:12-Hourly minimum temperature difference between two consecutive records LESS than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>12 Hours minimum temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TN12</Property>
+		<Code>003</Code>
+	  <Text>#Code#:12-Hourly minimum temperature difference between two consecutive records GREATER than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>12 Hours minimum temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>TX1</Property>
+		<Code>001</Code>
+		<Text>#Code#:1-Hourly maximum temperature values outside #0# Celsius degrees (#Code# #1# C)</Text>
+		<TextOLD>Hourly maximum temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TX1</Property>
+		<Code>002</Code>
+		<Text>#Code#:1-Hourly maximum temperature difference between two consecutive records LESS than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>Hourly maximum temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TX1</Property>
+		<Code>003</Code>
+	  <Text>#Code#:1-Hourly maximum temperature difference between two consecutive records GREATER than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>Hourly maximum temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>TX6</Property>
+		<Code>001</Code>
+		<Text>#Code#:6-Hourly maximum temperature values outside #0# Celsius degrees (#Code# #1# C)</Text>
+		<TextOLD>6 Hours maximum temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TX6</Property>
+		<Code>002</Code>
+		<Text>#Code#:6-Hourly maximum temperature difference between two consecutive records LESS than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>6 Hours maximum temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TX6</Property>
+		<Code>003</Code>
+	  <Text>#Code#:6-Hourly maximum temperature difference between two consecutive records GREATER than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>6 Hours maximum temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>TX12</Property>
+		<Code>001</Code>
+		<Text>#Code#:12-Hourly maximum temperature values outside #0# Celsius degrees (#Code# #1# C)</Text>
+		<TextOLD>12 Hours maximum temperature values outside -80 : 60 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TX12</Property>
+		<Code>002</Code>
+		<Text>#Code#:12-Hourly maximum temperature difference between two consecutive records LESS than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>12 Hours maximum temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+		<Message>
+		<Property>TX12</Property>
+		<Code>003</Code>
+	  <Text>#Code#:12-Hourly maximum temperature difference between two consecutive records GREATER than #0# degree (#Code# #1#, #Code# Prev #2#, #Code# Diff #3# C)</Text>
+		<TextOLD>12 Hours maximum temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>TD</Property>
+		<Code>001</Code>
+		<Text>#Code#:Dew Point Temperature outside #0# Celsius degrees (TD #1# C)</Text>
+		<TextOLD>Dew Point Temperature outside -80 : 35 Celsius degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TD</Property>
+		<Code>002</Code>
+		<Text>#Code#:Higher than TT (TD #0# C and TT #1# C)</Text>
+		<TextOLD>Higher than TT</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>TD</Property>
+		<Code>003</Code>
+		<Text>#Code#:change between two consecutive records LESS than #0# degree (#1# C at #2# UTC to #3# C at #4# UTC)</Text>
+		<TextOLD>Dew point temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.05 degree</TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>TD</Property>
+		<Code>004</Code>
+		<Text>#Code#:change between two consecutive records higher than #0# degree (#1# C at #2# UTC to #3# C at #4# UTC)</Text>
+		<TextOLD>change between two consecutive records (either hourly or 3-hourly) higher than 11 degree</TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>TD</Property>
+		<Code>005</Code>
+		<Text>Absolute difference between observed dew point temperature and MOS dew point temperature GREATER than #0# degree (TDobs= #1# C, TDmos= #2# C )</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+	<Message>
+		<Property>TD</Property>
+		<Code>006</Code>
+		<Text>Absolute difference between observed dew point temperature and MOS dew point temperature GREATER than #0# degree and less or equal to #1# degree (TDobs= #2# C, TDmos= #3# C )</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>		
+
+	<Message>
+		<Property>DIR</Property>
+		<Code>001</Code>
+		<Text>#Code#:Wind direction outside #0# degrees (#1# Degree)</Text>
+		<TextOLD>Wind direction outside 0-360 degrees</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>DIR</Property>
+		<Code>002</Code>
+		<Text>#Code#:Wind direction between two consecutive records LESS than #0# degree and wind speed GREATER than #1# m/sec (FF #2# m/sec, #Code# #3# degrees, #Code# Prev #4# degrees, #Code# Diff #5# degrees)</Text>
+		<TextOLD>Wind direction between two consecutive records (either hourly or 3-hourly) LESS than 5 degree and wind speed GREATER than 4.6 m/sec</TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>DIR</Property>
+		<Code>003</Code>
+		<Text>#Code#:Wind direction between two consecutive records GREATER than #0# degree and wind speed GREATER than #1# m/sec (FF #2# m/sec, #Code# #3# degrees, #Code# Prev #4# degrees, #Code# Diff #5# degrees)</Text>
+		<TextOLD>#Code#:Wind direction between two consecutive records (either hourly or 3-hourly) GREATER than 40 degree and wind speed GREATER than 4.6 m/sec </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>FF</Property>
+		<Code>001</Code>
+		<Text>#Code#:Wind speed outside #0# m/sec (#1# m/sec)</Text>
+		<TextOLD>Wind speed outside 0 – 75 m/sec</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>FF</Property>
+		<Code>002</Code>
+		<Text>#Code#:Wind speed between difference two consecutive records LESS than #0# m/sec and wind speed GREATER than #1# m/sec (#Code# #2# m/sec, #Code# Prev #3# m/sec, #Code# Diff #4# m/sec )</Text>
+		<TextOLD>Wind speed between two consecutive records (either hourly or 3-hourly) LESS than 0.5 m/sec and wind speed GREATER than 4.6 m/sec</TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>FF</Property>
+		<Code>003</Code>
+		<Text>#Code#:Wind speed between difference two consecutive records GREATER than #0# m/sec (#Code# #2# m/sec, #Code# Prev #3# m/sec, #Code# Diff #4# m/sec)</Text>
+		<TextOLD>Wind speed between two consecutive records (either hourly or 3-hourly) GREATER than 15 m/sec </TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>FF</Property>
+		<Code>004</Code>
+		<Text>#Code#:Wind speed GREATER than #0# m/sec and Wind direction #1# (#Code# #2# m/sec) </Text>
+		<TextOLD>Wind speed GREATER than 0 and Wind direction NA </TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>FF</Property>
+		<Code>005</Code>
+		<Text>Absolute difference between observed Wind speed and MOS Wind speed GREATER than #0# m/sec (FFobs= #1# m/sec, FFmos= #2# m/sec) </Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+	<Message>
+		<Property>FF</Property>
+		<Code>006</Code>
+		<Text>Absolute difference between observed Wind speed and MOS Wind speed GREATER than #0# m/sec and less or equal than #1# m/sec (FFobs= #2# m/sec, FFmos= #3# m/sec) </Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+	<Message>
+		<Property>FF</Property>
+		<Code>007</Code>
+		<Text>Observed Wind speed = #0# m/sec and MOS Wind speed GREATER than #1# m/sec (FFobs= #2# m/sec, FFmos= #3# m/sec) </Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+		<Message>
+		<Property>FF</Property>
+		<Code>008</Code>
+		<Text>Wind speed ratio between #0# and #1# (FFobs= #2# m/sec, FFmos= #3# m/sec) </Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+
+	<Message>
+		<Property>RD</Property>
+		<Code>001</Code>
+		<Text>#Code#:Hourly Solar radiation outside #0# W/m2 (#Code# #1# W/m2)</Text>
+		<TextOLD>#Code#:Hourly Solar radiation outside 0-1600 W/m2</TextOLD>
+		<Level>W</Level>
+	</Message>
+	
+	<Message>
+		<Property>RD</Property>
+		<Code>002</Code>
+		<Text>#Code#:Sunshine duration GREATER than #0# and radiation = #1# (SH #2# minutes)</Text>
+		<TextOLD>Sunshine duration GREATER than 0 and radiation = 0</TextOLD>
+		<Level>S</Level>
+	</Message>	
+
+	<Message>
+		<Property>RD24</Property>
+		<Code>001</Code>
+		<Text>#Code#:24 Hours Solar radiation outside 0-38.4 KW/m2</Text>
+		<TextOLD>#Code#:24 Hours Solar radiation outside 0-38.4 KW/m2</TextOLD>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>SH</Property>
+		<Code>001</Code>
+		<Text>#Code#:Hourly Sunshine duration GREATER than #0# minutes</Text>
+		<TextOLD>Hourly Sunshine duration GREATER than 60 minutes</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>SH24</Property>
+		<Code>001</Code>
+		<Text>#Code#:Hourly Sunshine duration GREATER than #0# hours (#1# hours)</Text>
+		<TextOLD>Hourly Sunshine duration GREATER than 24 hours</TextOLD>
+		<Level>W</Level>
+	</Message>
+
+	<!--
+	<Message>
+		<Property>SH24</Property>
+		<Code>002</Code>
+		<Text>#Code#:Daily Sunshine duration GREATER than 0 and Daily Radiation = 0</Text>
+		<Level>S</Level>
+	</Message>
+	-->
+
+	<Message>
+		<Property>N</Property>
+		<Code>001</Code>
+		<Text>#Code#:Cloud Cover outside #0# (#Code# #1#)</Text>
+		<TextOLD>Cloud Cover outside 0-8</TextOLD>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>L</Property>
+		<Code>001</Code>
+		<Text>#Code#:Low Cloud Cover outside #0# (#Code# #1#)</Text>
+		<TextOLD>Low Cloud Cover outside 0-8</TextOLD>
+		<Level>W</Level>
+	</Message>
+
+    <!--
+	<Message>
+		<Property>N</Property>
+		<Code>002</Code>
+		<Text>#Code#:Cloud cover 0 and precipitation GREATER than 0 </Text>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>N</Property>
+		<Code>003</Code>
+		<Text>#Code#:Cloud cover 8 and sunshine duration GREATER than 0 </Text>
+		<Level>S</Level>
+	</Message>
+	-->
+
+	<Message>
+		<Property>PREC</Property>
+		<Code>001</Code>
+		<Text>#Code#:Precipitation outside #0# (#Code# #1#)</Text>
+		<TextOLD>Precipitation outside 0-400</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>PREC</Property>
+		<Code>002</Code>
+		<Text>#Code#:Precipitation GREATER than #0# (#Code# #1#)</Text>
+		<TextOLD>Precipitation GREATER than 200</TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>PREC</Property>
+		<Code>003</Code>
+		<Text>1H Precipitation wrong value after MOS check (RRRobs= #0#, RRRMos= #1#, RRRXmos= #2#, RRRsd= #3#, RRRf = #4#)</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>PREC</Property>
+		<Code>004</Code>
+		<Text>1H Precipitation wrong value after MOS check (RRRobs= #0#, RRRMos= #1#, RRRXmos= #2#, RRRsd= #3#, RRRf = #4#)</Text>
+		<Level>S</Level>	
+	</Message>
+	<Message>
+		<Property>PREC</Property>
+		<Code>005</Code>
+		<Text>For interval #0# - #1# the difference between 24H Precipitation (=#2# mm, identified at #3#) and sum of 1H precipitation (=#4# mm) is greater than #5# mm</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	
+	<Message>
+		<Property>PR06</Property>
+		<Code>001</Code>
+		<Text>6H Precipitation wrong value after MOS check (RRRobs= #0#, RRRMos= #1#, RRRXmos= #2#, RRRsd= #3#, RRRf = #4#)</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>PR06</Property>
+		<Code>002</Code>
+		<Text>6H Precipitation wrong value after MOS check (RRRobs= #0#, RRRMos= #1#, RRRXmos= #2#, RRRsd= #3#, RRRf = #4#)</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>PR06</Property>
+		<Code>003</Code>
+		<Text>For interval #0# - #1# the difference between 24H Precipitation (=#2# mm, identified at #3#) and sum of 6H precipitation (=#4# mm) is greater than #5# mm</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+	
+	<Message>
+		<Property>PR24</Property>
+		<Code>001</Code>
+		<Text>24H Precipitation wrong value after MOS check (RRRobs= #0#, RRRMos= #1#, RRRXmos= #2#, RRRsd= #3#, RRRf = #4#)</Text>
+		<TextOLD></TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>PR24</Property>
+		<Code>002</Code>
+		<Text>24H Precipitation wrong value after MOS check (RRRobs= #0#, RRRMos= #1#, RRRXmos= #2#, RRRsd= #3#, RRRf = #4#)</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+	<Message>
+		<Property>PR24</Property>
+		<Code>003</Code>
+		<Text>For interval #0# - #1# the difference between 24H Precipitation (=#2# mm, identified at #3#) and sum of 6H precipitations (=#4# mm) is greater than #5# mm</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>	
+	<Message>
+		<Property>PR24</Property>
+		<Code>004</Code>
+		<Text>For interval #0# - #1# the difference between 24H Precipitation (=#2# mm, identified at #3#) and sum of 1H precipitation (=#4# mm) is greater than #5# mm</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	<Message>
+		<Property>PR24</Property>
+		<Code>005</Code>
+		<Text>For interval #0# - #1# the difference between 24H Precipitation (=#2# mm, identified at #3#) and sum of RR/TR precipitation (=#4# mm) is greater than #5# mm</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>
+	
+	<Message>
+		<Property>RR</Property>
+		<Code>001</Code>
+		<Text>For interval #0# - #1# the difference between 24H Precipitation (=#2# mm, identified at #3#) and sum of RR/TR precipitation (=#4# mm) is greater than #5# mm [RR=#6#, TR=#7#]</Text>
+		<TextOLD></TextOLD>
+		<Level>S</Level>
+	</Message>		
+	
+	<Message>
+		<Property>AP</Property>
+		<Code>001</Code>
+		<Text>#Code#:Atmospheric Pressure outside #0# hPa (AP #1# hPa)</Text>
+		<TextOLD>Atmospheric Pressure outside 500 – 1100 hPa</TextOLD>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>AP</Property>
+		<Code>002</Code>
+		<Text>#Code#:Atmospheric Pressure difference between two consecutive records (either hourly or 3-hourly) GREATER than #0# hPa (AP #1# hPa, AP Prev #2# hPa, #Code# DIFF #3# hPa)</Text>
+		<TextOLD>Atmospheric Pressure between two consecutive records (either hourly or 3-hourly) GREATER than 9</TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>QFF</Property>
+		<Code>001</Code>
+		<Text>#Code#:Atmospheric Pressure reduce to MSL outside #0# hPa (QFF #1# hPa)</Text>
+		<TextOLD>Atmospheric Pressure reduce to MSL outside 950 – 1060 hPa</TextOLD>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>RH</Property>
+		<Code>001</Code>
+		<Text>#Code#:Relative Humidity outside #0# % (RH #1#%)</Text>
+		<TextOLD>Relative Humidity outside 0 - 100 %</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>RH</Property>
+		<Code>002</Code>
+		<Text>#Code#:Relative humidity difference between two consecutive records LESS than #0#% (RH #1#%, RH Prev #2#%, #Code# Diff #3#%)</Text>
+		<TextOLD>Relative humidity between two consecutive records (either hourly or 3-hourly) LESS than 1%</TextOLD>
+		<Level>S</Level>
+	</Message>
+
+	<Message>
+		<Property>D_RH</Property>
+		<Code>001</Code>
+		<Text>#Code#:Relative Humidity outside #0# % (DRH #1#)</Text>
+		<TextOLD>Relative Humidity outside 0 - 100 %</TextOLD>
+		<Level>W</Level>
+	</Message>
+	<Message>
+		<Property>D_RH</Property>
+		<Code>002</Code>
+		<Text>#Code#:Relative humidity difference between two consecutive records LESS than #0#% (#Code# #1#%, #Code# Prev #2#%, #Code# Diff #3#%) </Text>
+		<TextOLD>Relative humidity between two consecutive records (either hourly or 3-hourly) LESS than 1% </TextOLD>
+		<Level>S</Level>
+	</Message>
+
+</Messages>

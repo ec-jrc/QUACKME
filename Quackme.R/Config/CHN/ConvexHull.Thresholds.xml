@@ -1,0 +1,79 @@
+<Exceptions>
+	<Exception>
+	    <Area>Daily</Area>
+		<Error Property="TX" Code="001" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>
+	<Exception>	
+		<Area>Daily</Area>
+		<Error Property="TX" Code="002" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>
+	<Exception>	
+		<Area>Daily</Area>
+		<Error Property="TX" Code="003" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>
+	<Exception>	
+		<Area>Daily</Area>
+		<Error Property="TX" Code="004" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>	
+	<Exception>
+	    <Area>Daily</Area>
+		<Error Property="TN" Code="001" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>
+	<Exception>
+	    <Area>Daily</Area>
+		<Error Property="TN" Code="002" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>	
+	<Exception>
+	    <Area>Season</Area>
+		<Error Property="TX" Code="001" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>	
+	<Exception>
+		<Area>Season</Area>
+		<Error Property="TX" Code="002" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>
+	<Exception>
+	    <Area>Season</Area>
+		<Error Property="TX" Code="003" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>	
+	<Exception>
+	    <Area>Season</Area>
+		<Error Property="TX" Code="004" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>	
+	<Exception>
+	    <Area>Season</Area>
+		<Error Property="TN" Code="001" />
+		<Stations_Counter>10</Stations_Counter>
+		<Hull_Radius>150000;200000</Hull_Radius>
+		<Hull_Area>71000</Hull_Area>
+	</Exception>
+</Exceptions>

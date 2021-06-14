@@ -1,0 +1,264 @@
+<Aggregation>
+   <Property>
+   		<Name>N</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="N" RoundDigits="2">
+			<Specific Time="18, 21" Day="-01" />
+			<Specific Time="00, 03, 06, 09, 12, 15, 18" Day="00" />
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property>    
+   
+   <Property>
+   		<Name>MSUN</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.SUN.CHN</Formula>
+		</FormulaValue>
+   </Property>   
+       
+   <Property>
+   		<Name>MRAD</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.RAD.CHN</Formula>
+		</FormulaValue>
+   </Property>     
+   
+   <Property>
+   		<Name>TN</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="1">
+			<Formula>Aggregation.TN.CHN</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>MOS</Parameter>
+		</FormulaValue>
+   </Property>    
+   
+   <Property>
+   		<Name>TX</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="1">
+			<Formula>Aggregation.TX.CHN</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>MOS</Parameter>
+		</FormulaValue>
+   </Property>  
+  
+   <Property>
+   		<Name>MVP</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="D_E" RoundDigits="2">
+			<Specific Time="18, 21" Day="-01" />
+			<Specific Time="00, 03, 06, 09, 12, 15, 18" Day="00" />			
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property> 
+  
+   <Property>
+   		<Name>FF</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="FF" RoundDigits="2">
+			<Specific Time="18, 21" Day="-01" />
+			<Specific Time="00, 03, 06, 09, 12, 15, 18" Day="00" />			
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property>     
+     
+   <Property>
+   		<Name>RRR</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="1">
+			<Formula>Aggregation.RRR.CHN</Formula>
+			<Parameter>Current.Date</Parameter>
+		</FormulaValue>   	
+   </Property>    
+   
+   <Property>
+		<Name>TT06</Name>
+		<FormulaValue Type="Fixed" Time="00" Day="0" ReferenceProperty="TT" RoundDigits="1" />
+   </Property>  
+   
+   <Property>
+		<Name>TT09</Name>
+		<FormulaValue Type="Fixed" Time="03" Day="0" ReferenceProperty="TT" RoundDigits="1" />		
+   </Property>     
+      <Property>
+		<Name>TT12</Name>
+		<FormulaValue Type="Fixed" Time="06" Day="0" ReferenceProperty="TT" RoundDigits="1" />	
+   </Property>  
+   <Property>
+		<Name>TT15</Name>
+		<FormulaValue Type="Fixed" Time="09" Day="0" ReferenceProperty="TT" RoundDigits="1" />
+   </Property>   
+   <Property>
+		<Name>TT18</Name>
+		<FormulaValue Type="Fixed" Time="12" Day="0" ReferenceProperty="TT" RoundDigits="1" />
+   </Property>  
+   
+   <Property>
+		<Name>RH06</Name>
+		<FormulaValue Type="Fixed" Time="00" Day="0" ReferenceProperty="RH" RoundDigits="2" />
+		<NAFormula>
+			<FormulaValue Type="Fixed" Time="00" Day="0" ReferenceProperty="D_RH" RoundDigits="2" />
+		</NAFormula>		
+   </Property>  
+   <Property>
+		<Name>RH09</Name>
+		<FormulaValue Type="Fixed" Time="03" Day="0" ReferenceProperty="RH" RoundDigits="2" />
+		<NAFormula>
+			<FormulaValue Type="Fixed" Time="03" Day="0" ReferenceProperty="D_RH" RoundDigits="2" />
+		</NAFormula>		
+   </Property>     
+      <Property>
+		<Name>RH12</Name>
+		<FormulaValue Type="Fixed" Time="06" Day="0" ReferenceProperty="RH" RoundDigits="2" />	
+		<NAFormula>
+			<FormulaValue Type="Fixed" Time="06" Day="0" ReferenceProperty="D_RH" RoundDigits="2" />
+		</NAFormula>		
+   </Property>  
+   <Property>
+		<Name>RH15</Name>
+		<FormulaValue Type="Fixed" Time="09" Day="0" ReferenceProperty="RH" RoundDigits="2" />
+		<NAFormula>
+			<FormulaValue Type="Fixed" Time="09" Day="0" ReferenceProperty="D_RH" RoundDigits="2" />
+		</NAFormula>		
+   </Property>   
+   <Property>
+		<Name>RH18</Name>
+		<FormulaValue Type="Fixed" Time="12" Day="0" ReferenceProperty="RH" RoundDigits="2" />
+		<NAFormula>
+			<FormulaValue Type="Fixed" Time="12" Day="0" ReferenceProperty="D_RH" RoundDigits="2" />
+		</NAFormula>		
+   </Property>     
+   
+   <Property>
+		<Name>SOIL</Name>
+		<FormulaValue Type="Fixed" Time="00" Day="0" ReferenceProperty="SOIL" RoundDigits="2" />
+   </Property>    
+   
+   <Property>
+   		<Name>VPD</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="D_VPD" RoundDigits="2">
+			<Specific Time="18, 21" Day="-01" />
+			<Specific Time="00, 03, 06, 09, 12, 15, 18" Day="00" />			
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property>   
+   
+   <Property>
+   		<Name>SLOPE</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="D_SLOPE" RoundDigits="3">
+			<Specific Time="18, 21" Day="-01" />
+			<Specific Time="00, 03, 06, 09, 12, 15, 18" Day="00" />
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property>      
+   
+   <Property>
+   		<Name>NDT</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="N" RoundDigits="2">
+			<Specific Time="00, 03, 06, 09, 12" Day="00" />
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property>    
+   
+   <Property>
+   		<Name>L</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="L" RoundDigits="2">
+			<Formula>Aggregation.LowClouds.CHN</Formula>
+		</FormulaValue>
+   </Property>     
+   
+	<Property>
+		<Name>ANGRAD</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.AngotRadiation</Formula>
+			<Parameter>Current.Date</Parameter>
+		</FormulaValue>
+   </Property>   
+   
+   <Property>
+		<Name>APRAD</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.AngstromPrescottRadiation</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property>  
+
+   <Property>
+		<Name>SVKRAD</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.SupitVanKappelRadiation</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property> 
+   
+    <Property>
+		<Name>HGVRAD</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.HargreavesRadiation</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property> 
+   
+   <Property>
+   		<Name>CRAD</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.GlobalRadiation</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property>            
+   
+   <Property>
+		<Name>E0</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.E0</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property>   
+  
+    <Property>
+		<Name>ES0</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.ES0</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property>  
+  
+    <Property>
+		<Name>ET0</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="2">
+			<Formula>Aggregation.ET0</Formula>
+			<Parameter>Current.Date</Parameter>
+			<Parameter>Day.Agg</Parameter>
+		</FormulaValue>
+   </Property>
+   
+   <Property>
+   		<Name>VIS</Name>
+		<FormulaValue Type="Formula" Parameter="V" ReferenceProperty="VIS" RoundDigits="2">
+			<Specific Time="00,03, 06, 09, 12" Day="00" />
+			<Formula>Aggregation.Mean.80</Formula>
+			<Parameter>Expected.Values</Parameter>
+		</FormulaValue>
+   </Property>    
+   
+   <Property>
+   		<Name>SNOW</Name>
+		<FormulaValue Type="Fixed" Time="06" Day="0" ReferenceProperty="SNOW" RoundDigits="2" />
+   </Property>     
+   
+   <Property>
+   		<Name>TND</Name>
+		<FormulaValue Type="Formula" Parameter="M" RoundDigits="1">
+			<Formula>Aggregation.TND</Formula>
+			<Parameter>Current.Date</Parameter>
+		</FormulaValue>
+	</Property>
+  
+</Aggregation>

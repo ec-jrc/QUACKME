@@ -1,0 +1,26 @@
+<Observations>
+<Observation>
+  <Station>3016003</Station>
+  <DayTime>2021021302</DayTime>
+  <TD Status="S">-38.3</TD>
+  <ALERT Level="S" Property="TD" Code="006" Message="Absolute difference between observed dew point temperature and MOS dew point temperature GREATER than 11 degree and less or equal to 15 degree (TDobs= -38.3 C, TDmos= -26.5 C )" Status="?"/>
+</Observation>
+<Observation>
+  <Station>3016003</Station>
+  <DayTime>2021021304</DayTime>
+  <TD Status="S">-40.3</TD>
+  <ALERT Level="S" Property="TD" Code="006" Message="Absolute difference between observed dew point temperature and MOS dew point temperature GREATER than 11 degree and less or equal to 15 degree (TDobs= -40.3 C, TDmos= -28.8 C )" Status="?"/>
+</Observation>
+<Observation>
+  <Station>3016003</Station>
+  <DayTime>2021021305</DayTime>
+  <TD Status="S">-42</TD>
+  <ALERT Level="S" Property="TD" Code="006" Message="Absolute difference between observed dew point temperature and MOS dew point temperature GREATER than 11 degree and less or equal to 15 degree (TDobs= -42 C, TDmos= -29.2 C )" Status="?"/>
+</Observation>
+<Observation>
+  <Station>3016003</Station>
+  <DayTime>2021021306</DayTime>
+  <TD Status="S">-42.1</TD>
+  <ALERT Level="S" Property="TD" Code="006" Message="Absolute difference between observed dew point temperature and MOS dew point temperature GREATER than 11 degree and less or equal to 15 degree (TDobs= -42.1 C, TDmos= -29.1 C )" Status="?"/>
+</Observation>
+</Observations>

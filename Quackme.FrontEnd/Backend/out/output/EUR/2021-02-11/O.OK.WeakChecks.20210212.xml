@@ -1,0 +1,2452 @@
+<Observations>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-14.8</TT>
+  <TD Status="C">-16.3</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">1.4</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">260</DIR>
+  <FF Status="C">0.82</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.71</D_E>
+  <D_RH Status="C">88.35</D_RH>
+  <D_VPD Status="C">0.22</D_VPD>
+  <D_SLOPE Status="C">0.16</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-14.3</TT>
+  <TD Status="C">-15.2</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">220</DIR>
+  <FF Status="C">0.87</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.87</D_E>
+  <D_RH Status="C">92.85</D_RH>
+  <D_VPD Status="C">0.14</D_VPD>
+  <D_SLOPE Status="C">0.166</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-13.6</TT>
+  <TD Status="C">-14.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">240</DIR>
+  <FF Status="C">1.08</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.95</D_E>
+  <D_RH Status="C">91.37</D_RH>
+  <D_VPD Status="C">0.18</D_VPD>
+  <D_SLOPE Status="C">0.175</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-13.8</TT>
+  <TD Status="C">-15</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">230</DIR>
+  <FF Status="C">1.08</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.9</D_E>
+  <D_RH Status="C">90.61</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.172</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-17.3</TT>
+  <TD Status="C">-19.2</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">300</DIR>
+  <FF Status="C">0.41</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.33</D_E>
+  <D_RH Status="C">85.1</D_RH>
+  <D_VPD Status="C">0.23</D_VPD>
+  <D_SLOPE Status="C">0.132</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-17</TT>
+  <TD Status="C">-18.6</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">220</DIR>
+  <FF Status="C">1.29</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.4</D_E>
+  <D_RH Status="C">87.41</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.135</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1084</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-20.2</TT>
+  <TD Status="C">-22.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-13.3</TX12>
+  <TN12 Status="C">-22.9</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0.2</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">NA</DIR>
+  <FF Status="C">0.1</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1</D_E>
+  <D_RH Status="C">82.58</D_RH>
+  <D_VPD Status="C">0.21</D_VPD>
+  <D_SLOPE Status="C">0.106</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-28.6</TT>
+  <TD Status="C">-31.6</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">320</DIR>
+  <FF Status="C">2.52</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1048.8</AP>
+  <QFF Status="C">1048.8</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.43</D_E>
+  <D_RH Status="C">75.4</D_RH>
+  <D_VPD Status="C">0.14</D_VPD>
+  <D_SLOPE Status="C">0.053</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-28.6</TT>
+  <TD Status="C">-31.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">140</DIR>
+  <FF Status="C">0.72</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1048.8</AP>
+  <QFF Status="C">1048.8</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.41</D_E>
+  <D_RH Status="C">73.27</D_RH>
+  <D_VPD Status="C">0.15</D_VPD>
+  <D_SLOPE Status="C">0.053</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-26.8</TT>
+  <TD Status="C">-29.6</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">100</DIR>
+  <FF Status="C">0.72</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1048</AP>
+  <QFF Status="C">1048</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.52</D_E>
+  <D_RH Status="C">77.13</D_RH>
+  <D_VPD Status="C">0.15</D_VPD>
+  <D_SLOPE Status="C">0.062</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-25.9</TT>
+  <TD Status="C">-28.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">250</DIR>
+  <FF Status="C">1.49</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1047.5</AP>
+  <QFF Status="C">1047.5</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.55</D_E>
+  <D_RH Status="C">75.82</D_RH>
+  <D_VPD Status="C">0.18</D_VPD>
+  <D_SLOPE Status="C">0.067</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-26.3</TT>
+  <TD Status="C">-29.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">260</DIR>
+  <FF Status="C">2</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1047.8</AP>
+  <QFF Status="C">1047.8</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.5</D_E>
+  <D_RH Status="C">71.75</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.064</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-28.8</TT>
+  <TD Status="C">-32.2</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">280</DIR>
+  <FF Status="C">0.72</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1049</AP>
+  <QFF Status="C">1049</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.4</D_E>
+  <D_RH Status="C">72.56</D_RH>
+  <D_VPD Status="C">0.15</D_VPD>
+  <D_SLOPE Status="C">0.052</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1288</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-28</TT>
+  <TD Status="C">-30.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-23.8</TX12>
+  <TN12 Status="C">-32.5</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">12</TR>
+  <SNOW Status="C">33</SNOW>
+  <DIR Status="C">240</DIR>
+  <FF Status="C">0.51</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1049</AP>
+  <QFF Status="C">1049</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">55</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.48</D_E>
+  <D_RH Status="C">79.93</D_RH>
+  <D_VPD Status="C">0.12</D_VPD>
+  <D_SLOPE Status="C">0.056</D_SLOPE>
+  <SOIL Status="C">17</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-10.2</TT>
+  <TD Status="C">-15.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">140</DIR>
+  <FF Status="C">1.29</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.1</AP>
+  <QFF Status="C">1042.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.89</D_E>
+  <D_RH Status="C">67.37</D_RH>
+  <D_VPD Status="C">0.92</D_VPD>
+  <D_SLOPE Status="C">0.223</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-10.3</TT>
+  <TD Status="C">-14.6</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">160</DIR>
+  <FF Status="C">1.08</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.2</AP>
+  <QFF Status="C">1042.2</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.97</D_E>
+  <D_RH Status="C">70.73</D_RH>
+  <D_VPD Status="C">0.82</D_VPD>
+  <D_SLOPE Status="C">0.222</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-10.4</TT>
+  <TD Status="C">-15</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">150</DIR>
+  <FF Status="C">0.72</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.3</AP>
+  <QFF Status="C">1042.3</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.91</D_E>
+  <D_RH Status="C">69.04</D_RH>
+  <D_VPD Status="C">0.86</D_VPD>
+  <D_SLOPE Status="C">0.22</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-11</TT>
+  <TD Status="C">-15.3</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">10</DIR>
+  <FF Status="C">0.21</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.5</AP>
+  <QFF Status="C">1042.5</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.86</D_E>
+  <D_RH Status="C">70.63</D_RH>
+  <D_VPD Status="C">0.77</D_VPD>
+  <D_SLOPE Status="C">0.211</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-11.1</TT>
+  <TD Status="C">-15</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">140</DIR>
+  <FF Status="C">1.7</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.6</AP>
+  <QFF Status="C">1042.6</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.91</D_E>
+  <D_RH Status="C">72.95</D_RH>
+  <D_VPD Status="C">0.71</D_VPD>
+  <D_SLOPE Status="C">0.209</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-11.1</TT>
+  <TD Status="C">-15</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">140</DIR>
+  <FF Status="C">2</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.7</AP>
+  <QFF Status="C">1042.7</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.91</D_E>
+  <D_RH Status="C">72.95</D_RH>
+  <D_VPD Status="C">0.71</D_VPD>
+  <D_SLOPE Status="C">0.209</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>1317</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-10.9</TT>
+  <TD Status="C">-15.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-7.4</TX12>
+  <TN12 Status="C">-11.6</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">10</SNOW>
+  <DIR Status="C">NA</DIR>
+  <FF Status="C">1.2</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1042.9</AP>
+  <QFF Status="C">1042.9</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">65</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.89</D_E>
+  <D_RH Status="C">71.21</D_RH>
+  <D_VPD Status="C">0.76</D_VPD>
+  <D_SLOPE Status="C">0.212</D_SLOPE>
+  <SOIL Status="C">17</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-5.2</TT>
+  <TD Status="C">-5.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">320</DIR>
+  <FF Status="C">9.41</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">4</D_E>
+  <D_RH Status="C">96.29</D_RH>
+  <D_VPD Status="C">0.15</D_VPD>
+  <D_SLOPE Status="C">0.316</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-5.3</TT>
+  <TD Status="C">-6.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">320</DIR>
+  <FF Status="C">11</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">3.88</D_E>
+  <D_RH Status="C">94.1</D_RH>
+  <D_VPD Status="C">0.24</D_VPD>
+  <D_SLOPE Status="C">0.313</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-5.5</TT>
+  <TD Status="C">-7.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">310</DIR>
+  <FF Status="C">9.2</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">3.37</D_E>
+  <D_RH Status="C">83.19</D_RH>
+  <D_VPD Status="C">0.68</D_VPD>
+  <D_SLOPE Status="C">0.309</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-5.2</TT>
+  <TD Status="C">-8.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">320</DIR>
+  <FF Status="C">9.41</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">3.12</D_E>
+  <D_RH Status="C">75.25</D_RH>
+  <D_VPD Status="C">1.03</D_VPD>
+  <D_SLOPE Status="C">0.316</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-5.8</TT>
+  <TD Status="C">-6.3</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">300</DIR>
+  <FF Status="C">7.3</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">3.82</D_E>
+  <D_RH Status="C">96.24</D_RH>
+  <D_VPD Status="C">0.15</D_VPD>
+  <D_SLOPE Status="C">0.303</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-5.2</TT>
+  <TD Status="C">-5.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">290</DIR>
+  <FF Status="C">8.69</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">4</D_E>
+  <D_RH Status="C">96.29</D_RH>
+  <D_VPD Status="C">0.15</D_VPD>
+  <D_SLOPE Status="C">0.316</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2103</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-5.4</TT>
+  <TD Status="C">-6.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-4.4</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">300</DIR>
+  <FF Status="C">9.2</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">3.88</D_E>
+  <D_RH Status="C">94.81</D_RH>
+  <D_VPD Status="C">0.21</D_VPD>
+  <D_SLOPE Status="C">0.311</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-14</TT>
+  <TD Status="C">-16.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">230</DIR>
+  <FF Status="C">3.39</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.69</D_E>
+  <D_RH Status="C">82.03</D_RH>
+  <D_VPD Status="C">0.37</D_VPD>
+  <D_SLOPE Status="C">0.17</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-11.1</TT>
+  <TD Status="C">-13.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">250</DIR>
+  <FF Status="C">4.99</FF>
+  <N Status="C">6</N>
+  <L Status="C">6</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.17</D_E>
+  <D_RH Status="C">83.13</D_RH>
+  <D_VPD Status="C">0.44</D_VPD>
+  <D_SLOPE Status="C">0.209</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-8.4</TT>
+  <TD Status="C">-11.2</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">270</DIR>
+  <FF Status="C">4.32</FF>
+  <N Status="C">4</N>
+  <L Status="C">4</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.6</D_E>
+  <D_RH Status="C">80.22</D_RH>
+  <D_VPD Status="C">0.64</D_VPD>
+  <D_SLOPE Status="C">0.253</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-10.6</TT>
+  <TD Status="C">-12.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">240</DIR>
+  <FF Status="C">5.09</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.26</D_E>
+  <D_RH Status="C">83.2</D_RH>
+  <D_VPD Status="C">0.46</D_VPD>
+  <D_SLOPE Status="C">0.217</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-11.4</TT>
+  <TD Status="C">-13.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">250</DIR>
+  <FF Status="C">4.01</FF>
+  <N Status="C">1</N>
+  <L Status="C">1</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.12</D_E>
+  <D_RH Status="C">83.07</D_RH>
+  <D_VPD Status="C">0.43</D_VPD>
+  <D_SLOPE Status="C">0.205</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-7.1</TT>
+  <TD Status="C">-10.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">270</DIR>
+  <FF Status="C">4.47</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.77</D_E>
+  <D_RH Status="C">77.3</D_RH>
+  <D_VPD Status="C">0.81</D_VPD>
+  <D_SLOPE Status="C">0.277</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2176</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-6.4</TT>
+  <TD Status="C">-10.3</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-6</TX12>
+  <TN12 Status="C">-14.9</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">280</DIR>
+  <FF Status="C">5.09</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.8</D_E>
+  <D_RH Status="C">73.87</D_RH>
+  <D_VPD Status="C">0.99</D_VPD>
+  <D_SLOPE Status="C">0.291</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-7.4</TT>
+  <TD Status="C">-11.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0.02</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">40</DIR>
+  <FF Status="C">5.5</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1038.2</AP>
+  <QFF Status="C">1038.2</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.56</D_E>
+  <D_RH Status="C">73.08</D_RH>
+  <D_VPD Status="C">0.94</D_VPD>
+  <D_SLOPE Status="C">0.272</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-7.6</TT>
+  <TD Status="C">-11.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">40</DIR>
+  <FF Status="C">4.99</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1038.5</AP>
+  <QFF Status="C">1038.5</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.56</D_E>
+  <D_RH Status="C">74.22</D_RH>
+  <D_VPD Status="C">0.89</D_VPD>
+  <D_SLOPE Status="C">0.268</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-7.8</TT>
+  <TD Status="C">-11.5</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">10</DIR>
+  <FF Status="C">3.5</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1038.5</AP>
+  <QFF Status="C">1038.5</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.54</D_E>
+  <D_RH Status="C">74.76</D_RH>
+  <D_VPD Status="C">0.86</D_VPD>
+  <D_SLOPE Status="C">0.264</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-8.1</TT>
+  <TD Status="C">-11.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">30</DIR>
+  <FF Status="C">4.47</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1038.8</AP>
+  <QFF Status="C">1038.8</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.62</D_E>
+  <D_RH Status="C">79.02</D_RH>
+  <D_VPD Status="C">0.7</D_VPD>
+  <D_SLOPE Status="C">0.259</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-8.4</TT>
+  <TD Status="C">-10.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">20</DIR>
+  <FF Status="C">4.68</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1039.1</AP>
+  <QFF Status="C">1039.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.66</D_E>
+  <D_RH Status="C">82.16</D_RH>
+  <D_VPD Status="C">0.58</D_VPD>
+  <D_SLOPE Status="C">0.253</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-8</TT>
+  <TD Status="C">-10.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">20</DIR>
+  <FF Status="C">3.29</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1039.1</AP>
+  <QFF Status="C">1039.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.7</D_E>
+  <D_RH Status="C">80.92</D_RH>
+  <D_VPD Status="C">0.64</D_VPD>
+  <D_SLOPE Status="C">0.26</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2516</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-8.1</TT>
+  <TD Status="C">-10.5</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-6</TX12>
+  <TN12 Status="C">-8.5</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">20</DIR>
+  <FF Status="C">2.42</FF>
+  <N Status="C">0</N>
+  <L Status="C">0</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1039.3</AP>
+  <QFF Status="C">1039.3</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">50</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.75</D_E>
+  <D_RH Status="C">82.85</D_RH>
+  <D_VPD Status="C">0.57</D_VPD>
+  <D_SLOPE Status="C">0.259</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-14.4</TT>
+  <TD Status="C">-16</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1029.3</AP>
+  <QFF Status="C">1029.3</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.75</D_E>
+  <D_RH Status="C">87.63</D_RH>
+  <D_VPD Status="C">0.25</D_VPD>
+  <D_SLOPE Status="C">0.165</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-13.9</TT>
+  <TD Status="C">-15.5</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">320</DIR>
+  <FF Status="C">1.29</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1029.2</AP>
+  <QFF Status="C">1029.2</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.82</D_E>
+  <D_RH Status="C">87.65</D_RH>
+  <D_VPD Status="C">0.26</D_VPD>
+  <D_SLOPE Status="C">0.171</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-13.6</TT>
+  <TD Status="C">-15.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">320</DIR>
+  <FF Status="C">1.49</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1029.1</AP>
+  <QFF Status="C">1029.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.89</D_E>
+  <D_RH Status="C">88.42</D_RH>
+  <D_VPD Status="C">0.25</D_VPD>
+  <D_SLOPE Status="C">0.175</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-14.3</TT>
+  <TD Status="C">-15.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">340</DIR>
+  <FF Status="C">1.18</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1029</AP>
+  <QFF Status="C">1029</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.76</D_E>
+  <D_RH Status="C">87.63</D_RH>
+  <D_VPD Status="C">0.25</D_VPD>
+  <D_SLOPE Status="C">0.166</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-14.3</TT>
+  <TD Status="C">-15.8</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1029.1</AP>
+  <QFF Status="C">1029.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.78</D_E>
+  <D_RH Status="C">88.38</D_RH>
+  <D_VPD Status="C">0.23</D_VPD>
+  <D_SLOPE Status="C">0.166</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-14.4</TT>
+  <TD Status="C">-16</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">250</DIR>
+  <FF Status="C">1.08</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1029</AP>
+  <QFF Status="C">1029</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.75</D_E>
+  <D_RH Status="C">87.63</D_RH>
+  <D_VPD Status="C">0.25</D_VPD>
+  <D_SLOPE Status="C">0.165</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2732</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-14.1</TT>
+  <TD Status="C">-15.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-13.6</TX12>
+  <TN12 Status="C">-19.7</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">150</DIR>
+  <FF Status="C">2.78</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1028.5</AP>
+  <QFF Status="C">1028.5</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.79</D_E>
+  <D_RH Status="C">87.68</D_RH>
+  <D_VPD Status="C">0.25</D_VPD>
+  <D_SLOPE Status="C">0.168</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-24.9</TT>
+  <TD Status="C">-27.5</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0.2</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">57</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1028.2</AP>
+  <QFF Status="C">1028.2</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.63</D_E>
+  <D_RH Status="C">78.95</D_RH>
+  <D_VPD Status="C">0.17</D_VPD>
+  <D_SLOPE Status="C">0.072</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-24.2</TT>
+  <TD Status="C">-26.7</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">57</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1027.7</AP>
+  <QFF Status="C">1027.7</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.68</D_E>
+  <D_RH Status="C">79.79</D_RH>
+  <D_VPD Status="C">0.17</D_VPD>
+  <D_SLOPE Status="C">0.077</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-23</TT>
+  <TD Status="C">-25.5</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">57</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1027.1</AP>
+  <QFF Status="C">1027.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.76</D_E>
+  <D_RH Status="C">80.06</D_RH>
+  <D_VPD Status="C">0.19</D_VPD>
+  <D_SLOPE Status="C">0.085</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-21.6</TT>
+  <TD Status="C">-23.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">57</SNOW>
+  <DIR Status="C">190</DIR>
+  <FF Status="C">0.51</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1026</AP>
+  <QFF Status="C">1026</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.88</D_E>
+  <D_RH Status="C">81.67</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.095</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-20</TT>
+  <TD Status="C">-22.2</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">57</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1025.4</AP>
+  <QFF Status="C">1025.4</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.02</D_E>
+  <D_RH Status="C">82.63</D_RH>
+  <D_VPD Status="C">0.22</D_VPD>
+  <D_SLOPE Status="C">0.107</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-19.6</TT>
+  <TD Status="C">-21.8</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">57</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1024.9</AP>
+  <QFF Status="C">1024.9</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.06</D_E>
+  <D_RH Status="C">82.68</D_RH>
+  <D_VPD Status="C">0.22</D_VPD>
+  <D_SLOPE Status="C">0.111</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>2745</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-19.2</TT>
+  <TD Status="C">-21.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">-19.2</TX12>
+  <TN12 Status="C">-30.2</TN12>
+  <PREC Status="C">0.2</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0.2</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">58</SNOW>
+  <DIR Status="C">0</DIR>
+  <FF Status="C">0</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">1024.1</AP>
+  <QFF Status="C">1024.1</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.1</D_E>
+  <D_RH Status="C">82.68</D_RH>
+  <D_VPD Status="C">0.23</D_VPD>
+  <D_SLOPE Status="C">0.114</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">16.7</TT>
+  <TD Status="C">-13.6</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">0</RR>
+  <TR Status="C">6</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">340</DIR>
+  <FF Status="C">4.11</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.2</D_E>
+  <D_RH Status="C">11.69</D_RH>
+  <D_VPD Status="C">16.6</D_VPD>
+  <D_SLOPE Status="C">1.194</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">16.6</TT>
+  <TD Status="C">-13.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">340</DIR>
+  <FF Status="C">3.6</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.15</D_E>
+  <D_RH Status="C">11.49</D_RH>
+  <D_VPD Status="C">16.53</D_VPD>
+  <D_SLOPE Status="C">1.188</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">15.8</TT>
+  <TD Status="C">-14.3</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">360</DIR>
+  <FF Status="C">2.62</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">2.08</D_E>
+  <D_RH Status="C">11.69</D_RH>
+  <D_VPD Status="C">15.69</D_VPD>
+  <D_SLOPE Status="C">1.137</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">8</TT>
+  <TD Status="C">-15.8</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">110</DIR>
+  <FF Status="C">2.11</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.82</D_E>
+  <D_RH Status="C">17.07</D_RH>
+  <D_VPD Status="C">8.87</D_VPD>
+  <D_SLOPE Status="C">0.728</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">7.6</TT>
+  <TD Status="C">-15.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">90</DIR>
+  <FF Status="C">2.11</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.81</D_E>
+  <D_RH Status="C">17.39</D_RH>
+  <D_VPD Status="C">8.6</D_VPD>
+  <D_SLOPE Status="C">0.711</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">7.2</TT>
+  <TD Status="C">-15.9</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">100</DIR>
+  <FF Status="C">1.49</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.81</D_E>
+  <D_RH Status="C">17.86</D_RH>
+  <D_VPD Status="C">8.32</D_VPD>
+  <D_SLOPE Status="C">0.694</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>60677</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">6.9</TT>
+  <TD Status="C">-15.4</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">6</TN12>
+  <PREC Status="C">0</PREC>
+  <PR24 Status="C">0</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">80</DIR>
+  <FF Status="C">1.49</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">1.88</D_E>
+  <D_RH Status="C">18.98</D_RH>
+  <D_VPD Status="C">8.04</D_VPD>
+  <D_SLOPE Status="C">0.682</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021200</DayTime>
+  <TT Status="C">-22.4</TT>
+  <TD Status="C">-24.8</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">10</DIR>
+  <FF Status="C">3.91</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.81</D_E>
+  <D_RH Status="C">80.82</D_RH>
+  <D_VPD Status="C">0.19</D_VPD>
+  <D_SLOPE Status="C">0.089</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021201</DayTime>
+  <TT Status="C">-22</TT>
+  <TD Status="C">-24.3</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">360</DIR>
+  <FF Status="C">4.57</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.85</D_E>
+  <D_RH Status="C">81.6</D_RH>
+  <D_VPD Status="C">0.19</D_VPD>
+  <D_SLOPE Status="C">0.092</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021202</DayTime>
+  <TT Status="C">-21.8</TT>
+  <TD Status="C">-24.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">20</DIR>
+  <FF Status="C">4.11</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.86</D_E>
+  <D_RH Status="C">81.63</D_RH>
+  <D_VPD Status="C">0.19</D_VPD>
+  <D_SLOPE Status="C">0.093</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021203</DayTime>
+  <TT Status="C">-21.5</TT>
+  <TD Status="C">-23.8</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">360</DIR>
+  <FF Status="C">4.78</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.89</D_E>
+  <D_RH Status="C">81.66</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.095</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021204</DayTime>
+  <TT Status="C">-21.3</TT>
+  <TD Status="C">-23.6</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">360</DIR>
+  <FF Status="C">4.11</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.9</D_E>
+  <D_RH Status="C">81.7</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.097</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021205</DayTime>
+  <TT Status="C">-21.2</TT>
+  <TD Status="C">-23.5</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">NA</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">360</DIR>
+  <FF Status="C">4.57</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.91</D_E>
+  <D_RH Status="C">81.69</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.098</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+<Observation>
+	<Station>3016003</Station>
+	<DayTime>2021021206</DayTime>
+  <TT Status="C">-20.9</TT>
+  <TD Status="C">-23.1</TD>
+  <TX1 Status="C">NA</TX1>
+  <TN1 Status="C">NA</TN1>
+  <TX6 Status="C">NA</TX6>
+  <TN6 Status="C">NA</TN6>
+  <TX12 Status="C">NA</TX12>
+  <TN12 Status="C">-24</TN12>
+  <PREC Status="C">NA</PREC>
+  <PR24 Status="C">NA</PR24>
+  <PR06 Status="C">NA</PR06>
+  <RR Status="C">NA</RR>
+  <TR Status="C">NA</TR>
+  <SNOW Status="C">NA</SNOW>
+  <DIR Status="C">340</DIR>
+  <FF Status="C">4.68</FF>
+  <N Status="C">NA</N>
+  <L Status="C">NA</L>
+  <RD Status="C">NA</RD>
+  <RD24 Status="C">NA</RD24>
+  <AP Status="C">NA</AP>
+  <QFF Status="C">NA</QFF>
+  <SH Status="C">NA</SH>
+  <SH24 Status="C">NA</SH24>
+  <VIS Status="C">NA</VIS>
+  <RH Status="C">NA</RH>
+  <D_E Status="C">0.94</D_E>
+  <D_RH Status="C">82.52</D_RH>
+  <D_VPD Status="C">0.2</D_VPD>
+  <D_SLOPE Status="C">0.1</D_SLOPE>
+  <SOIL Status="C">NA</SOIL>
+</Observation>
+</Observations>

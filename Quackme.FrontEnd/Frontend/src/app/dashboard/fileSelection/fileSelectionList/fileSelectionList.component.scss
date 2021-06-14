@@ -1,0 +1,58 @@
+@import "../../../../styles/variables.scss";
+
+
+.file {
+  &--wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  &__filter {
+    width: 100%;
+  }
+
+  &__table {
+    width: 100%;
+
+    &--select {
+      width: 90px;
+    }
+
+    &--referance-date {
+      width: 140px;
+    }
+
+    &--check-level {
+      width: 240px;
+    }
+
+    th,
+    td {
+      padding-left: 24px;
+    }
+
+    th:not(:nth-last-child(1)),
+    td:not(:nth-last-child(1)) {
+      border-right: 1px solid $border-color;
+    }
+
+    &-header,
+    &-element {
+      padding: 8px !important;
+
+      &--not-sent {
+        color: red;
+      }
+
+      &--sent {
+        color: greenyellow;
+      }
+    }
+  }
+}
+
+:host {
+  width: 50%
+}

@@ -1,0 +1,36 @@
+<Exceptions>
+	<Exception>
+		<Description>Mountain Station - Maximum Temperature</Description>
+		<Error Property="TX" Code="001" />
+		<Property Name="TX">
+			<Condition Type="Include" Target="Value" MinEqual="-40" MaxEqual="50" />
+		</Property>
+		<Condition Type="Include" Target="Altitude" MinEqual="1000" />
+	</Exception>
+	<Exception>
+		<Description>Rusia &amp; Kazakhstan - Maximum Temperature</Description>
+		<Error Property="TX" Code="001" />
+		<Property Name="TX">
+			<Condition Type="Include" Target="Value" MinEqual="-40" MaxEqual="50" />
+		</Property>
+		<Condition Type="Include" Target="Latitude" MinEqual="40" />
+		<Condition Type="Include" Target="Longitude" MinEqual="42" />
+	</Exception>	
+	<Exception>
+		<Description>Mountain Station - Minimum Temperature</Description>
+		<Error Property="TN" Code="001" />
+		<Property Name="TN">
+			<Condition Type="Include" Target="Value" MinEqual="-50" MaxEqual="35" />
+		</Property>
+		<Condition Type="Include" Target="Altitude" MinEqual="1000" />
+	</Exception>	
+	<Exception>
+		<Description>Rusia &amp; Kazakhstan - Minimum Temperature</Description>
+		<Error Property="TN" Code="001" />
+		<Property Name="TN">
+			<Condition Type="Include" Target="Value" MinEqual="-50" MaxEqual="35" />
+		</Property>
+		<Condition Type="Include" Target="Latitude" MinEqual="40" />
+		<Condition Type="Include" Target="Longitude" MinEqual="42" />
+	</Exception>	
+</Exceptions>

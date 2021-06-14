@@ -1,0 +1,70 @@
+<Workflow>
+	<WeakChecks>
+		<Check> 
+			<Name>Temperature Checks</Name>
+			<Module>TT_TD_WeakChecks.R</Module>
+			<Method>WeakChecks.ChecksTemperatures</Method>		
+			<Status>ON</Status>
+		</Check>
+		<Check> 
+			<Name>Wind checks</Name>
+			<Module>DIR_FF_WeakChecks.R</Module>
+			<Method>WeakChecks.ChecksWind</Method>		
+			<Status>ON</Status>
+		</Check>
+		<Check> 
+			<Name>Solar Checks</Name>
+			<Module>SOL_WeakChecks.R</Module>
+			<Method>WeakChecks.ChecksSolar</Method>		
+			<Status>ON</Status>
+		</Check>
+		<Check> 
+			<Name>Air Checks</Name>
+			<Module>AP_WeakChecks.R</Module>
+			<Method>WeakChecks.ChecksAir</Method>		
+			<Status>ON</Status>
+		</Check>		
+		<Check> 
+			<Name>Humidity Checks</Name>
+			<Module>RH_WeakChecks.R</Module>
+			<Method>WeakChecks.ChecksHumidity</Method>		
+			<Status>ON</Status>
+		</Check>	
+			<Check> 
+			<Name>MinMax Temperature Checks</Name>
+			<Module>TN_TX_WeakChecks.R</Module>
+			<Method>WeakChecks.ChecksMinMaxTemperatures</Method>		
+			<Status>ON</Status>
+		</Check>
+	</WeakChecks>
+	
+	<HeavyChecks>
+		<Check> 
+			<Name>All Controls</Name>
+			<Module>HeavyChecks.R</Module>
+			<Method>Station.HeavyChecks</Method>
+			<Status>ON</Status>			
+		</Check>		
+	</HeavyChecks>	
+	
+	<ThresholdChecks>
+		<Check> 
+			<Name>All Controls</Name>
+			<Module>ThresholdChecks.R</Module>
+			<Method>Station.DailyChecks</Method>
+			<Status>ON</Status>			
+		</Check>		
+		<Check> 
+			<Name>All Controls</Name>
+			<Module>ThresholdChecks.R</Module>
+			<Method>Station.SeasonsChecks</Method>
+			<Status>ON</Status>			
+		</Check>
+		<Check> 
+			<Name>All Controls</Name>
+			<Module>ThresholdChecks.R</Module>
+			<Method>Station.5BestChecks</Method>
+			<Status>OFF</Status>			
+		</Check>
+	</ThresholdChecks>	
+</Workflow>

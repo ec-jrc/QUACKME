@@ -1,0 +1,75 @@
+﻿<?xml version="1.0"?>
+<Messages>
+	<Message>
+		<Property>TX</Property>
+		<Code>001</Code>
+		<Values>TN, TX</Values>
+		<Text>Daily mean temperature greater than the 99th percentile value associated with the day under analysis(Values TMean:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Code>002</Code>
+		<Values>TX</Values>
+		<Text>Daily maximum temperature greater than the 99th percentile value associated with the day under analysis(Values TMax:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+	
+	<Message>
+		<Property>TX</Property>
+		<Code>003</Code>
+		<Values>TN, TX</Values>
+		<Text>Tmean=(TX+TN)/2 is lower than the 1st percentile of its climatology of this day (Values - TMean:#0#, Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Code>004</Code>
+		<Values>TX</Values>
+		<Text>Daily maximum temperature lower than the 1st percentile value associated with the day under analysis(Values TMax:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>TX</Property>
+		<Code>005</Code>
+		<Values>TN, TX</Values>
+		<Text>Comparison of daily mean temperature predicted by an autoregressive of order 1, AR(1), model having mean daily temperatures from the 5 closest stations as additional covariates(Values TMean:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>	
+	
+	<Message>
+		<Property>TX</Property>
+		<Code>006</Code>
+		<Values>TN, TX</Values>
+		<Text>5 Best station checks(Values TMax:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>	
+	 
+	<Message>
+		<Property>TN</Property>
+		<Code>001</Code>
+		<Values>TN</Values>
+		<Text>Daily minimum temperature lower than the 1st percentile value associated with the day under analysis(Values TMin:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TN</Property>
+		<Code>002</Code>
+		<Values>TN</Values>
+		<Text>Daily minimum temperature greater than the 99th percentile value associated with the day under analysis(Values TMin:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>		
+	
+	<Message>
+		<Property>TN</Property>
+		<Code>003</Code>
+		<Values>TN, TX</Values>
+		<Text>5 Best station checks(Values TMin:#0# Threshold:#1#)</Text>
+		<Level>W</Level>
+	</Message>	
+	
+</Messages>

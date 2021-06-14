@@ -1,0 +1,36 @@
+<Converters>
+	<Converter Name="MG" Method="Input.MG.Converter">
+		<Properties>
+			<Property>
+				<Source>TT</Source>
+				<Destination>TT</Destination>
+				<Status>ON</Status>
+			</Property>
+			<Property>
+				<Source>TD</Source>
+				<Destination>TD</Destination>
+				<Status>ON</Status>
+			</Property>
+			<Property>
+				<Source>TX</Source>
+				<Destination>TX</Destination>
+				<Status>ON</Status>
+			</Property>
+			<Property>
+				<Source>TN</Source>
+				<Destination>TN</Destination>
+				<Status>ON</Status>
+			</Property>
+			<Property>
+				<Source>TX</Source>
+				<Destination>TX</Destination>
+				<Status>ON</Status>
+			</Property>
+			<Property>
+				<Source>TN</Source>
+				<Destination>TN</Destination>
+				<Status>ON</Status>
+			</Property>			
+		</Properties>		
+	</Converter>
+</Converters>	

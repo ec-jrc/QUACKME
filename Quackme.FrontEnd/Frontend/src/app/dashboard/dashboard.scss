@@ -1,0 +1,16 @@
+* {
+  display: block;
+}
+
+:host {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.dashboard__container {
+  display: flex;
+  flex-direction: row;
+  align-self: stretch;
+  flex-grow: 1;
+}
