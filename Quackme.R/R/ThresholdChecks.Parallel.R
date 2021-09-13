@@ -6,10 +6,12 @@ library (XML)
 library(foreach)
 library(doParallel)
 library(stringr)
+library(alphahull)
 library(rgdal)
 library(sp)
 library(cluster)
 library(EMCluster)
+library(tripack)
 
 #*********************************************************
 #            Run the main application
@@ -134,7 +136,7 @@ cat(paste0('[', Sys.time(), ']I| Current elaboration date: ', current.date), fil
 input.stations <- unique(input.data[,"Station"])
 
 # station filter
-#input.stations <- input.stations[ input.stations == 1068 ] # | input.stations == 4096 | input.stations == 6201]
+#input.stations <- input.stations[ input.stations == 1209 ] # | input.stations == 4096 | input.stations == 6201]
 
 # Read the alert messages configuration
 df.daily.msg <- xmlToDataFrame(paste0(options[1, "ConfigPath"], "Messages.Daily.", checks.level, ".xml"), stringsAsFactors = FALSE)
@@ -312,10 +314,6 @@ colnames(data.df) <- agg.columns
 error.df <- as.data.frame(matrix(nrow = 0,ncol = 9))
 colnames(error.df) <- c('Station', 'DayTime', 'Property', 'Value', 'Code', 'Area', 'Level', 'Message', 'Values')
 
-# data.frame for flags
-#flags.df <- as.data.frame(matrix(nrow = 0,ncol = 4))
-#colnames(flags.df) <- c("Station", "DayTime", "Property", "Flags")
-
 # manage all answers
 for (i in 1:length(data.list))
 {
@@ -391,7 +389,14 @@ if (nrow(error.df) > 0)
   stations.df <- stations.df[which(stations.df$StationNumber %in% input.stations), ]
 
   cvhull.file <- paste0(options[1, "ConfigPath"], "ConvexHull.Thresholds.xml")
-  error.df <- Manage.ConvexHull.Exceptions(error.df, stations.df, cvhull.file, log.file)
+  #print (paste0('Prima di convex.hull:', nrow(error.df)))
+  error.df <- Manage.ConvexHull.Exceptions(error.df,
+                                           stations.df,
+                                           cvhull.file,
+                                           log.file,
+                                           paste0(options[1, "OutputPath"], "Convex.Hull.Errors.", format(current.date, "%Y%m%d"), ".dat"))
+
+  print (paste0('Dopo convex.hull:', nrow(error.df)))
 }
 
 # remove the values for properties with WRONG error level , before to save the data to file
@@ -434,6 +439,7 @@ if (nrow(error.df) <= 0)
 } else {
   # convert all data produced into XML file
   ThresholdChecks.CreateXML.KOFile(data.df, error.df, "Observation", "Observations", ko.xml.filename)
+  write.table(error.df, paste0(options[1, "OutputPath"], "KO.Threshold.Errors.dat"), row.names = FALSE, col.names = TRUE, sep="\t")
 }
 cat(paste0('[', Sys.time(), ']I|  KO XML file created: ', ko.xml.filename), file = log.file, sep="\n")
 
@@ -449,11 +455,38 @@ if (nrow(error.df) > 0)
                                             error.df[f, "Level"])
   }
 
+  flags.filename <- paste0(options[1, "OutputPath"], "Flags.", checks.level, "." , format(current.date, "%Y%m%d"), ".dat", sep="")
+  if (file.exists(flags.filename)) file.remove((flags.filename))
+  write.table(df.flags, file=flags.filename, sep="\t", row.names = FALSE, col.names = TRUE, quote=FALSE)
+
+  idx <- which(nchar(as.vector(df.flags[, "Flags"])) > 1)
+  if (length(idx) > 0)
+  {
+    for (f in 1:length(idx))
+    {
+      if (nchar(as.character(df.flags[idx[f], "Flags"])) > 1)
+      {
+        property <- df.flags[idx[f], "Property"]
+        station  <- df.flags[idx[f], "Station"]
+        day      <- df.flags[idx[f], "DayTime"]
+        flags    <- unlist (strsplit(as.character(df.flags[idx[f], "Flags"]), "[|]"))
+
+        for (g in 1:length(flags))
+        {
+          df.flags <- rbind(df.flags, c(station, day, property, flags[g]))
+        }
+      }
+    }
+
+    idxm <- which(nchar(as.vector(df.flags[, "Flags"])) > 1)
+    df.flags <- df.flags[-idxm, ]
+  }
+
   df.flags <- df.flags[order(as.integer(df.flags[, 1])), ]
 }
 
 # save flags to file
-flags.filename <- paste0(options[1, "OutputPath"], "Flags.", checks.level, "." , format(current.date, "%Y%m%d"), ".dat", sep="")
+flags.filename <- paste0(options[1, "OutputPath"], "S", format(current.date, "%Y%m%d"), ".mdat", sep="")
 if (file.exists(flags.filename)) file.remove((flags.filename))
 write.table(df.flags, file=flags.filename, sep="\t", row.names = FALSE, col.names = TRUE, quote=FALSE)
 cat(paste0('[', Sys.time(), ']I| Flags file created:', format(current.date, "%Y%m%d")), file = log.file, sep="\n")

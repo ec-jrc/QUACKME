@@ -27,7 +27,6 @@ EMclu = function(x,k.max){
   return(f.class)
 }
 
-
 #*********************************************************
 # EM clustering with K chosen with GAP
 # Parameters :
@@ -69,7 +68,6 @@ Area.Hull = function(x){
     #calculate end-points
     if (length(as.vector(h.poi[, 1])) > 0)
     {
-      print (h.poi)
       for(i in 1:h.nnod){
         rot=cbind(rbind(c(cos(h.arc[i,6]),-sin(h.arc[i,6])),c(sin(h.arc[i,6]),cos(h.arc[i,6]))))
         arot=cbind(rbind(c(cos(h.arc[i,6]),sin(h.arc[i,6])),c(-sin(h.arc[i,6]),cos(h.arc[i,6]))))
@@ -87,9 +85,12 @@ Area.Hull = function(x){
 
     a.arc = as.vector(t(h.arc[,7:8]))  #create a vector with the index of the points
 
+    # need at least 2 elements
+    if (length(a.arc) <= 2) return (0)
+
     for(i in 2:(length(a.arc)-1)){
 
-      if(i%%2 == 1) {next} #need to check to have consecutive nodes at indeces 2-3, 4-5, etc. to build a polygon
+      if(i%%2 == 1) {next} #need to check to have consecutive nodes at indexes 2-3, 4-5, etc. to build a polygon
 
       if(a.arc[i]==a.arc[(i+1)]){
         next
@@ -98,16 +99,16 @@ Area.Hull = function(x){
         a.arc[(i+2)] = a.arc[(i+1)]
         a.arc[(i+1)] = a.arc[i]
       }
-
     }
 
     a.poly=c() #build the matrix with points' coordinates to create the Polygon
 
-    for(i in 1:length(a.arc)){
-
+    for(i in 1:length(a.arc))
+    {
       a.poly=rbind(a.poly,h.poi[a.arc[i],])
-
     }
+
+    if (length(a.poly) < 4) return (0)
 
     h.poly = Polygon(a.poly)
     h.area = h.poly@area
@@ -149,10 +150,11 @@ Area.Hull = function(x){
 #  - stations.df        [INPUT] [DATA.FRAME]- stations data
 #  - cvhull.file        [INPUT] [STRING]    - XML convex hull configurations
 #  - log.file           [INPUT] [HANDLE]    - log file handle
+#  - cvx.file           [INPUT] [STRING]    - name of file for previous convex hull errors removed
 # RETURN :
 #    Data frame with errors data
 #*********************************************************
-Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log.file)
+Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log.file, cvx.file)
 {
   result <- tryCatch({
 
@@ -164,7 +166,20 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
     }
     else
     {
+      print ('Convex Hull file empty')
       return (error.df)
+    }
+
+    # check if exists the
+    cvx.df <- NULL
+    if (file.exists(cvx.file)){
+      cvx.df <- read.table(cvx.file, header=TRUE, colClasses = c("integer", "character", "character"), stringsAsFactors = FALSE)
+      print("Originale")
+      print (cvx.df)
+    }
+    else {
+      cvx.df <- as.data.frame(matrix(nrow = 0, ncol = 3))
+      colnames(cvx.df) <- c("Station", "Area", "ErrorCode")
     }
 
     xml.exceptions <- getNodeSet(cvhull.xml, "//Exceptions/Exception")
@@ -177,7 +192,7 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
         hull.area <- as.numeric(xmlValue(getNodeSet(ex.node, "Hull_Area")[[1]]))
 
         error.property <- as.character(xmlGetAttr(getNodeSet(ex.node, "Error")[[1]], "Property"))
-        error.code     <- as.character(xmlGetAttr(getNodeSet(ex.node, "Error")[[1]], "Code"))
+        error.code     <- str_pad(as.character(xmlGetAttr(getNodeSet(ex.node, "Error")[[1]], "Code")), 3, "left", pad = "0")
         error.area     <- as.character(xmlValue(getNodeSet(ex.node, "Area")[[1]]))
 
         # extract only the stations that presents the error configured like exception
@@ -206,8 +221,6 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
           myk = which.max(mygap$Tab[,3])
           class = EMclu.gap(stations.points,myk)
 
-          #print (paste0('Cluster:', myk))
-
           # Determine alpha-convex hull for each cluster
           are.res=rep(NA,myk)
           for(i in 1:myk)
@@ -216,10 +229,9 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
             if (!is.null(aset) & !is.null(aset$arcs) & length(as.vector(aset$arcs[, 1]) >= 2))
             {
               # determine hull area in km2
-              #sset = suppressWarnings(areaahull(aset)/1000000)
               sset = suppressWarnings(Area.Hull(aset)/1000000)
 
-              #print (paste0('Cluster:', i, ', Radius:', hull.radius[[1]], ', Area:', sset))
+              print (paste0('Cluster:', i, ', Radius:', hull.radius[[1]], ', Area:', sset))
 
               # check the area for other radius if the area was not determinate
               idx.radius <- 2
@@ -230,14 +242,12 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
                   aset = ahull(stations.points[which(class$cluster==i),],alpha=as.numeric(hull.radius[[idx.radius]]))
                   if (!is.null(aset) & !is.null(aset$arcs) & length(as.vector(aset$arcs[, 1]) >= 2))
                   {
-                    #sset = suppressWarnings(areaahull(aset)/1000000)
                     sset = suppressWarnings(Area.Hull(aset)/1000000)
-
-                    #print (paste0('Cluster:', i, ', Radius:', hull.radius[[idx.radius]], ', Area:', sset))
+                    print (paste0('Cluster:', i, ', Radius:', hull.radius[[idx.radius]], ', Area:', sset))
                     if (!is.na(sset) & (sset > hull.area)) break;
 
-                    idx.radius <- idx.radius + 1
                   }
+                  idx.radius <- idx.radius + 1
                 }
               }
 
@@ -258,7 +268,7 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
                   }
                 }
 
-                #print (stations.number)
+                print (stations.number)
 
                 # remove all errors with same property and code for the stations belong to the cluster (TO DO)
                 if (length(stations.number) > 0)
@@ -278,11 +288,57 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
                                 sset, ", for following stations:", paste(stations.number, collapse = ",")),
                          file = log.file, sep="\n")
                   }
+
+                  # get stations for which the errors was removed but are not present into convex hull file
+                  print (cvx.df)
+                  for (st in 1: length(stations.number))
+                  {
+                    print (paste0('Search for:', stations.number[st], ', ', error.area, ', ', error.property, ', ', error.code))
+                    idx.station <- which(cvx.df$Station == stations.number[st] &
+                                           cvx.df$Area == error.area &
+                                           cvx.df$ErrorCode == paste0(error.property, "-", error.code))
+                    print(idx.station)
+                    if (length(idx.station) <= 0)
+                    {
+                      cvx.df[nrow(cvx.df) + 1, ] <- c(stations.number[st], error.area, paste0(error.property, "-", error.code))
+                    }
+                  }
                 }
               }
             }
           }
         }
+
+        #check if exists some errors that was removed in the previous runs
+        if (nrow(error.df) > 0)
+        {
+          idx.remove <- c()
+          for(er in 1:nrow(error.df))
+          {
+            idx.error <- which(cvx.df$Station == error.df[er, "Station"] &
+                               cvx.df$Area == error.df[er, "Area"] &
+                               cvx.df$ErrorCode == paste0(error.df[er, "Property"], "-", error.df[er, "Code"]))
+            if (length(idx.error) > 0)
+            {
+              idx.remove <- c(idx.remove, er)
+            }
+          }
+
+          if (length(idx.remove) > 0)
+          {
+            error.df <- error.df[-idx.remove, ]
+          }
+        }
+
+        # save errors removed by convex hull algorithm
+        if (nrow(cvx.df) > 0)
+        {
+          if (file.exists(cvx.file)) {
+            file.remove(cvx.file)
+          }
+          write.table(cvx.df, cvx.file, quote=FALSE, sep="\t", row.names = FALSE, col.names = TRUE)
+        }
+
       }
       ,error = function (err)
       {
