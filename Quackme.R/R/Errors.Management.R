@@ -856,38 +856,26 @@ ThresholdChecks.Daily.GetError <- function(station.obs, property, error.code, er
 
   err.list <- tryCatch(
     {
-      generate.msg <- FALSE
+      generate.msg <- 1
 
       # search for same error
-      station.error <- NULL
+      error.index <- c()
       if (!is.null(df.errors))
       {
-        station.error <- subset (df.errors, df.errors$Station == station.number &
-                                   df.errors$Property == property &
-                                   df.errors$ErrorCode == error.code &
-                                   df.errors$DayTime == day.time &
-                                   (df.errors$Area == "Daily" | df.errors$Area == "Unknown"))
+        error.index <- which (df.errors$Station == station.number &
+                              df.errors$Property == property &
+                              df.errors$ErrorCode == error.code &
+                              df.errors$DayTime == day.time &
+                              (df.errors$Area == "Daily" | df.errors$Area == "Unknown"))
+
+        if (length(error.index) > 0) {
+          # if the message was already generate check the Status attribute for the property
+          generate.msg <- ifelse(station.error$Flag == "M" | station.error$Flag == "W" | station.error$Flag == "S", 1, 0)
+          print ( paste0('Property:', property, ', code:', error.code, ', DayTime:', day.time,  ', Error.Status:', station.error$Flag))
+        }
       }
 
-      if (is.null(station.error))
-      {
-        generate.msg <- TRUE
-      }
-      else if (nrow(station.error) == 0)
-      {
-        generate.msg <- TRUE
-      }
-      print (generate.msg)
-
-      # check if the message was already generated
-      if (!generate.msg)
-      {
-        # if the message was already generate check the Status attribute for the property
-        generate.msg <- (station.error$Flag == "M" | station.error$Flag == "W" | station.error$Flag == "S")
-        print ( paste0('Property:', property, ', code:', error.code, ', DayTime:', day.time,  ', Error.Status:', station.error$Flag))
-      }
-
-      if (generate.msg)
+      if (generate.msg > 0)
       {
         # get message node
         msg <- df.daily.msg[ which( df.daily.msg$Property == property & df.daily.msg$Code == error.code)[1], ]
@@ -967,38 +955,27 @@ ThresholdChecks.Seasons.GetError <- function(station.obs, property, error.code, 
 
   err.list <- tryCatch(
     {
-      generate.msg <- FALSE
+      generate.msg <- 1
 
       # search for same error
-      station.error <- NULL
+      error.index <- c()
       if (!is.null(df.errors))
       {
-        station.error <- subset (df.errors, df.errors$Station == station.number &
-                                   df.errors$Property == property &
-                                   df.errors$ErrorCode == error.code &
-                                   df.errors$DayTime == day.time &
-                                   (df.errors$Area == "Season" | df.errors$Area == "Unknown"))
+        error.index <- which (df.errors$Station == station.number &
+                                df.errors$Property == property &
+                                df.errors$ErrorCode == error.code &
+                                df.errors$DayTime == day.time &
+                                (df.errors$Area == "Season" | df.errors$Area == "Unknown"))
+
+        if (length(error.index) > 0) {
+          # if the message was already generate check the Status attribute for the property
+          error.flag <- df.errors[error.index[1], "Flag"]
+          generate.msg <- ifelse(error.flag == "M" | error.flag == "W" | error.flag == "S", 1, 0)
+          #print ( paste0('Property:', property, ', code:', error.code, ', DayTime:', day.time,  ', Error.Status:', station.error$Flag))
+        }
       }
 
-      if (is.null(station.error))
-      {
-        generate.msg <- TRUE
-      }
-      else if (nrow(station.error) == 0)
-      {
-        generate.msg <- TRUE
-      }
-      print (generate.msg)
-
-      # check if the message was already generated
-      if (!generate.msg)
-      {
-        # if the message was already generate check the Status attribute for the property
-        generate.msg <- (station.error$Flag == "M" | station.error$Flag == "W" | station.error$Flag == "S")
-        #print ( paste0('Property:', property, ', code:', error.code, ', DayTime:', day.time,  ', Error.Status:', station.error$Flag))
-      }
-
-      if (generate.msg)
+      if (generate.msg > 0)
       {
         # get message node
         msg <- df.seasons.msg[ which( df.seasons.msg$Property == property & df.seasons.msg$Code == error.code), ]
