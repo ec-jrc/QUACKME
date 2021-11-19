@@ -1,0 +1,51 @@
+@import "../../../../styles/variables.scss";
+
+:host {
+  width: calc(100% / 2.62 + 10px);
+}
+
+.server {
+
+  &-area {
+    display: block;
+  }
+
+  &-table {
+    display: flex;
+    margin: 20px auto;
+    width: 300px;
+
+    &-cell {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+      border-right: 1px solid rgba(0, 0, 0, 0.2);
+      font-size: 16px;
+      line-height: 23px;
+      min-height: 23px;
+      padding: 6px 5px;
+    }
+
+    &-label {
+      font-weight: 700;
+    }
+
+    &-chn,
+    &-eu {
+      min-width: 50px;
+      text-align: center;
+    }
+
+    &-chn {
+      .server-table-cell {
+        border-right: 0;
+      }
+    }
+  }
+
+  &-file-ready {
+    color: $jrc-green;
+  }
+
+  &-file-not-ready {
+    color: $jrc-red;
+  }
+}

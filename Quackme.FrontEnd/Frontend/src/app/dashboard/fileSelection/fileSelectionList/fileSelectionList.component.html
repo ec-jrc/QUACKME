@@ -1,0 +1,33 @@
+<div class="file--wrapper">
+  <table mat-table [dataSource]="dataSource" matSort class="file__table">
+
+    <ng-container matColumnDef="radio">
+      <th mat-header-cell *matHeaderCellDef class="file__table-header file__table--select"> SELECTION </th>
+      <td mat-cell *matCellDef="let row" class="file__table-element file__table--select">
+        <mat-radio-group [(ngModel)]="selectedFile">
+          <mat-radio-button [value]="row" (change)="changeSelectedFile(row)"></mat-radio-button>
+        </mat-radio-group>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="checkLevel">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="file__table-header file__table--check-level"> CHECK
+        LEVEL. </th>
+      <td mat-cell *matCellDef="let element" class="file__table-element file__table--check-level">
+        {{element.checkLevel}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="referanceDates">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header class="file__table-header file__table--referance-date">
+        REFERANCE DATE </th>
+      <td mat-cell *matCellDef="let element" class="file__table-element file__table--referance-date">
+        <span *ngFor="let date of element.referenceDates">
+          {{date}}
+        </span>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

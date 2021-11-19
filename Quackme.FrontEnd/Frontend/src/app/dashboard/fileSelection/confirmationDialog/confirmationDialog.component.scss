@@ -1,0 +1,10 @@
+@import "../../../../styles/variables.scss";
+
+.confirm-area {
+  justify-content: center;
+
+  &__approve {
+    background-color: $primary-color;
+    color: $white;
+  }
+}

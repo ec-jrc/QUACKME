@@ -1,0 +1,17 @@
+<div mat-dialog-content>
+  <p>{{data.selectedMessage}}</p>
+
+  <div *ngIf="data.selectedHelpMessage" class="help">
+    <span (click)="toggleHelp()" class="help__label"> Help:</span>
+    <div *ngIf="isHelpDisplayed" class="help__area">
+      <p>It looks like somebody else is working as well in the MARS - QUACKME frontend, or your browser-page lost contact with
+      the server.</p>
+      <p>Press "OK" to reload this page with the most up-to-date data. Your current edits on this page will be lost.</p>
+      <p> If you want to save your edits press “Cancel” and save.</p>
+    </div>
+  </div>
+</div>
+<div mat-dialog-actions class="confirm-area">
+  <button mat-raised-button cdkFocusInitial class="confirm-area__approve" (click)="refreshAction()">Ok</button>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+</div>

@@ -1,0 +1,142 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./styles/variables.scss";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import '~saturn-datepicker/bundle.css';
+
+body {
+  position: relative;
+
+  font-family: 'Roboto Mono', monospace;
+
+  margin: 0;
+  height: 100vh;
+}
+
+@mixin defaultPin {
+  height: 30px !important;
+  left: -15px !important;
+  margin-left: 115px;
+  position: absolute;
+  top: -30px !important;
+  width: 30px !important;
+}
+
+@mixin defaultPinArrow {
+  border: 9px solid transparent;
+  bottom: -27px;
+  content: "";
+  height: 0px;
+  left: -1px;
+  position: absolute;
+  width: 0px;
+}
+
+app-root {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+}
+
+.pin {
+  @include defaultPin;
+  fill: #e6a500;
+
+  &-edited {
+    @include defaultPin;
+  }
+
+  &-edited svg #Layer1 {
+    fill: #cdcdcd;
+  }
+
+  &-highlight {
+    @include defaultPin;
+    z-index: 999 !important;
+  }
+
+  &-highlight svg #Layer1 {
+    fill: $jrc-red;
+  }
+
+}
+
+.mat-form-field-label {
+  padding-left: 10px;
+}
+
+.mat-form-field-infix input {
+  padding-left: 8px !important;
+}
+
+.mat-select-value {
+  padding-left: 8px;
+}
+
+.legend {
+  position: relative;
+
+  &__tooltip {
+    background-color: rgba(85, 85, 85, 0.8);
+    border-radius: 6px;
+    color: #fff;
+    display: none;
+    line-height: 30px;
+    opacity: 0;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    transition: opacity .6s;
+    width: 250px;
+    z-index: 100;
+
+    &--bottom {
+      left: -50px;
+      margin-left: -60px;
+      top: 135%;
+
+      &::after {
+        content: "";
+        border-color: transparent transparent rgba(85, 85, 85, 0.8) transparent;
+        border-style: solid;
+        border-width: 5px;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        position: absolute;
+      }
+
+
+      &-last {
+        left: -130px;
+
+        @media (min-width: $desktop-breake-point) {
+          left: -50px;
+        }
+
+        &::after {
+          left: 85%;
+
+          @media (min-width: $desktop-breake-point) {
+            left: 50%;
+          }
+        }
+      }
+    }
+
+  }
+
+  &:hover &__tooltip {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+}
