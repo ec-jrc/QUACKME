@@ -331,7 +331,7 @@ Station.HeavyChecks <- function (data.list, station.number, current.date)
           if (!is.null(error.data) & length(error.data) > 0)
           {
             #prop.status[1, "N"] <- ifelse (prop.status[1, "N"] != "W", error.data[[1]], prop.status[1, "N"])
-            new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "N", iFF, "002", error.data[[1]], error.data[[2]], error.data[[3]])
+            new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "N", iN, "002", error.data[[1]], error.data[[2]], error.data[[3]])
             #station.flags <- HeavyChecks.ManageFlags(station.flags, station.number, current.date, "N", error.data[[1]])
           }
         } else {
