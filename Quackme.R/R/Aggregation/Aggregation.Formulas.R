@@ -320,7 +320,7 @@ Aggregation.RAD <- function(station.data, hourly.flags, current.date)
           validValues <- which(!is.na(rd.df$RD))
           if (length(validValues) > 0 & round( length(validValues)/hours.interval, digits = 1 ) >= 0.8 )
           {
-            RAD <- round ( sum(rd.df$RD, na.rm = TRUE) / 1000.0, 2)
+            RAD <- round ( sum(rd.df$RD, na.rm = TRUE) / 100.0, 2)
 
             # get the flag
             if (checkFlags)
