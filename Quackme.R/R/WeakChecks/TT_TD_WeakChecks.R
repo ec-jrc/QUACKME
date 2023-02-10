@@ -32,11 +32,46 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
 
       paramsErr  = c("")
 
-      th.counter.tt <- 15
-      th.counter.td <- 20
-      th.counter.rh <- 20
-
+      tt.integers <- CheckIntegerValues(station.obs[,"TT"], 1)
+      td.integers <- CheckIntegerValues(station.obs[,"TD"], 1)
       checkConsecutiveObservations <- FALSE
+
+      # before to start check how many errors for consecutive values need to manage
+      diff.times <- diff(station.obs$DayTime)
+      diff.times <- append(diff.times, NA, 0)
+      diff.times[which(diff.times == 77)] <- 1
+
+      #consecutive intervals
+      tt.errors <- 0
+      td.errors <- 0
+      idx.times <- which(diff.times == 1 | is.na(diff.times))
+      print (paste0('Time 1H diferences:', length(diff.times)))
+      for (i in 2:length(idx.times))
+      {
+        if (tt.integers == TRUE)
+        {
+           tt.errors <- tt.errors + ifelse(input.data[idx.times[i-1], "TT"] - input.data[idx.times[i], "TT"] <= 0, 1, 0)
+        }
+        else
+        {
+           tt.errors <- tt.errors + ifelse(input.data[idx.times[i-1], "TT"] - input.data[idx.times[i], "TT"] < 0.2, 1, 0)
+        }
+
+        if (td.integers == TRUE)
+        {
+          td.errors <- td.errors + ifelse(input.data[idx.times[i-1], "TD"] - input.data[idx.times[i], "TD"] <= 0, 1, 0)
+        }
+        else
+        {
+          td.errors <- td.errors + ifelse(input.data[idx.times[i-1], "TD"] - input.data[idx.times[i], "TD"] <= 0.2, 1, 0)
+        }
+      }
+
+      raise.tt.consecutives <- tt.errors >= 4
+      raise.td.consecutives <- td.errors >= 4
+
+      #print (paste0('Station:', station.obs[1, "Station"], ' raise tt:', raise.tt.consecutives, ' raise td:', raise.td.consecutives, ' tt.errors:', tt.errors, ' td.errors:', td.errors))
+      #print (paste0('Station:', station.obs[1, "Station"], ' tt.int:',tt.integers, ' td.int:', td.integers))
 
       for (obs in 1:nrow(station.obs))
       {
@@ -76,38 +111,59 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
 
             if (!is.na(iPrevTT))
             {
-              tt.diff <- round(abs(iTT - iPrevTT), digits = 2)
-              if (tt.diff < 0.1 & strptime(station.obs[obs, "DayTime"], "%Y%m%d%H") < (current.date + 24 * 3600))
-              {
-                th.counter.tt <- th.counter.tt - 1
-                if (th.counter.tt == 0)
-                {
-                  # before to raise the alert check if all values are integer
-                  integer.tt.values <- CheckIntegerValues(station.obs[,"TT"], 1)
+              dtime.prev <- strptime(station.obs[obs-1, "DayTime"],"%Y%m%d%H")
+              dtime <- strptime(row$DayTime, "%Y%m%d%H")
 
-                  if (integer.tt.values == FALSE)
-                  {
-                    paramsErr  = c("0.1", iTT, iPrevTT, tt.diff)
-                    error.data <- WeakChecks.GetError("002", "TT", row$DayTime, old.errors, paramsErr)
-                    if (!is.null(error.data) & length(error.data) > 0)
-                    {
-                      prop.status[obs, "TT"] <- ifelse (prop.status[obs, "TT"] == "C" | prop.status[obs, "TT"] == "S", error.data[[1]], prop.status[obs, "TT"])
-                      new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TT", iTT, "002", error.data[[1]], error.data[[2]])
-                      prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TT", error.data[[1]])
-                    }
-                  }
-                }
-              }
-              else if (tt.diff > 15)
+              # 10.11.2022 - Check the difference against the 0.2 degree and not more 0.1 degree, when the values aren't integers
+              tt.diff <- round(abs(iTT - iPrevTT), digits = 1)
+              print (paste0('Station:', station.obs[1, "Station"], ' tt.diff:', tt.diff, ' iTT:', iTT, ' iPrevTT', iPrevTT))
+              if ( (tt.integers == TRUE & raise.tt.consecutives == TRUE & tt.diff <= 0) |
+                   (tt.integers == FALSE & raise.tt.consecutives == TRUE & tt.diff < 0.2))
               {
-                #Pierluca De Palma 17.09.2019
-                paramsErr  = c(15, iTT, iPrevTT, tt.diff)
+                  print (paste0('Station:', station.obs[1, "Station"], ' Time:', station.obs[obs, "DayTime"], ' Raise TT 002'))
+                  paramsErr  = c("0.2", iPrevTT, format(dtime.prev,format = '%T'), iTT, format(dtime, format = '%T'))
+                  error.data <- WeakChecks.GetError("002", "TT", row$DayTime, old.errors, paramsErr)
+                  if (!is.null(error.data) & length(error.data) > 0)
+                  {
+                    prop.status[obs, "TT"] <- ifelse (prop.status[obs, "TT"] == "C" | prop.status[obs, "TT"] == "S", error.data[[1]], prop.status[obs, "TT"])
+                    new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TT", iTT, "002", error.data[[1]], error.data[[2]])
+                    prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TT", error.data[[1]])
+                  }
+
+                  # check if the error already exists for the previous time
+                  error.prev.time <- subset(new.errors, new.errors$DayTime == station.obs[obs-1, "DayTime"] &
+                                                        new.errors$Station == station.obs[obs-1, "Station"] &
+                                                        new.errors$Property == "TT" &
+                                                        new.errors$Code == "002")
+                  if (nrow(error.prev.time) <= 0)
+                  {
+                    prop.status[obs-1, "TT"] <- ifelse (prop.status[obs-1, "TT"] == "C" | prop.status[obs-1, "TT"] == "S", error.data[[1]], prop.status[obs-1, "TT"])
+                    new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, station.obs[obs-1, "DayTime"], "TT", iPrevTT, "002", error.data[[1]], error.data[[2]])
+                    prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, station.obs[obs-1, "DayTime"], "TT", error.data[[1]])
+                  }
+              }
+
+              if (tt.diff > 15)
+              {
+                paramsErr  = c("15", iPrevTT, format(dtime.prev,format = '%T'), iTT, format(dtime, format = '%T'))
                 error.data <- WeakChecks.GetError("003", "TT", row$DayTime, old.errors, paramsErr)
                 if (!is.null(error.data) & length(error.data) > 0)
                 {
                   prop.status[obs, "TT"] <- ifelse (prop.status[obs, "TT"] == "C" | prop.status[obs, "TT"] == "S", error.data[[1]], prop.status[obs, "TT"])
                   new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TT", iTT, "003", error.data[[1]], error.data[[2]])
                   prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TT", error.data[[1]])
+                }
+
+                # check if the error already exists for the previous time
+                error.prev.time <- subset(new.errors, new.errors$DayTime == station.obs[obs-1, "DayTime"] &
+                                            new.errors$Station == station.obs[obs-1, "Station"] &
+                                            new.errors$Property == "TT" &
+                                            new.errors$Code == "003")
+                if (nrow(error.prev.time) <= 0)
+                {
+                  prop.status[obs-1, "TT"] <- ifelse (prop.status[obs-1, "TT"] == "C" | prop.status[obs-1, "TT"] == "S", error.data[[1]], prop.status[obs-1, "TT"])
+                  new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, station.obs[obs-1, "DayTime"], "TT", iPrevTT, "003", error.data[[1]], error.data[[2]])
+                  prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, station.obs[obs-1, "DayTime"], "TT", error.data[[1]])
                 }
               }
             }
@@ -140,29 +196,35 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
               dtime <- strptime(row$DayTime, "%Y%m%d%H")
 
               td.diff <- round(abs(iTD - iPrevTD), digits = 2)
-              if (td.diff < 0.05 & strptime(station.obs[obs, "DayTime"], "%Y%m%d%H") < (current.date + 24 * 3600))
+              print (paste0('Station:', station.obs[1, "Station"], ' td.diff:', td.diff, ' iTD:', iTD, ' iPrevTD', iPrevTD))
+              if ( (td.integers == TRUE & raise.td.consecutives == TRUE & td.diff <= 0) |
+                   (td.integers == FALSE & raise.td.consecutives == TRUE & td.diff < 0.2))
               {
-                th.counter.td <- th.counter.td - 1
-                if (th.counter.td == 0)
-                {
-                  # before to raise the alert check if all values are integer
-                  integer.td.values <- CheckIntegerValues(station.obs[, "TD"], 1)
-
-                  if (integer.td.values == FALSE)
+                  #Pierluca De Palma 17.09.2019
+                  print (paste0('Station:', station.obs[1, "Station"], ' Time:', station.obs[obs, "DayTime"], ' Raise TD 003'))
+                  paramsErr  = c("0.2", iPrevTD, format(dtime.prev,format = '%T'), iTD, format(dtime,format = '%T'))
+                  error.data <- WeakChecks.GetError("003", "TD", row$DayTime, old.errors, paramsErr)
+                  if (!is.null(error.data) & length(error.data) > 0)
                   {
-                    #Pierluca De Palma 17.09.2019
-                    paramsErr  = c("0.05", iPrevTD, format(dtime.prev,format = '%T'), iTD, format(dtime,format = '%T'))
-                    error.data <- WeakChecks.GetError("003", "TD", row$DayTime, old.errors, paramsErr)
-                    if (!is.null(error.data) & length(error.data) > 0)
-                    {
-                      prop.status[obs, "TD"] <- ifelse (prop.status[obs, "TD"] == "C" | prop.status[obs, "TD"] == "S", error.data[[1]], prop.status[obs, "TD"])
-                      new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TD", iTD, "003", error.data[[1]], error.data[[2]])
-                      prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TD", error.data[[1]])
-                    }
+                    prop.status[obs, "TD"] <- ifelse (prop.status[obs, "TD"] == "C" | prop.status[obs, "TD"] == "S", error.data[[1]], prop.status[obs, "TD"])
+                    new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TD", iTD, "003", error.data[[1]], error.data[[2]])
+                    prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TD", error.data[[1]])
                   }
-                }
+
+                  # check if the error already exists for the previous time
+                  error.prev.time <- subset(new.errors, new.errors$DayTime == station.obs[obs-1, "DayTime"] &
+                                              new.errors$Station == station.obs[obs-1, "Station"] &
+                                              new.errors$Property == "TD" &
+                                              new.errors$Code == "003")
+                  if (nrow(error.prev.time) <= 0)
+                  {
+                    prop.status[obs-1, "TT"] <- ifelse (prop.status[obs-1, "TD"] == "C" | prop.status[obs-1, "TD"] == "S", error.data[[1]], prop.status[obs-1, "TD"])
+                    new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, station.obs[obs-1, "DayTime"], "TD", iPrevTD, "003", error.data[[1]], error.data[[2]])
+                    prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, station.obs[obs-1, "DayTime"], "TD", error.data[[1]])
+                  }
               }
-              else if (td.diff > 11)
+
+              if (td.diff > 11)
               {
                 #Pierluca De Palma 17.09.2019
                 paramsErr  = c(11, iPrevTD, format(dtime.prev,format = '%T'), iTD, format(dtime, format = '%T'))
@@ -172,6 +234,17 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
                   prop.status[obs, "TD"] <- ifelse (prop.status[obs, "TD"] == "C" | prop.status[obs, "TD"] == "S", error.data[[1]], prop.status[obs, "TD"])
                   new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TD", iTD, "004", error.data[[1]], error.data[[2]])
                   prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TD", error.data[[1]])
+                }
+                # check if the error already exists for the previous time
+                error.prev.time <- subset(new.errors, new.errors$DayTime == station.obs[obs-1, "DayTime"] &
+                                            new.errors$Station == station.obs[obs-1, "Station"] &
+                                            new.errors$Property == "TD" &
+                                            new.errors$Code == "004")
+                if (nrow(error.prev.time) <= 0)
+                {
+                  prop.status[obs-1, "TT"] <- ifelse (prop.status[obs-1, "TD"] == "C" | prop.status[obs-1, "TD"] == "S", error.data[[1]], prop.status[obs-1, "TD"])
+                  new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, station.obs[obs-1, "DayTime"], "TD", iPrevTD, "004", error.data[[1]], error.data[[2]])
+                  prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, station.obs[obs-1, "DayTime"], "TD", error.data[[1]])
                 }
               }
             }
@@ -183,7 +256,7 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
         {
           if (iTD > iTT)
           {
-            print (paste0('Station:', row$Station, ', DayTime:', row$DayTime, ', TT:', iTT, ', TD:', iTD))
+            #print (paste0('Station:', row$Station, ', DayTime:', row$DayTime, ', TT:', iTT, ', TD:', iTD))
             if ( (iTD - iTT) < 1.0 )
             {
               # replace Dew Point temperature with Air temperature
@@ -202,6 +275,16 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
                 new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TD", iTD, "002", error.data[[1]], error.data[[2]])
                 prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TD", error.data[[1]])
               }
+
+              # raise error even for TT
+              error.data <- WeakChecks.GetError("006", "TT", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "TT"] <- ifelse (prop.status[obs, "TT"] == "C" | prop.status[obs, "TT"] == "S", error.data[[1]], prop.status[obs, "TT"])
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "TT", iTT, "006", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TT", error.data[[1]])
+              }
+
             }
           }
         }
@@ -296,6 +379,8 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
       new.errors  <- data.list[[2]]
       prop.flags  <- data.list[[3]]
 
+      th.counter.rh <- 20
+
       # calculate dynamic properties once the interpolations was done
       checkConsecutiveObservations <- FALSE
       for (obs in 1:nrow(station.obs))
@@ -338,6 +423,40 @@ WeakChecks.ChecksTemperatures <- function(data.list, current.date, old.errors, m
               prop.flags <- WeakChecks.ManageMultipleFlag(prop.flags, row[1, "Station"], row[1, "DayTime"], "D_RH", obs.flags[, "Flags"])
               prop.flags <- WeakChecks.ManageMultipleFlag(prop.flags, row[1, "Station"], row[1, "DayTime"], "D_E", obs.flags[, "Flags"])
               prop.flags <- WeakChecks.ManageMultipleFlag(prop.flags, row[1, "Station"], row[1, "DayTime"], "D_VPD", obs.flags[, "Flags"])
+            }
+          }
+          else {
+            # verify again the TD and TT values only if one of them was interpolated
+            tt.interpolated <- nrow(subset(prop.flags, prop.flags$DayTime == row[1, "DayTime"] && prop.flags$Property == "TT" && str_detect('I', prop.flags$Flags))) > 0
+            td.interpolated <- nrow(subset(prop.flags, prop.flags$DayTime == row[1, "DayTime"] && prop.flags$Property == "TD" && str_detect('I', prop.flags$Flags))) > 0
+
+            print (paste0('TD.Interpolated:', td.interpolated, ', TT.Interpolated:', tt.interpolated, ', TT:', iTT, ', TD:', iTD))
+            if (tt.interpolated == TRUE | td.interpolated == TRUE)
+            {
+              if ( (iTD - iTT) < 1.0 )
+              {
+                # replace Dew Point temperature with Air temperature
+                station.obs[obs, "TD"] <- iTT
+                print ( paste0('TD value [', iTD, '] replaced with TT value [', iTT, '] for Station no. ', row$Station, ' and time ', row$DayTime ))
+                iTD <- iTT
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "TD", "R")
+              }
+              else
+              {
+                # reset interpolated values - (v2.0.5)
+                if (tt.interpolated) {
+                  iTT <- NA
+                  station.obs[obs, "TT"] <- NA
+                  print (paste0('Removed interpolated TT for Station=', station.obs[1, "Station"], ' Time=', station.obs[obs, "DayTime"]))
+                }
+
+                if (td.interpolated)
+                {
+                  iTD <- NA
+                  station.obs[obs, "TD"] <- NA
+                  print (paste0('Removed interpolated TD for Station=', station.obs[1, "Station"], ' Time=', station.obs[obs, "DayTime"]))
+                }
+              }
             }
           }
 

@@ -439,7 +439,7 @@ if (nrow(error.df) <= 0)
 } else {
   # convert all data produced into XML file
   ThresholdChecks.CreateXML.KOFile(data.df, error.df, "Observation", "Observations", ko.xml.filename)
-  write.table(error.df, paste0(options[1, "OutputPath"], "KO.Threshold.Errors.dat"), row.names = FALSE, col.names = TRUE, sep="\t")
+  #write.table(error.df, paste0(options[1, "OutputPath"], "KO.Threshold.Errors.dat"), row.names = FALSE, col.names = TRUE, sep="\t")
 }
 cat(paste0('[', Sys.time(), ']I|  KO XML file created: ', ko.xml.filename), file = log.file, sep="\n")
 

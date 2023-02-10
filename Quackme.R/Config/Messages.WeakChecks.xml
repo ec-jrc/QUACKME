@@ -10,14 +10,14 @@
 	<Message>
 		<Property>TT</Property>
 		<Code>002</Code>
-		<Text>#Code#:Air temperature difference between two consecutive records LESS than #0# degree (#Code# #1# C, #Code# Prev #2# C,#Code# Diff #3# C)</Text>
+		<Text>#Code#:Air temperature difference between two consecutive records LESS than #0# degree (#1# C at #2# UTC to #3# C at #4# UTC)</Text>
 		<TextOLD>Air temperature between two consecutive records (either hourly or 3-hourly) LESS than 0.1 degree</TextOLD>
 		<Level>S</Level>
 	</Message>
 		<Message>
 		<Property>TT</Property>
 		<Code>003</Code>
-		<Text>#Code#:Air temperature difference between two consecutive records GREATER than #0# degree (#Code# #1# C, #Code# Prev #2# C, #Code# Diff #3# C)</Text>
+		<Text>#Code#:Air temperature difference between two consecutive records GREATER than #0# degree (#1# C at #2# UTC to #3# C at #4# UTC)</Text>
 		<TextOLD>Air temperature between two consecutive records (either hourly or 3-hourly) GREATER than 15 degree</TextOLD>
 		<Level>S</Level>
 	</Message>
@@ -34,6 +34,13 @@
 		<Text>Absolute difference between observed air temperature and MOS air temperature GREATER than #0# degree and less or equal to #1# degree(TTobs= #2# C, TTmos= #3# C )</Text>
 		<TextOLD></TextOLD>
 		<Level>S</Level>
+	</Message>	
+	<Message>
+		<Property>TT</Property>
+		<Code>006</Code>
+		<Text>TD:Higher than #Code# (TD #0# C and TT #1# C)</Text>
+		<TextOLD>Higher than TT</TextOLD>
+		<Level>W</Level>
 	</Message>	
 
 	<Message>

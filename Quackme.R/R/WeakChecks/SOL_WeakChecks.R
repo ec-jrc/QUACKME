@@ -78,23 +78,24 @@ WeakChecks.ChecksSolar <- function(data.list, current.date, old.errors, mos.data
         }
 
         # daily solar radiation. the value is reported in J/cm2
-        # removed on 15.12.2021
-        if (FALSE) {
-          if (!is.na(iRD24))
-          {
-            if ( iRD24 < 0 | iRD24 > 5760 * 24)
-            {
-              #Pierluca De Palma 18.09.2019
-              paramsErr  = c("0 - 38.4", (iRD24/360))
-              error.data <- WeakChecks.GetError("001", "RD24", row$DayTime, old.errors, paramsErr)
-              if (!is.null(error.data) & length(error.data) > 0)
-              {
-                prop.status[obs, "RD24"] <- error.data[[1]]
-                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RD24", iRD24, "001", error.data[[1]], error.data[[2]])
-                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RD24", error.data[[1]])
-              }
-            }
-          }
+        # remove on 15.12.2021
+        if (FALSE)
+        {
+	        if (!is.na(iRD24))
+	        {
+	          if ( iRD24 < 0 | iRD24 > 5760 * 24)
+	          {
+	            #Pierluca De Palma 18.09.2019
+	            paramsErr  = c("0 - 38.4", (iRD24/360))
+	            error.data <- WeakChecks.GetError("001", "RD24", row$DayTime, old.errors, paramsErr)
+	            if (!is.null(error.data) & length(error.data) > 0)
+	            {
+	              prop.status[obs, "RD24"] <- error.data[[1]]
+	              new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RD24", iRD24, "001", error.data[[1]], error.data[[2]])
+	              prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RD24", error.data[[1]])
+	            }
+	          }
+	        }
         }
 
         # hourly sunshine

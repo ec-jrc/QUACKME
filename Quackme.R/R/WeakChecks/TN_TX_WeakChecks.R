@@ -158,7 +158,7 @@ WeakChecks.ChecksMinMaxTemperatures <- function(data.list, current.date, old.err
           ## check consecutive values for TX1
           if (checkConsecutiveObservations)
           {
-            iPrevTX1 <- ifelse (!is.na(station.obs[obs-1, "TX1"]), suppressWarnings(as.numeric(as.character(df.obs[obs-1, "TX1"]))), NA)
+            iPrevTX1 <- ifelse (!is.na(station.obs[obs-1, "TX1"]), suppressWarnings(as.numeric(as.character(station.obs[obs-1, "TX1"]))), NA)
             if (!is.na(iPrevTX1))
             {
               tx1.diff <- abs(iTX1 - iPrevTX1)

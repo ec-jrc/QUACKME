@@ -35,6 +35,13 @@
 		<TextOLD></TextOLD>
 		<Level>S</Level>
 	</Message>	
+	<Message>
+		<Property>TT</Property>
+		<Code>006</Code>
+		<Text>TD:Higher than #Code# (TD #0# C and TT #1# C)</Text>
+		<TextOLD>Higher than TT</TextOLD>
+		<Level>W</Level>
+	</Message>
 
 	<Message>
 		<Property>TN1</Property>

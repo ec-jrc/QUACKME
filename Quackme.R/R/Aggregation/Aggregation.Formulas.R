@@ -320,7 +320,7 @@ Aggregation.RAD <- function(station.data, hourly.flags, current.date)
           validValues <- which(!is.na(rd.df$RD))
           if (length(validValues) > 0 & round( length(validValues)/hours.interval, digits = 1 ) >= 0.8 )
           {
-            RAD <- round ( sum(rd.df$RD, na.rm = TRUE) / 100.0, 2)
+            RAD <- round ( sum(rd.df$RD, na.rm = TRUE) / 1000.0, 2)
 
             # get the flag
             if (checkFlags)
@@ -1854,7 +1854,7 @@ Aggregation.GlobalRadiation <- function(station.data, hourly.flags, current.date
           if (!is.na(Measured.Sunshine))
           {
             # retrieve the Angstrom Radiation
-            AngstromPrescott.Radiation <- as.double(day.obs[1, "APRAD"]) / 1000-0
+            AngstromPrescott.Radiation <- as.double(day.obs[1, "APRAD"]) / 1000.0
             if (!is.na(AngstromPrescott.Radiation))
             {
               Global.Radiation <- AngstromPrescott.Radiation

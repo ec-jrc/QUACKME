@@ -174,8 +174,6 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
     cvx.df <- NULL
     if (file.exists(cvx.file)){
       cvx.df <- read.table(cvx.file, header=TRUE, colClasses = c("integer", "character", "character"), stringsAsFactors = FALSE)
-      print("Originale")
-      print (cvx.df)
     }
     else {
       cvx.df <- as.data.frame(matrix(nrow = 0, ncol = 3))
@@ -268,7 +266,7 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
                   }
                 }
 
-                print (stations.number)
+                #print (stations.number)
 
                 # remove all errors with same property and code for the stations belong to the cluster (TO DO)
                 if (length(stations.number) > 0)
@@ -290,14 +288,13 @@ Manage.ConvexHull.Exceptions <- function(error.df, stations.df, cvhull.file, log
                   }
 
                   # get stations for which the errors was removed but are not present into convex hull file
-                  print (cvx.df)
                   for (st in 1: length(stations.number))
                   {
-                    print (paste0('Search for:', stations.number[st], ', ', error.area, ', ', error.property, ', ', error.code))
+                    #print (paste0('Search for:', stations.number[st], ', ', error.area, ', ', error.property, ', ', error.code))
                     idx.station <- which(cvx.df$Station == stations.number[st] &
                                            cvx.df$Area == error.area &
                                            cvx.df$ErrorCode == paste0(error.property, "-", error.code))
-                    print(idx.station)
+                    #print(idx.station)
                     if (length(idx.station) <= 0)
                     {
                       cvx.df[nrow(cvx.df) + 1, ] <- c(stations.number[st], error.area, paste0(error.property, "-", error.code))

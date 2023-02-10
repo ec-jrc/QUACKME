@@ -92,18 +92,16 @@ ERH <- function(TT, TD)
 #*********************************************************
 # Check if the valid values of the array are integer values
 # Parameters :
-#  - xml.obs    [INPUT] [XML]			 	  - xml data of the observations relative to the date to be analyse
-#  - hist.obs   [INPUT] [DATA.FRAME] 	- data frame with hourly observations data starting from date to analyse - 1 with a deep of ? days
-#  - day.obs    [INPUT] [INT]			  	- day to analyze (like int in the format YYYYMMDDHH)
-#  - xml.errors [INPUT] [XML]         - xml errors
+#  - col.obs    [INPUT] [VECTOR]			 	  - vector with values to evaluate
+#  - decimal.number
 #  - mos.data   [INPUT] [DATA.FRAME]  - MOS data
 # RETURN :
-#               [XML]                 - station observation with some ALERT messages, if error was detected
+#               [BOOL]                 - TRUE if the array contains only integer values
 #*********************************************************
 CheckIntegerValues <- function (col.obs, decimal.number)
 {
   par.data <- col.obs[ which(!is.na(col.obs))]
-  answer <- NA
+  answer <- FALSE
   sum.data <- 0
   if (length(par.data) > 0)
   {
