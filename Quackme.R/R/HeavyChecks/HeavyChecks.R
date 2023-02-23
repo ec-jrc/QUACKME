@@ -309,13 +309,13 @@ Station.HeavyChecks <- function (data.list, station.number, current.date)
 
       # RRR - Precipitation
       iRRR <- as.numeric(row$RRR)
-      if (!is.na(iRRR) & (iRRR < 0 | iRRR > 140))
+      if (!is.na(iRRR) & (iRRR < 0 | iRRR > 1400))
       {
         exception.valid.rrr <- Check.HeavyChecks.Exceptions(exceptions.config, list("RRR", "001", station.data, station.coord))
 
         if (!exception.valid.rrr)
         {
-          paramsErr  = c("0", "140", iRRR)
+          paramsErr  = c("0", "1400", iRRR)
           error.data <- HeavyChecks.GetError(station.data, "RRR", "001", paramsErr)
           if (!is.null(error.data) & length(error.data) > 0)
           {
