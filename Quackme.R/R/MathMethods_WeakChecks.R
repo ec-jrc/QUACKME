@@ -358,6 +358,7 @@ WeakChecks.CheckHourlyObservations <- function(dates)
 
     no.dates <- length(dates)
     diff.results <- diff(dates)
+    diff.results[which(diff.results == 77)] <- 1
     if (no.dates > 12 & sum(diff.results) >= (no.dates-1)) return (TRUE)
 
     return (FALSE)
@@ -656,3 +657,123 @@ WeakChecks.Property.Interpolation <- function(data.list, current.date, propertyN
   return (result)
 }
 
+#*********************************************************
+# Generate the consecutive errors for AIR Temperature
+# Parameters :
+#  - indexes
+#  - list of data
+# RETURN :
+#  [LIST] - list with 3 data.frame : new errors, properties status, properties flags
+#*********************************************************
+WeakChecks.Generate.TT.ConsecutiveErrors <-function(indexes, data)
+{
+  station.data <- data[[1]]
+  old.errors   <- data[[2]]
+  new.errors   <- data[[3]]
+  prop.status  <- data[[4]]
+  prop.flags   <- data[[5]]
+  station.code <- station.data[1, "Station"]
+
+  print (indexes)
+
+  # need to raise all alerts and update the flags for TT parameter for all values involved
+  for(x in 1:length(indexes))
+  {
+    obs.idx      = indexes[x]
+    tt.value     = station.data[obs.idx, "TT"]
+    tt.nextvalue = station.data[obs.idx+1, "TT"]
+    tt.daytime   = station.data[obs.idx, "DayTime"]
+    paramsErr    = c("0.1",
+                     tt.value,
+                     format(strptime(station.data[obs.idx, "DayTime"],"%Y%m%d%H"),format = '%T'),
+                     tt.nextvalue,
+                     format(strptime(station.data[obs.idx+1, "DayTime"],"%Y%m%d%H"),format = '%T'))
+    error.data <- WeakChecks.GetError("002", "TT", tt.daytime, old.errors, paramsErr)
+    if (!is.null(error.data) & length(error.data) > 0)
+    {
+      prop.status[obs.idx, "TT"] <- ifelse (prop.status[obs.idx, "TT"] == "C" | prop.status[obs.idx, "TT"] == "S", error.data[[1]], prop.status[obs.idx, "TT"])
+      new.errors[ nrow(new.errors) + 1, ] <- c(station.code, tt.daytime, "TT", tt.value, "002", error.data[[1]], error.data[[2]])
+      prop.flags <- WeakChecks.ManageFlag(prop.flags, station.code, tt.daytime, "TT", error.data[[1]])
+    }
+  }
+
+  # add the error for the last index of observations
+  obs.idx      = indexes[length(indexes)] + 1
+  tt.prevvalue = station.data[obs.idx-1, "TT"]
+  tt.value     = station.data[obs.idx, "TT"]
+  tt.daytime   = station.data[obs.idx, "DayTime"]
+  paramsErr    = c("0.1",
+                   tt.prevvalue,
+                   format(strptime(station.data[obs.idx-1, "DayTime"],"%Y%m%d%H"),format = '%T'),
+                   tt.value,
+                   format(strptime(tt.daytime,"%Y%m%d%H"),format = '%T'))
+
+  error.data <- WeakChecks.GetError("002", "TT", tt.daytime, old.errors, paramsErr)
+  if (!is.null(error.data) & length(error.data) > 0)
+  {
+    prop.status[obs.idx, "TT"] <- ifelse (prop.status[obs.idx, "TT"] == "C" | prop.status[obs.idx, "TT"] == "S", error.data[[1]], prop.status[obs.idx, "TT"])
+    new.errors[ nrow(new.errors) + 1, ] <- c(station.code, tt.daytime, "TT", tt.value, "002", error.data[[1]], error.data[[2]])
+    prop.flags <- WeakChecks.ManageFlag(prop.flags, station.code, tt.daytime, "TT", error.data[[1]])
+  }
+
+  return (list(new.errors, prop.status, prop.flags))
+}
+
+#*********************************************************
+# Generate the consecutive errors for DEW Point Temperature
+# Parameters :
+#  - indexes
+#  - list of data
+# RETURN :
+#  [LIST] - list with 3 data.frame : new errors, properties status, properties flags
+#*********************************************************
+WeakChecks.Generate.TD.ConsecutiveErrors <-function(indexes, data)
+{
+  station.data <- data[[1]]
+  old.errors   <- data[[2]]
+  new.errors   <- data[[3]]
+  prop.status  <- data[[4]]
+  prop.flags   <- data[[5]]
+  station.code <- station.data[1, "Station"]
+
+  # need to raise all alerts and update the flags for TD parameter for all values involved
+  for(x in 1:length(indexes))
+  {
+    obs.idx      = indexes[x]
+    td.value     = station.data[obs.idx, "TD"]
+    td.nextvalue = station.data[obs.idx+1, "TD"]
+    td.daytime   = station.data[obs.idx, "DayTime"]
+    paramsErr    = c("0.1",
+                     td.value,
+                     format(strptime(station.data[obs.idx, "DayTime"],"%Y%m%d%H"),format = '%T'),
+                     td.nextvalue,
+                     format(strptime(station.data[obs.idx+1, "DayTime"],"%Y%m%d%H"),format = '%T'))
+    error.data <- WeakChecks.GetError("003", "TD", td.daytime, old.errors, paramsErr)
+    if (!is.null(error.data) & length(error.data) > 0)
+    {
+      prop.status[obs.idx, "TD"] <- ifelse (prop.status[obs.idx, "TD"] == "C" | prop.status[obs.idx, "TD"] == "S", error.data[[1]], prop.status[obs.idx, "TD"])
+      new.errors[ nrow(new.errors) + 1, ] <- c(station.code, td.daytime, "TD", td.value, "003", error.data[[1]], error.data[[2]])
+      prop.flags <- WeakChecks.ManageFlag(prop.flags, station.code, td.daytime, "TD", error.data[[1]])
+    }
+  }
+
+  # add the error for the last index of observations
+  obs.idx      = indexes[length(indexes)] + 1
+  td.prevvalue = station.data[obs.idx-1, "TD"]
+  td.value     = station.data[obs.idx, "TD"]
+  td.daytime   = station.data[obs.idx, "DayTime"]
+  paramsErr    = c("0.1",
+                   td.prevvalue,
+                   format(strptime(station.data[obs.idx-1, "DayTime"],"%Y%m%d%H"),format = '%T'),
+                   td.value,
+                   format(strptime(td.daytime,"%Y%m%d%H"),format = '%T'))
+  error.data <- WeakChecks.GetError("003", "TD", td.daytime, old.errors, paramsErr)
+  if (!is.null(error.data) & length(error.data) > 0)
+  {
+    prop.status[obs.idx, "TD"] <- ifelse (prop.status[obs.idx, "TD"] == "C" | prop.status[obs.idx, "TD"] == "S", error.data[[1]], prop.status[obs.idx, "TD"])
+    new.errors[ nrow(new.errors) + 1, ] <- c(station.code, td.daytime, "TD", td.value, "003", error.data[[1]], error.data[[2]])
+    prop.flags <- WeakChecks.ManageFlag(prop.flags, station.code, td.daytime, "TD", error.data[[1]])
+  }
+
+  return (list(new.errors, prop.status, prop.flags))
+}

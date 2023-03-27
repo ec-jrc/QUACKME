@@ -181,10 +181,11 @@ WeakChecks.ChecksSolar <- function(data.list, current.date, old.errors, mos.data
               prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "PREC", error.data[[1]])
             }
           }
-          else if (iPREC > 200)
+          else if (iPREC > 70 & iPREC <= 400)
           {
             #Pierluca De Palma 18.09.2019
-            paramsErr  = c("200", iPREC)
+            #March 2023 - change the threshold from 200 to 70 mm by hour
+            paramsErr  = c("70", iPREC)
             error.data <- WeakChecks.GetError("002", "PREC", row$DayTime, old.errors, paramsErr)
             if (!is.null(error.data) & length(error.data) > 0)
             {

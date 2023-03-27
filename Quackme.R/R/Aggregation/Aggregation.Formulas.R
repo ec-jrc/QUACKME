@@ -313,14 +313,14 @@ Aggregation.RAD <- function(station.data, hourly.flags, current.date)
                                       strptime(station.data$DayTime, "%Y%m%d%H") <= (dt.sunset + 3600))
         isHourlyObservations <- CheckHourlyObservations(rd.df[, "DayTime"])
 
-        # the total value must be converted from KJ/m2 to MJ/m2
+        # the total value must be converted from J/cm2 to MJ/m2
         if (isHourlyObservations)
         {
           # check for NA values
           validValues <- which(!is.na(rd.df$RD))
           if (length(validValues) > 0 & round( length(validValues)/hours.interval, digits = 1 ) >= 0.8 )
           {
-            RAD <- round ( sum(rd.df$RD, na.rm = TRUE) / 1000.0, 2)
+            RAD <- round ( sum(rd.df$RD, na.rm = TRUE) / 100.0, 2)
 
             # get the flag
             if (checkFlags)

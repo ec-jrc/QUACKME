@@ -308,14 +308,15 @@ Station.HeavyChecks <- function (data.list, station.number, current.date)
       }
 
       # RRR - Precipitation
+      # March 2023 / change the threshold from 1400 to 500 mm daily, and the error become a suspicious one, not wrong
       iRRR <- as.numeric(row$RRR)
-      if (!is.na(iRRR) & (iRRR < 0 | iRRR > 1400))
+      if (!is.na(iRRR) & (iRRR < 0 | iRRR > 500))
       {
         exception.valid.rrr <- Check.HeavyChecks.Exceptions(exceptions.config, list("RRR", "001", station.data, station.coord))
 
         if (!exception.valid.rrr)
         {
-          paramsErr  = c("0", "1400", iRRR)
+          paramsErr  = c("0", "500", iRRR)
           error.data <- HeavyChecks.GetError(station.data, "RRR", "001", paramsErr)
           if (!is.null(error.data) & length(error.data) > 0)
           {
@@ -325,6 +326,25 @@ Station.HeavyChecks <- function (data.list, station.number, current.date)
           }
         } else {
           print (paste0("Exception rule remove error RRR-001 for station ", station.number, "\n"))
+        }
+      }
+
+      if (!is.na(iRRR) & iRRR > 200 & iRRR <= 500)
+      {
+        exception.valid.rrr <- Check.HeavyChecks.Exceptions(exceptions.config, list("RRR", "002", station.data, station.coord))
+
+        if (!exception.valid.rrr)
+        {
+          paramsErr  = c("200", "500", iRRR)
+          error.data <- HeavyChecks.GetError(station.data, "RRR", "003", paramsErr)
+          if (!is.null(error.data) & length(error.data) > 0)
+          {
+            #prop.status[1, "RRR"] <- error.data[[1]]
+            new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RRR", iRRR, "003", error.data[[1]], error.data[[2]], error.data[[3]])
+            #station.flags <- HeavyChecks.ManageFlags(station.flags, station.number, current.date, "RRR", error.data[[1]])
+          }
+        } else {
+          print (paste0("Exception rule remove error RRR-002 for station ", station.number, "\n"))
         }
       }
 

@@ -110,8 +110,16 @@
 		<Values>RRR</Values>
 		<Text>Cloud cover EQUAL to #0# and precipitation GREATER than #1# (RRR=#2# mm) </Text>
 		<Level>S</Level>
-	</Message>	
-	
+	</Message>
+
+	<Message>
+		<Property>RRR</Property>
+		<Code>003</Code>
+		<Values>RRR</Values>
+		<Text>Precipitation inside of interval #0# - #1# mm (#Code# #2# mm) </Text>
+		<Level>S</Level>
+	</Message>
+
 	<Message>
 		<Property>TT06</Property>
 		<Code>001</Code>
