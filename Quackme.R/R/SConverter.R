@@ -74,8 +74,8 @@ printer = file(s.file, "w")
 # read records from input file and save them to the output file
 for (i in 1:nrow(input.data))
 {
-  station.line <- paste0(str_pad( input.data[i, "Station"], 7, side = "left", pad = " "),
-                         str_pad( format(ref.date, "%Y%m%d"), 10, side = "left", pad = " "),
+  station.line <- paste0(str_pad( input.data[i, "Station"], 8, side = "left", pad = " "),
+                         str_pad( format(ref.date, "%Y%m%d"), 9, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "N"]), "-99.0", round(input.data[i, "N"], digits = 1)), 6, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "MSUN"]), "-99.0", round(input.data[i, "MSUN"], digits=1)), 6, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "MRAD"]), "-99.0", round(input.data[i, "MRAD"], digits=1)), 6, side = "left", pad = " "),
