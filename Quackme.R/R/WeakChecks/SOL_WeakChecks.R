@@ -52,6 +52,8 @@ WeakChecks.ChecksSolar <- function(data.list, current.date, old.errors, mos.data
         iCC   <- ifelse(!is.na(row$N), suppressWarnings(as.numeric(as.character(row$N))), NA)
         iLC   <- ifelse(!is.na(row$L), suppressWarnings(as.numeric(as.character(row$L))), NA)
         iPREC <- ifelse(!is.na(row$PREC), suppressWarnings(as.numeric(as.character(row$PREC))), NA)
+        iRR <- ifelse(!is.na(row$RR), suppressWarnings(as.numeric(as.character(row$RR))), NA)
+        iTR <- ifelse(!is.na(row$TR), suppressWarnings(as.numeric(as.character(row$TR))), NA)
 
         # replace NA total cloud value with the low cloud value if valid
         if (is.na(iCC) && !is.na(iLC))
@@ -169,7 +171,7 @@ WeakChecks.ChecksSolar <- function(data.list, current.date, old.errors, mos.data
         # precipitation
         if (!is.na(iPREC))
         {
-          if ( iPREC < 0 | iPREC > 400)
+          if ( iPREC < 0 | iPREC >= 400)
           {
             #Pierluca De Palma 18.09.2019
             paramsErr  = c("0 - 400", iPREC)
@@ -181,11 +183,11 @@ WeakChecks.ChecksSolar <- function(data.list, current.date, old.errors, mos.data
               prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "PREC", error.data[[1]])
             }
           }
-          else if (iPREC > 70 & iPREC <= 400)
+          else if (iPREC >= 40 & iPREC < 400)
           {
             #Pierluca De Palma 18.09.2019
             #March 2023 - change the threshold from 200 to 70 mm by hour
-            paramsErr  = c("70", iPREC)
+            paramsErr  = c("40", iPREC)
             error.data <- WeakChecks.GetError("002", "PREC", row$DayTime, old.errors, paramsErr)
             if (!is.null(error.data) & length(error.data) > 0)
             {
@@ -208,6 +210,145 @@ WeakChecks.ChecksSolar <- function(data.list, current.date, old.errors, mos.data
               prop.status[obs, "RD"] <- ifelse (prop.status[obs, "RD"] == "C" | prop.status[obs, "RD"] == "S", error.data[[1]], prop.status[obs, "RD"])
               new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RD", iRD, "002", error.data[[1]], error.data[[2]])
               prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RD", error.data[[1]])
+            }
+          }
+        }
+
+        # precipitation for RR/TR
+        if (!is.na(iTR) & !is.na(iRR))
+        {
+          print (paste0('Station:', row$Station, ',DayTime:', row$DayTime, ', RR:', iRR, ', TR:', iTR))
+          if (iTR == 1)
+          {
+            if ( iRR < 0 | iRR >= 400)
+            {
+              paramsErr  = c("0", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("002", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "002", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+            else if (iRR >= 40 & iRR < 400)
+            {
+              paramsErr  = c("40", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("003", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "003", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+          }
+
+          # precipitation for RR/TR - 3 H
+          if (iTR == 3 )
+          {
+            if (iRR < 0 | iRR >= 400)
+            {
+              paramsErr  = c("0", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("002", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "002", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+            else if (iRR >= 80 & iRR < 400)
+            {
+              paramsErr  = c("80", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("003", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "003", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+          }
+
+          # precipitation for RR/TR - 6 H
+          if (iTR == 6)
+          {
+            if (iRR < 0 | iRR >= 400)
+            {
+              paramsErr  = c("0", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("002", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "002", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+            else if (iRR >= 80 & iRR < 400)
+            {
+              paramsErr  = c("80", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("003", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "003", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+          }
+
+          # precipitation for RR/TR - 12 H
+          if (iTR == 12)
+          {
+            if (iRR < 0 | iRR >= 400)
+            {
+              paramsErr  = c("0", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("002", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "002", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+            else if (iRR >= 80 & iRR < 400)
+            {
+              paramsErr  = c("80", "400", iRR, iTR)
+              error.data <- WeakChecks.GetError("003", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "RR"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "RR", iRR, "003", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "RR", error.data[[1]])
+              }
+            }
+          }
+        }
+
+        # precipitation for PR06
+        if (!is.na(row$PR06))
+        {
+          if (row$PR06 < 0 | row$PR06 >= 400)
+          {
+            paramsErr  = c("0", "400", row$PR06)
+            error.data <- WeakChecks.GetError("004", "PR06", row$DayTime, old.errors, paramsErr)
+            if (!is.null(error.data) & length(error.data) > 0)
+            {
+              prop.status[obs, "PR06"] <- error.data[[1]]
+              new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "PR06", row$PR06, "004", error.data[[1]], error.data[[2]])
+              prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "PR06", error.data[[1]])
+            }
+            else if (iPR06 >= 80 & iPR06 < 400)
+            {
+              paramsErr  = c("80", "400", row$PR06)
+              error.data <- WeakChecks.GetError("005", "RR", row$DayTime, old.errors, paramsErr)
+              if (!is.null(error.data) & length(error.data) > 0)
+              {
+                prop.status[obs, "PR06"] <- error.data[[1]]
+                new.errors[ nrow(new.errors) + 1, ] <- c(row$Station, row$DayTime, "PR06", row$PR06, "005", error.data[[1]], error.data[[2]])
+                prop.flags <- WeakChecks.ManageFlag(prop.flags, row$Station, row$DayTime, "PR06", error.data[[1]])
+              }
             }
           }
         }

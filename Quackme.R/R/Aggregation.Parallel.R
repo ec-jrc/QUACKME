@@ -256,8 +256,8 @@ stopCluster(cl)
 cat(paste0('[', Sys.time(), ']I|  Cluster stopped'), file = log.file, sep="\n")
 
 #release some memory
-rm(hourly.flags)
-rm(input.data)
+#rm(hourly.flags)
+#rm(input.data)
 
 # manage the aggregated data and daily flags
 # data.frame for real data
@@ -310,6 +310,113 @@ for (i in 1:length(data.list))
       return (NULL)
     }
   )
+}
+
+# check the final values for TMIN & TMAX
+tntx_indexes = which(!is.na(data.df$TN) & !is.na(data.df$TX) & as.numeric(data.df$TN) > as.numeric(data.df$TX))
+
+# manage the EUR region of interest
+if (length(tntx_indexes) > 0 & options[1, "RegionOfInterest"] == "EUR")
+{
+  cat(paste0('[', Sys.time(), ']I|  Found ', length(tntx_indexes), ' cases for TMIN > TMAX'), file = log.file, sep="\n")
+
+  # calculates the dates for TN and TX intervals
+  date_19UTC_pd = current.date - 5 * 3600
+  date_18UTC_cd = current.date + 18 * 3600
+  date_07UTC_cd = current.date + 7 * 3600
+  date_06UTC_nd = current.date + 30 * 3600
+
+  h3_tn_times <- c()
+  h3_tx_times <- c()
+  for(x in 1:8)
+  {
+    xn = as.integer(format(current.date - 3*3600 + (x-1)*3*3600, "%Y%m%d%H"))
+    xt = as.integer(format(current.date + 9*3600 + (x-1)*3*3600, "%Y%m%d%H"))
+    h3_tn_times <- c( xn, h3_tn_times)
+    h3_tx_times <- c( xt, h3_tx_times)
+  }
+
+  for(r in 1:length(tntx_indexes))
+  {
+    #recalculate the TMIN and TMAX for each station for which TMIN > TMAX
+    station.index  <- tntx_indexes[r]
+    station.number <- data.df[station.index, "Station"]
+
+    station.data <- input.data[ which(input.data$Station == station.number), ]
+    hist.station.data <- history.data.db[ which(history.data.db$Station == station.number), ]
+    if (nrow(hist.station.data) > 0) {
+    station.data <-  merge(x = station.data,
+                           y = hist.station.data,
+                           by.x = colnames(station.data),
+                           by.y = colnames(hist.station.data),
+                           all = TRUE)
+    }
+
+    hist.station.data <- history.data.dn[ which(history.data.dn$Station == station.number), ]
+    if (nrow(hist.station.data) > 0) {
+      station.data <-  merge(x = station.data,
+                             y = hist.station.data,
+                             by.x = colnames(station.data),
+                             by.y = colnames(hist.station.data),
+                             all = TRUE)
+    }
+
+    #recalculate TMIN using the time interval 19 UTC previous day - 18 UTC current day
+    data_tn <- station.data[ which(strptime(station.data$DayTime, "%Y%m%d%H") >= date_19UTC_pd &
+                                   strptime(station.data$DayTime, "%Y%m%d%H") <= date_18UTC_cd), ]
+    calculate_tn <- length( which(!is.na(data_tn[, "TT"])) ) / 24.0
+    
+    new_tn <- NA
+    if (calculate_tn >= 0.8) {
+      new_tn = min(data_tn[, "TT"], na.rm = TRUE)      
+      if (new_tn >= as.numeric(data.df[station.index, "TN"])) { new_tn = NA }
+    } else {
+      #check for 3 hours values
+      data_tn <- station.data[ which(station.data$DayTime %in% h3_tn_times), ]
+      calculate_tn <- length( which(!is.na(data_tn[, "TT"]))) / 8.0
+      if (calculate_tn >= 0.8)
+      {
+        new_tn = min(data_tn[, "TT"], na.rm = TRUE)
+        if (new_tn >= as.numeric(data.df[station.index, "TN"])) { new_tn = NA }
+      }
+    }
+
+    if (is.na(new_tn)) {
+      cat(paste0('[', Sys.time(), ']W| Cannot recalculate the TMIN for station ', station.number ), file = log.file, sep="\n")
+    }
+    else {
+      cat(paste0('[', Sys.time(), ']I|  Station:', station.number, ', New TMIN value: ', new_tn, ' replacing the calculated TMIN: ', data.df[ station.index, "TN"]), file = log.file, sep="\n")
+      data.df[ station.index, "TN"] = new_tn
+    }
+
+    data_tx <- station.data[ which(strptime(station.data$DayTime, "%Y%m%d%H") >= date_07UTC_cd &
+                                     strptime(station.data$DayTime, "%Y%m%d%H") <= date_06UTC_nd), ]
+    calculate_tx <- length( which(!is.na(data_tn[, "TT"])) ) / 24.0
+	
+    new_tx <- NA
+    if (calculate_tx >= 0.8) {
+      new_tx = max(data_tx[, "TT"], na.rm=TRUE)
+      if (new_tx <= as.numeric(data.df[station.index, "TX"])) { new_tx = NA }
+    }
+    else {
+      data_tx <- station.data[ which(station.data$DayTime %in% h3_tx_times), ]
+      calculate_tx <- length( which(!is.na(data_tx[, "TT"]))) / 8.0
+      if (calculate_tx >= 0.8)
+      {
+        new_tx = max(data_tx[, "TT"], na.rm=TRUE)
+        if (new_tx <= as.numeric(data.df[station.index, "TX"])) { new_tx = NA }
+      }
+    }
+
+    if (!is.na(new_tx))
+    {
+      cat(paste0('[', Sys.time(), ']I|  Station:', station.number, ', New TMAX value: ', new_tx, ' replacing the calculated TMAX: ', data.df[ station.index, "TX"]), file = log.file, sep="\n")
+      data.df[ station.index, "TX"] = new_tx
+    }
+    else {
+      cat(paste0('[', Sys.time(), ']W| Cannot recalculate the TMAX for station ', station.number ), file = log.file, sep="\n")
+    }
+  }
 }
 
 # Manage DAT file for current date

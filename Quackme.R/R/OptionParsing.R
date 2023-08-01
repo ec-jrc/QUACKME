@@ -178,7 +178,7 @@ WeakChecks.Command.Parse <- function()
 }
 
 #*********************************************************
-# Manage the option from the command line for the Aggreation area
+# Manage the option from the command line for the Aggregation module
 # RETURN [DATA.FRAME]
 #*********************************************************
 Aggregation.Command.Parse <- function()
@@ -190,6 +190,8 @@ Aggregation.Command.Parse <- function()
                 help="Input path", metavar="character"),
     make_option(c("-f", "--file"), type="character", default=NULL,
                 help="Input file to process", metavar="character"),
+    make_option(c("-r", "--region"), type="character", default="EUR",
+                help="Region of interest (EUR|CHN)", metavar="character"),
     make_option(c("-o", "--output"), type="character", default=NULL,
                 help="Output path", metavar="character"),
     make_option(c("-t", "--hist"), type="character", default=NULL,
@@ -219,6 +221,17 @@ Aggregation.Command.Parse <- function()
   if (is.null(opt$input)){
     print_help(opt_parser)
     stop("The input path is mandatory !", call.=FALSE)
+  }
+
+  # set default region to EUR
+  if (is.null(opt$region))
+  {
+    opt$region <- "EUR"
+  }
+  else if ( ! (opt$region %in% c("EUR", "CHN")))
+  {
+    print_help(opt_parser)
+    stop("Unrecognized region!", call.=FALSE)
   }
 
   if (is.null(opt$hist)){
@@ -283,8 +296,8 @@ Aggregation.Command.Parse <- function()
   }
 
   # return the command line options like a data.frame
-  cmd.options <- data.frame(matrix( c( opt$config, opt$input, opt$output, opt$log, opt$file, opt$hist, opt$cores, opt$mos), ncol = 8, nrow = 1))
-  colnames(cmd.options) <- c("ConfigPath", "InputPath", "OutputPath", "LogPath", "InputFile", "HistoryPath", "CoreNumber", "MOSPath")
+  cmd.options <- data.frame(matrix( c( opt$config, opt$input, opt$output, opt$log, opt$file, opt$hist, opt$cores, opt$mos, opt$region), ncol = 9, nrow = 1))
+  colnames(cmd.options) <- c("ConfigPath", "InputPath", "OutputPath", "LogPath", "InputFile", "HistoryPath", "CoreNumber", "MOSPath", "RegionOfInterest")
   return (cmd.options[1, ])
 }
 

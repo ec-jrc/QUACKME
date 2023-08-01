@@ -54,7 +54,7 @@ Station.DailyChecks <- function (data.list, station.number, current.date)
       if (!is.na(iTMean))
       {
         MT99 <- as.numeric(as.character(th.row$MT99))
-        if (!is.na(MT99) & iTMean > MT99)
+        if (!is.na(MT99) & iTMean > (MT99 + 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(iTMean, MT99)
@@ -68,7 +68,7 @@ Station.DailyChecks <- function (data.list, station.number, current.date)
         }
 
         MT1 <- as.numeric(as.character(th.row$MT1))
-        if (!is.na(MT1) & iTMean < MT1)
+        if (!is.na(MT1) & iTMean < (MT1 - 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(iTMean, th.row$MT1)
@@ -88,7 +88,7 @@ Station.DailyChecks <- function (data.list, station.number, current.date)
         MTN99 <- as.numeric(as.character(th.row$MTN99))
         MTN1  <- as.numeric(as.character(th.row$MTN1))
 
-        if (!is.na(MTN99) & iTN > MTN99)
+        if (!is.na(MTN99) & iTN > (MTN99 + 2.0))
         {
           paramsErr  = c(iTN, MTN99)
           error.data <- ThresholdChecks.Daily.GetError(station.data, "TN", "002", paramsErr)
@@ -100,7 +100,7 @@ Station.DailyChecks <- function (data.list, station.number, current.date)
           }
         }
 
-        if (!is.na(MTN1) & iTN < MTN1)
+        if (!is.na(MTN1) & iTN < (MTN1 - 2.0))
         {
           paramsErr  = c(iTN, MTN1)
           error.data <- ThresholdChecks.Daily.GetError(station.data, "TN", "001", paramsErr)
@@ -119,7 +119,7 @@ Station.DailyChecks <- function (data.list, station.number, current.date)
         MTX99 <- as.numeric(as.character(th.row$MTX99))
         MTX1 <- as.numeric(as.character(th.row$MTX1))
 
-        if (!is.na(MTX99) & iTX > MTX99)
+        if (!is.na(MTX99) & iTX > (MTX99 + 2.0))
         {
           paramsErr  = c(iTX, MTX99)
           error.data <- ThresholdChecks.Daily.GetError(station.data, "TX", "002", paramsErr)
@@ -131,7 +131,7 @@ Station.DailyChecks <- function (data.list, station.number, current.date)
           }
         }
 
-        if (!is.na(MTX1) & iTX < MTX1)
+        if (!is.na(MTX1) & iTX < (MTX1 - 2.0))
         {
           paramsErr  = c(iTX, MTX1)
           error.data <- ThresholdChecks.Daily.GetError(station.data, "TX", "004", paramsErr)
@@ -226,7 +226,7 @@ Station.SeasonsChecks <- function (data.list, station.number, current.date)
       # daily mean temperature checks
       if (!is.na(dMT))
       {
-        if (!is.na(th.row$MT95) & dMT > th.row$MT95)
+        if (!is.na(th.row$MT95) & dMT > (th.row$MT95 + 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(dMT, th.row$MT95, season)
@@ -238,7 +238,7 @@ Station.SeasonsChecks <- function (data.list, station.number, current.date)
             #station.flags <- ThresholdChecks.ManageFlags(station.flags, station.number, current.date, "TX", error.data[[1]])
           }
         }
-        else if (!is.na(th.row$MT5) & dMT < th.row$MT5)
+        else if (!is.na(th.row$MT5) & dMT < (th.row$MT5 - 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(dMT, th.row$MT5, season)
@@ -257,7 +257,7 @@ Station.SeasonsChecks <- function (data.list, station.number, current.date)
       if (!is.na(iTN.cd) & !is.na(iTN.pd))
       {
         dTN <- round(abs ( iTN.cd - iTN.pd), digits = 2)
-        if (!is.na(th.row$MTN95) & dTN > th.row$MTN95)
+        if (!is.na(th.row$MTN95) & dTN > (th.row$MTN95 + 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(dTN, th.row$MTN95, season)
@@ -269,7 +269,7 @@ Station.SeasonsChecks <- function (data.list, station.number, current.date)
             #station.flags <- ThresholdChecks.ManageFlags(station.flags, station.number, current.date, "TN", error.data[[1]])
           }
         }
-        else if (!is.na(th.row$MTN5) & dTN < th.row$MTN5)
+        else if (!is.na(th.row$MTN5) & dTN < (th.row$MTN5 - 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(dTN, th.row$MTN5, season)
@@ -288,7 +288,7 @@ Station.SeasonsChecks <- function (data.list, station.number, current.date)
       if (!is.na(iTX.cd) & !is.na(iTX.pd))
       {
         dTX <- round(abs(iTX.cd - iTX.pd), digits =2)
-        if (!is.na(th.row$MTX95) & dTX > th.row$MTX95)
+        if (!is.na(th.row$MTX95) & dTX > (th.row$MTX95 + 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(dTX, th.row$MTX95, season)
@@ -300,7 +300,7 @@ Station.SeasonsChecks <- function (data.list, station.number, current.date)
             #station.flags <- ThresholdChecks.ManageFlags(station.flags, station.number, current.date, "TX", error.data[[1]])
           }
         }
-        else if (!is.na(th.row$MTX5) & dTX < th.row$MTX5)
+        else if (!is.na(th.row$MTX5) & dTX < (th.row$MTX5 - 2.0))
         {
           #Pierluca De Palma 27.09.2019
           paramsErr  = c(dTX, th.row$MTX5, season)

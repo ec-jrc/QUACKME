@@ -139,7 +139,7 @@ Aggregation.RunFormula <- function(xml.formula, station.data, hourly.flags, curr
           as.integer(xmlGetAttr(fv.start[[1]], "Time")) * 3600
 
         fv.df <- subset( fv.df , strptime(fv.df$DayTime, "%Y%m%d%H") >= start.daytime)
-        fl.df <- subset( fl.df , strptime(fv.df$DayTime, "%Y%m%d%H") >= start.daytime)
+        fl.df <- subset( fl.df , strptime(fl.df$DayTime, "%Y%m%d%H") >= start.daytime)
       }
 
       if (!is.null(fv.end) & length(fv.end) > 0)
@@ -149,7 +149,7 @@ Aggregation.RunFormula <- function(xml.formula, station.data, hourly.flags, curr
           as.integer(xmlGetAttr(fv.end[[1]], "Time")) * 3600
 
         fv.df <- subset( fv.df , strptime(fv.df$DayTime, "%Y%m%d%H") <= end.daytime)
-        fl.df <- subset( fl.df , strptime(fv.df$DayTime, "%Y%m%d%H") <= end.daytime)
+        fl.df <- subset( fl.df , strptime(fl.df$DayTime, "%Y%m%d%H") <= end.daytime)
       }
 
       # try to identify all SPECIFIC tags
@@ -175,8 +175,8 @@ Aggregation.RunFormula <- function(xml.formula, station.data, hourly.flags, curr
               new.date <- current.date + as.integer(sp.times[t]) * 3600 + sp.day * 24 * 3600
               if (is.null(fv.dates))
               {
-                fv.dates <- subset(fv.df, strptime(fv.df$DayTime, "%Y%m%d%H") == new.date)
-                flags.v  <- subset(fl.df, strptime(fl.df$DayTime, "%Y%m%d%H") == new.date)
+                fv.dates <- fv.df[strptime(fv.df$DayTime, "%Y%m%d%H") == new.date, ]
+                flags.v  <- fl.df[strptime(fl.df$DayTime, "%Y%m%d%H") == new.date, ]
               }
               else {
                 fv.dates <- rbind( fv.dates, subset(fv.df, strptime(fv.df$DayTime, "%Y%m%d%H") == new.date))

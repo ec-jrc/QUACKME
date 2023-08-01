@@ -539,7 +539,7 @@ for (d in 1:length(input.dates))
   daily.flags.df <- subset (flags.df, strptime(flags.df$DayTime, "%Y%m%d") == current.date)
 
   # sort data for Station and DayTime
-  daily.flags.df <- daily.flags.df[ order( daily.flags.df[, "Station"], daily.flags.df["DayTime"] ), ]
+  daily.flags.df <- daily.flags.df[ order( daily.flags.df[, "Station"], daily.flags.df[, "DayTime"] ), ]
 
   #save data to file
   write.table(daily.flags.df, file=flags.filename, sep="\t", row.names = FALSE, col.names = TRUE, quote=FALSE)

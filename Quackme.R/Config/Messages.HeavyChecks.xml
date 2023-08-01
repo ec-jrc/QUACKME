@@ -66,7 +66,15 @@
 		<Code>002</Code>
 		<Text>Difference between maximum and minimum temperature outside of interval #0# - #1# Celsius degrees (TX=#2# C, TN=#3# C)</Text>
 		<Level>W</Level>
-	</Message>	
+	</Message>
+
+	<Message>
+		<Property>TN</Property>
+		<Values>TN,TX</Values>
+		<Code>003</Code>
+		<Text>Minimum temperature (#0# C) greater than maximum temperature (#1# C)</Text>
+		<Level>S</Level>
+	</Message>
 
 	<Message>
 		<Property>TX</Property>
@@ -81,6 +89,14 @@
 		<Code>002</Code>
 		<Text>Difference between maximum and minimum temperature outside of interval #0# - #1# Celsius degrees (TX=#2# C, TN=#3# C)</Text>
 		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>TX</Property>
+		<Values>TN,TX</Values>
+		<Code>003</Code>
+		<Text>Minimum temperature (#0# C) greater than maximum temperature (#1# c)</Text>
+		<Level>S</Level>
 	</Message>
 
 	<Message>
@@ -216,6 +232,13 @@
 		<Values>TN, TX</Values>
 		<Code>001</Code>
 		<Text>Snow value not allowed (#Code# (#0#+#1#)/2 = #2# > #3#</Text>
+		<Level>W</Level>
+	</Message>
+
+	<Message>
+		<Property>VIS</Property>
+		<Code>001</Code>
+		<Text>Visibility outside of interval (#0#-#1#) km (VISIBILITY=#2#)</Text>
 		<Level>W</Level>
 	</Message>
 

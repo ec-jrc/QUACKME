@@ -74,8 +74,8 @@ printer = file(s.file, "w")
 # read records from input file and save them to the output file
 for (i in 1:nrow(input.data))
 {
-  station.line <- paste0(str_pad( input.data[i, "Station"], 7, side = "left", pad = " "),
-                         str_pad( format(ref.date, "%Y%m%d"), 10, side = "left", pad = " "),
+  station.line <- paste0(str_pad( input.data[i, "Station"], 8, side = "left", pad = " "),
+                         str_pad( format(ref.date, "%Y%m%d"), 9, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "N"]), "-99.0", round(input.data[i, "N"], digits = 1)), 6, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "MSUN"]), "-99.0", round(input.data[i, "MSUN"], digits=1)), 6, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "MRAD"]), "-99.0", round(input.data[i, "MRAD"], digits=1)), 6, side = "left", pad = " "),
@@ -101,8 +101,8 @@ for (i in 1:nrow(input.data))
                          str_pad( ifelse(is.na(input.data[i, "L"]), "-99.0", round(input.data[i, "L"], digits = 1)), 6, side = "left", pad = " "),
                          str_pad( "-99.0", 6, side = "left", pad = " "),                      # Cloud shadow
                          str_pad( "-99.0", 6, side = "left", pad = " "),                      # Calculated Sunshine
-                         str_pad( ifelse(is.na(input.data[i, "CRAD"]), "-99.0", round(input.data[i, "CRAD"], digits=1)), 6, side = "left", pad = " "),   # Highest global radiation
-                         str_pad( ifelse(is.na(input.data[i, "ET0"]), "-99.0", round(input.data[i, "ET0"], digits = 1)), 6, side = "left", pad = " "),    # Potential evapotranspiration
+                         str_pad( ifelse(is.na(input.data[i, "CRAD"]), "-99.0", round(input.data[i, "CRAD"] / 1000.0, digits=1)), 6, side = "left", pad = " "),    # Global radiation in MJ/m2 day
+                         str_pad( ifelse(is.na(input.data[i, "ET0"]), "-99.0", round(input.data[i, "ET0"], digits = 1)), 6, side = "left", pad = " "),             # Evapotranspiration from crop canopy
                          str_pad( ifelse(is.na(input.data[i, "VIS"]), "-99.0", round(input.data[i, "VIS"], digits = 1)), 6, side = "left", pad = " "),
                          str_pad( ifelse(is.na(input.data[i, "SNOW"]), "-99.0", round(input.data[i, "SNOW"], digits = 1)), 6, side = "left", pad = " "),
                          str_pad( "-99.0", 6, side = "left", pad = " ")                       # RAIN_MOS

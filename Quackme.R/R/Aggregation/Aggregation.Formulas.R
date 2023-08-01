@@ -983,7 +983,7 @@ Aggregation.TN <- function(station.data, hourly.flags, current.date, mos.station
       if ( CheckHourlyObservations(tn.df[, "DayTime"]) )
       {
         valid.values = length( which(!is.na(tn.df[, "TN1"])) )
-        if ( round((valid.values / nrow(tn.df)), digits = 1) >= 0.8)
+        if ( round((valid.values /13), digits = 1) >= 0.8)
         {
           tn <- min (tn.df[, "TN1"], na.rm = TRUE)
           if (hourly.flags)
@@ -1007,7 +1007,7 @@ Aggregation.TN <- function(station.data, hourly.flags, current.date, mos.station
       if ( CheckHourlyObservations(tt.df[, "DayTime"]) )
       {
           valid.values <- length( which(!is.na(tt.df[, "TT"])) )
-          if ( round(( valid.values/nrow(tt.df)), digits = 1) >= 0.8)
+          if ( round(( valid.values/13), digits = 1) >= 0.8)
           {
             tn <- min( tt.df[, "TT"], na.rm = TRUE)
             if (checkFlags)
@@ -1033,7 +1033,7 @@ Aggregation.TN <- function(station.data, hourly.flags, current.date, mos.station
       {
         valid.values <- length(which(!is.na(tt.df[, "TT"])))
         lowest.tt <- c()
-        if ( round((valid.values / nrow(tt.df)), digits = 1) >= 0.8)
+        if ( round((valid.values / 13), digits = 1) >= 0.8)
         {
           lowest.tt <- which( tt.df$TT < tn)
         }
@@ -1386,7 +1386,7 @@ Aggregation.TX <- function(station.data, hourly.flags, current.date, mos.station
       {
         # check if the TN1 column was interpolated
         valid.values = length( which(!is.na(tx.df[, "TX1"])) )
-        if ( round((valid.values / nrow(tx.df)), digits = 1) >= 0.8)
+        if ( round((valid.values / 13), digits = 1) >= 0.8)
         {
           tx <- max (tx.df[, "TX1"], na.rm = TRUE)
           if (checkFlags)
@@ -1416,7 +1416,7 @@ Aggregation.TX <- function(station.data, hourly.flags, current.date, mos.station
       if ( CheckHourlyObservations(tt.df[, "DayTime"]) )
       {
         valid.values <- length(which(!is.na(tt.df[, "TT"])))
-        if ( round((valid.values / nrow(tt.df)), digits = 1) >= 0.8)
+        if ( round((valid.values / 13), digits = 1) >= 0.8)
         {
           tx <- max( tt.df[, "TT"], na.rm = TRUE)
           if (checkFlags)
@@ -1447,7 +1447,7 @@ Aggregation.TX <- function(station.data, hourly.flags, current.date, mos.station
       {
         valid.values <- length(which(!is.na(tt.df[, "TT"])))
         higher.tt <- c()
-        if ( round((valid.values / nrow(tt.df)), digits = 1) >= 0.8)
+        if ( round((valid.values / 13), digits = 1) >= 0.8)
         {
           higher.tt <- which( tt.df$TT > tx)
         }
@@ -1513,11 +1513,11 @@ Aggregation.AngotRadiation <- function(station.data, hourly.flags, current.date)
 
       # calculate  ANGOT Radiation
       dAob <- sinLD / cosLD
-      fDSinB <- 0
+      fDSinB <- 0.0
       if (abs(dAob) < 1.0)
       {
         dFrac <- cosLD * sqrt(1.0 - dAob * dAob) / pi;
-        fDSinB <- 3600 * (sinLD * dayLength + 24.0 * dFrac);
+        fDSinB <- 3600.0 * (sinLD * dayLength + 24.0 * dFrac);
         ANGRAD <- solarConstant * fDSinB / 1000.0
       }
       else if (dAob > 1.0)
@@ -1553,7 +1553,7 @@ Aggregation.AngotRadiation <- function(station.data, hourly.flags, current.date)
 #  - station.data    [INPUT] [DATA.FRAME]	  - the entire data.frame with station data
 #  - hourly.flags    [INPUT] [DATA.FRAME]   - the hourly flags of the station
 #  - current.date    [INPUT] [DATETIME]	    - elaboration date
-#  - day.list        [INPUT] [LIST]         - list with data.frame of the day for current station
+#  - day.list        [INPUT] [MATRIX]       - matrix with 2 lists (daily aggregated data, daily flags)
 #                    [RETURN] [NUMERIC]     - Angstrom Prescott radiation value
 #*********************************************************
 Aggregation.AngstromPrescottRadiation <- function(station.data, hourly.flags, current.date, data.list)
@@ -1585,16 +1585,16 @@ Aggregation.AngstromPrescottRadiation <- function(station.data, hourly.flags, cu
 
         if (!is.na(DayLength))
         {
-          Const.AngstromA <- as.double(as.character(station.coord[1, "AngstromA"]))
-          Const.AngstromB <- as.double(as.character(station.coord[1, "AngstromB"]))
+          Const.AngstromA <- as.numeric(as.character(station.coord[1, "AngstromA"]))
+          Const.AngstromB <- as.numeric(as.character(station.coord[1, "AngstromB"]))
 
           Angstrom.Radiation <- Angot.Radiation * (Const.AngstromA + Const.AngstromB * (Measured.Sunshine / DayLength))
 
           # manage flags
-          df.flags <- subset(day.flags, day.flags$Property == "MSUN" | day.flags$Property == "ANGRAD")
+          df.flags <- day.flags[day.flags$Property == "MSUN" | day.flags$Property == "ANGRAD", ]
           if (nrow(df.flags) > 0)
           {
-            Flags <- AggregateFormulaFlags( df.flags[, "Flags"])
+            Flags <- paste(unique(df.flags[, "Flags"]), collapse = ",")
           }
         }
       }
@@ -1649,7 +1649,7 @@ Aggregation.SupitVanKappelRadiation <- function(station.data, hourly.flags, curr
     Angot.Radiation <- as.numeric(day.obs[1, "ANGRAD"])
     TMAX <- as.numeric(day.obs[1, "TX"])
     TMIN <- as.numeric(day.obs[1, "TN"])
-    Cloud.Cover <- as.numeric(day.obs[1, "N"])
+    Cloud.Cover <- as.numeric(day.obs[1, "NDT"])
 
     if (!is.na(Angot.Radiation) & !is.na(TMAX) & !is.na(TMIN) & !is.na(Cloud.Cover))
     {
@@ -1657,40 +1657,28 @@ Aggregation.SupitVanKappelRadiation <- function(station.data, hourly.flags, curr
       station.coord <- subset(stations.df, stations.df$StationNumber == station.data[1, "Station"])
       if (length(station.coord) > 0)
       {
-        Const.SupitA <- as.double(as.character(station.coord[1, "SupitA"]))
-        Const.SupitB <- as.double(as.character(station.coord[1, "SupitB"])) / Const.SupitA
-        const.SupitC <- as.double(as.character(station.coord[1, "SupitC"])) * as.double (1000)
+        Const.SupitA <- as.numeric(as.character(station.coord[1, "SupitA"]))
+        Const.SupitB <- as.numeric(as.character(station.coord[1, "SupitB"])) / Const.SupitA
+        const.SupitC <- as.numeric(as.character(station.coord[1, "SupitC"])) * 1000.0
 
         Supit.Radiation <- suppressWarnings(Const.SupitA * Angot.Radiation *
-                  ( sqrt( TMAX - TMIN ) + Const.SupitB * sqrt(1 - Cloud.Cover/as.double(8))) +
+                  ( sqrt( abs(TMAX - TMIN) ) + Const.SupitB * sqrt(1.0 - Cloud.Cover/8.0)) +
                   const.SupitC)
 
         if (!is.na(Supit.Radiation))
         {
-          df.flags <- NULL
-          if (Supit.Radiation > Angot.Radiation)
-          {
-            Const.AngstromA <- as.double(as.character(station.coord[1, "AngstromA"]))
-            Const.AngstromB <- as.double(as.character(station.coord[1, "AngstromB"]))
-            Supit.Radiation <- Angot.Radiation * (Const.AngstromA + Const.AngstromB)
-            dv.flags <- subset(day.flags, day.flags$Property == "ANGRAD")
-          }
-          else if (Supit.Radiation < 0)
-          {
-            Supit.Radiation <- 0
-          }
-          else {
-            df.flags <- subset(day.flags, day.flags$Property == "ANGRAD" |
-                                 day.flags$Property == "TN" |
-                                 day.flags$Property == "TX" |
-                                 day.flags$Property == "N")
+          df.flags <- subset(day.flags, day.flags$Property == "ANGRAD" |
+                                        day.flags$Property == "TN" |
+                                        day.flags$Property == "TX" |
+                                        day.flags$Property == "NDT")
 
-            if (nrow(df.flags) > 0)
-            {
-              Flags <- AggregateFormulaFlags(df.flags[, "Flags"])
-            }
+          if (nrow(df.flags) > 0)
+          {
+             Flags <- paste(unique(df.flags[, "Flags"]), collapse = ",")
           }
+          if (Supit.Radiation < 0) { Supit.Radiation <- 0.0 }
         }
+
       }
       else
       {
@@ -1750,31 +1738,19 @@ Aggregation.HargreavesRadiation <- function(station.data, hourly.flags, current.
       station.coord <- subset(stations.df, stations.df$StationNumber == station.data[1, "Station"])
       if ( length(station.coord) > 0)
       {
-        Const.HargreavesA <- as.double(as.character(station.coord[1, "HargreavesA"]))
-        Const.HargreavesB <- as.double(as.character(station.coord[1, "HargreavesB"])) * as.double(1000)
+        Const.HargreavesA <- as.numeric(as.character(station.coord[1, "HargreavesA"]))
+        Const.HargreavesB <- as.numeric(as.character(station.coord[1, "HargreavesB"])) * 1000.0
         Hargreaves.Radiation <- Angot.Radiation * Const.HargreavesA * sqrt(abs(TMAX - TMIN)) + Const.HargreavesB
+        if (!is.na(Hargreaves.Radiation) & Hargreaves.Radiation < 0.0) { Hargreaves.Radiation <- 0.0 }
 
-        if (Hargreaves.Radiation > Angot.Radiation)
-        {
-          Const.AngstromA <- as.double(as.character(station.coord[1, "AngstromA"]))
-          Const.AngstromB <- as.double(as.character(station.coord[1, "AngstromB"]))
-          Hargreaves.Radiation <- Angot.Radiation * (Const.AngstromA + Const.AngstromB)
-          df.flags <- subset(day.flags, day.flags$Property == "ANGRAD")
-        }
-        else if (Hargreaves.Radiation < 0)
-        {
-          Hargreaves.Radiation <- 0
-        }
-        else
-        {
-          df.flags <- subset(day.flags, day.flags$Property == "ANGRAD" |
+        df.flags <- subset(day.flags, day.flags$Property == "ANGRAD" |
                                day.flags$Property == "TN" |
                                day.flags$Property == "TX" )
-          if (nrow(df.flags) > 0)
-          {
-            Flags <- AggregateFormulaFlags(df.flags[, "Flags"])
-          }
+        if (nrow(df.flags) > 0)
+        {
+          Flags <- paste(unique(df.flags[, "Flags"]), collapse = ",")
         }
+
       }
       else
       {
@@ -1819,42 +1795,45 @@ Aggregation.GlobalRadiation <- function(station.data, hourly.flags, current.date
       Global.Radiation <- NA
       Flags <- NA
 
-      day.obs <- day.list[[1]]
+      day.obs   <- day.list[[1]]
       day.flags <- day.list[[2]]
 
       #retrieve the Measured Radiation
-      Measured.Radiation <- as.double(day.obs[1, "MRAD"])
+      Measured.Radiation <- as.numeric(day.obs[1, "MRAD"])
+
+      # retrieve the station coordinates
+      station.coord <- subset(stations.df, stations.df$StationNumber == station.data[1, "Station"])
 
       # If Measured.Radiation is a valid value then return it
       if (!is.na(Measured.Radiation))
       {
-        Global.Radiation <- Measured.Radiation
-        gr.fl <- subset(day.flags, day.flags$Property == "MRAD")
+        Global.Radiation <- round(Measured.Radiation, digits = 1) * 1000.00
+        gr.fl <- day.flags[day.flags$Property == "MRAD", ]
         if (nrow(gr.fl) > 0) { Flags <- gr.fl[1, "MRAD"] }
       }
       else
       {
         # retrieve th Angot.Radiation
-        Angot.Radiation <- as.double(day.obs[1, "ANGRAD"])
+        Angot.Radiation <- as.numeric(day.obs[1, "ANGRAD"])
 
         # check if Angot Radiation is 0 (extreme cases)
-        if (!is.na(Angot.Radiation) & Angot.Radiation == as.double(0.0))
+        if (!is.na(Angot.Radiation) & Angot.Radiation <= 0.0)
         {
-          Global.Radiation <- (as.double (0.0))
+          Global.Radiation <- 0.0
           gr.fl <- subset(day.flags, day.flags$Property == "ANGRAD")
           if (nrow(gr.fl) > 0) { Flags <- gr.fl[1, "ANGRAD"] }
         }
         else
         {
           # retrieve Measured.Sunshine
-          Measured.Sunshine <- as.double(day.obs[1, "MSUN"])
+          Measured.Sunshine <- as.numeric(day.obs[1, "MSUN"])
           #print (paste0('Measure.Sunshine:', Measured.Sunshine))
 
           # for valid Measured sunshine use the Angstrom Radiation values
           if (!is.na(Measured.Sunshine))
           {
             # retrieve the Angstrom Radiation
-            AngstromPrescott.Radiation <- as.double(day.obs[1, "APRAD"]) / 1000.0
+            AngstromPrescott.Radiation <- as.numeric(day.obs[1, "APRAD"])
             if (!is.na(AngstromPrescott.Radiation))
             {
               Global.Radiation <- AngstromPrescott.Radiation
@@ -1866,23 +1845,25 @@ Aggregation.GlobalRadiation <- function(station.data, hourly.flags, current.date
           else
           {
             # retrieve the MAXIMUM and MINIMUM Temperature
-            TMAX <- as.double(day.obs[1, "TX"])
-            TMIN <- as.double(day.obs[1, "TN"])
+            TMAX <- as.numeric(day.obs[1, "TX"])
+            TMIN <- as.numeric(day.obs[1, "TN"])
             #print (paste0('TMAX:', TMAX, ', TMIN;', TMIN))
 
             if (!is.na(TMAX) & !is.na(TMIN))
             {
-              # retrieve Cloud.Cover TOTAL 24 H
-              Cloud.Cover <- as.double(day.obs[1, "N"])
-              #print (paste0('Cloud.Cover:', Cloud.Cover))
+              # retrieve Mean Cloud Cover Day Time
+              Cloud.Cover <- round(as.numeric(day.obs[1, "NDT"]), digits = 1)
+
+              AngstromA = as.numeric(as.character(station.coord[1, "AngstromA"]))
+              AngstromB = as.numeric(as.character(station.coord[1, "AngstromB"]))
 
               if (!is.na(Cloud.Cover))
               {
                 # retrieve SupitVanKappel Radiation
-                Suppit.Radiation <- as.double(day.obs[1, "SVKRAD"]) / 1000.0
+                Suppit.Radiation <- as.numeric(day.obs[1, "SVKRAD"])
                 if (!is.na(Suppit.Radiation))
                 {
-                  Global.Radiation <- Suppit.Radiation
+                  Global.Radiation = min(max(0.0, Suppit.Radiation), Angot.Radiation * (AngstromA + AngstromB))
                   gr.fl <- subset(day.flags, day.flags$Property == "SVKRAD")
                   if (nrow(gr.fl) > 0) { Flags <- gr.fl[1, "SVKRAD"] }
                 }
@@ -1890,13 +1871,12 @@ Aggregation.GlobalRadiation <- function(station.data, hourly.flags, current.date
               else
               {
                 # retrieve Hargreaves Radiation
-                Hargreaves.Radiation <- as.double(day.obs[1, "HGVRAD"]) / 1000.0
+                Hargreaves.Radiation <- as.numeric(day.obs[1, "HGVRAD"])
                 if (!is.na(Hargreaves.Radiation))
                 {
-                  Global.Radiation <- Hargreaves.Radiation
+                  Global.Radiation = min(max(0.0, Hargreaves.Radiation), Angot.Radiation * (AngstromA + AngstromB))
                   gr.fl <- subset(day.flags, day.flags$Property == "HGVRAD")
                   if (nrow(gr.fl) > 0) { Flags <- gr.fl[1, "HGVRAD"] }
-                  #print (paste0('Global.Radiation for Hargreaves:', Global.Radiation))
                 }
               }
             }
@@ -1909,7 +1889,7 @@ Aggregation.GlobalRadiation <- function(station.data, hourly.flags, current.date
     }
     ,error = function (err)
     {
-      print (paste0('Aggregation.GlobalRadiation - Error : ', err))
+      print (paste0('Aggregation.GlobalRadiation[Station=', station.data[1, "Station"], '] - Error : ', err))
       return (c(NA, NA))
     }
     ,warning = function (warn)
@@ -1940,15 +1920,13 @@ Aggregation.E0 <- function(station.data, hourly.flags, current.date, day.list)
       day.flags <- day.list[[2]]
 
       # retrieve all daily properties already calculate
-      TMAX    <- as.double(day.obs[1, "TX"])
-      TMIN    <- as.double(day.obs[1, "TN"])
-      MVP     <- as.double(day.obs[1, "MVP"])
-      MSUN    <- as.double(day.obs[1, "MSUN"])
-      FF      <- as.double(day.obs[1, "FF"])
-      ANGRAD  <- as.double(day.obs[1, "ANGRAD"])
-      APRAD   <- as.double(day.obs[1, "APRAD"])
-
-      #print ( paste0('E0 - TMAX:', TMAX, ', TMIN:', TMIN, ', MVP:', MVP, ', FF:', FF, ', ANGRAD:', ANGRAD, ', PRESCOTT:', APRAD))
+      TMAX    <- as.numeric(day.obs[1, "TX"])
+      TMIN    <- as.numeric(day.obs[1, "TN"])
+      MVP     <- as.numeric(day.obs[1, "MVP"])
+      MSUN    <- as.numeric(day.obs[1, "MSUN"])
+      FF      <- as.numeric(day.obs[1, "FF"])
+      ANGRAD  <- as.numeric(day.obs[1, "ANGRAD"])
+      CRAD    <- as.numeric(day.obs[1, "CRAD"])
 
       if (!is.na(TMAX) & !is.na(TMIN) & !is.na(MVP) & !is.na(FF))
       {
@@ -1961,7 +1939,7 @@ Aggregation.E0 <- function(station.data, hourly.flags, current.date, day.list)
         C.Gamma           <- 0.67
         C.ReflCoeffWater  <- 0.05       #reflection coeff of water
         C.LatentHeat      <- 2.45e6     #Latent heat of vaporization of water
-        C.Ten2Two         <- log(2.0/0.033)/log(10.0/0.033);
+        C.Ten2Two         <- log(2.0/0.033)/log(10.0/0.033)
 
         RelativeSunshineDuration <- 0.0
 
@@ -1989,10 +1967,10 @@ Aggregation.E0 <- function(station.data, hourly.flags, current.date, day.list)
           {
             RelativeSunshineDuration <- MSUN / DayLength
           }
-          else if (!is.na(APRAD) & !is.na(ANGRAD))
+          else if (!is.na(ANGRAD) & !is.na(CRAD))
           {
-            RelativeSunshineDuration <- ( ( APRAD/ANGRAD) - as.double(as.character(station.coord[1, "AngstromA"])) ) /
-                                            as.double(as.character(station.coord[1, "AngstromB"]));
+            RelativeSunshineDuration <- ((CRAD/ANGRAD) - as.numeric(as.character(station.coord[1, "AngstromA"]))) /
+                                            as.numeric(as.character(station.coord[1, "AngstromB"]));
           }
         }
 
@@ -2009,16 +1987,16 @@ Aggregation.E0 <- function(station.data, hourly.flags, current.date, day.list)
         Delta <- (C.Goudriaan * 17.32491 * SaturationVapourPressure) / (TMeanGoudriaan * TMeanGoudriaan)
 
         # calculate RNL
-        Rnl <- as.numeric(C.Boltzmann *
+        Rnl <- C.Boltzmann *
                ((TMean + 273.0) ** 4) *
                (0.56 - 0.08 * sqrt(VapourPressure)) *
-               (C.BruntE + C.BruntF * RelativeSunshineDuration))
+               (C.BruntE + C.BruntF * RelativeSunshineDuration)
 
         # calculate RNW, RNS, RNC (Absorbed radiation)
-        Rnw <- as.numeric( ( (1.0 - C.ReflCoeffWater) * (APRAD * 1000.0) - Rnl) / C.LatentHeat)
+        Rnw <- ((1.0 - C.ReflCoeffWater) * (CRAD*1000.0) - Rnl) / C.LatentHeat
 
         # calculate evaporative demand of the atmosphere (isothermal evaporation)
-        Ea  <- as.numeric(0.26 * (SaturationVapourPressure - VapourPressure) * (0.5 + C.BU * FF * C.Ten2Two))
+        Ea  <- 0.26 * (SaturationVapourPressure - VapourPressure) * (0.5 + C.BU * FF * C.Ten2Two)
 
         #print ( paste0('Delta:', Delta, ', Rnl:',Rnl, ', Rnw:', Rnw, ', Ea:', Ea))
 
@@ -2034,9 +2012,9 @@ Aggregation.E0 <- function(station.data, hourly.flags, current.date, day.list)
                           day.flags$Property == "FF" |
                           day.flags$Property == "MVP" |
                           day.flags$Property == "MSUN" |
-                          day.flags$Property == "ANGRAD" |
-                          day.flags$Property == "APRAD")
-        if (nrow(dv.fl) > 0) { Flags <- AggregateFormulaFlags(dv.fl[, "Flags"]) }
+                          day.flags$Property == "CRAD" |
+                          day.flags$Property == "ANGRAD")
+        if (nrow(dv.fl) > 0) { Flags <- paste(unique(dv.fl[, "Flags"]), collapse = ",") }
       }
 
       #print (paste0('E0:', E0, ', TMAX:', TMAX, ',TMIN:', TMIN))
@@ -2076,13 +2054,13 @@ Aggregation.ES0 <- function(station.data, hourly.flags, current.date, day.list)
     day.flags <- day.list[[2]]
 
     # retrieve all daily properties already calculate
-    TMAX    <- as.double(day.obs[1, "TX"])
-    TMIN    <- as.double(day.obs[1, "TN"])
-    MVP     <- as.double(day.obs[1, "MVP"])
-    MSUN    <- as.double(day.obs[1, "MSUN"])
-    FF      <- as.double(day.obs[1, "FF"])
-    ANGRAD  <- as.double(day.obs[1, "ANGRAD"])
-    APRAD   <- as.double(day.obs[1, "APRAD"])
+    TMAX    <- as.numeric(day.obs[1, "TX"])
+    TMIN    <- as.numeric(day.obs[1, "TN"])
+    MVP     <- as.numeric(day.obs[1, "MVP"])
+    MSUN    <- as.numeric(day.obs[1, "MSUN"])
+    FF      <- as.numeric(day.obs[1, "FF"])
+    ANGRAD  <- as.numeric(day.obs[1, "ANGRAD"])
+    CRAD    <- as.numeric(day.obs[1, "CRAD"])
 
     if (!is.na(TMAX) & !is.na(TMIN) & !is.na(MVP) & !is.na(FF))
     {
@@ -2093,7 +2071,7 @@ Aggregation.ES0 <- function(station.data, hourly.flags, current.date, day.list)
       C.BU              <- 0.54
       C.Boltzmann       <- 4.9e-3
       C.Gamma           <- 0.67
-      C.ReflCoeffSoil   <- 0.15       #water reflection coefficient
+      C.ReflCoeffSoil   <- 0.15       #soil reflection coefficient
       C.LatentHeat      <- 2.45e6     #Latent heat of vaporization of water
       C.Ten2Two         <- log(2.0/0.033)/log(10.0/0.033);
 
@@ -2123,10 +2101,10 @@ Aggregation.ES0 <- function(station.data, hourly.flags, current.date, day.list)
         {
           RelativeSunshineDuration <- MSUN / DayLength
         }
-        else if (!is.na(APRAD) & !is.na(ANGRAD))
+        else if (!is.na(CRAD) & !is.na(ANGRAD))
         {
-          RelativeSunshineDuration = ( ( APRAD/ANGRAD) - as.double(as.character(station.coord[1, "AngstromA"])) ) /
-            as.double(as.character(station.coord[1, "AngstromB"]));
+          RelativeSunshineDuration = ( ( CRAD/ANGRAD) - as.numeric(as.character(station.coord[1, "AngstromA"])) ) /
+            as.numeric(as.character(station.coord[1, "AngstromB"]));
         }
       }
 
@@ -2142,16 +2120,16 @@ Aggregation.ES0 <- function(station.data, hourly.flags, current.date, day.list)
       Delta <- (C.Goudriaan * 17.32491 * SaturationVapourPressure) / (TMeanGoudriaan * TMeanGoudriaan)
 
       # calculate RNL
-      Rnl <- C.Boltzmann *
-        ((TMean + 273.0) ** 4) *
-        (0.56 - 0.08 * sqrt(VapourPressure)) *
-        (C.BruntE + C.BruntF * RelativeSunshineDuration);
+      Rnl <- C.Boltzmann * ((TMean + 273.0)^4) *
+          (0.56 - 0.08 * sqrt(VapourPressure)) *
+          (C.BruntE + C.BruntF * RelativeSunshineDuration);
 
       # calculate RNW, RNS, RNC (Absorbed radiation)
-      Rns <- ((1.0 - C.ReflCoeffSoil)*( APRAD * 1000.0) - Rnl) / C.LatentHeat
+      Rns <- ((1.0 - C.ReflCoeffSoil)*(CRAD*1000.0) - Rnl) / C.LatentHeat
 
       # calculate evaporative demand of the atmosphere (isothermal evaporation)
       Ea  = 0.26 * (SaturationVapourPressure - VapourPressure) * (0.5 + C.BU * FF * C.Ten2Two);
+      #print ( paste0('Delta:', Delta, ', Rnl:',Rnl, ', Rns:', Rns, ', Ea:', Ea))
 
       # calculate the final result
       ES0  = (Delta * Rns + C.Gamma * Ea) / (Delta + C.Gamma)
@@ -2166,8 +2144,8 @@ Aggregation.ES0 <- function(station.data, hourly.flags, current.date, day.list)
                                  day.flags$Property == "MVP" |
                                  day.flags$Property == "MSUN" |
                                  day.flags$Property == "ANGRAD" |
-                                 day.flags$Property == "APRAD")
-      if (nrow(dv.fl) > 0) { Flags <- AggregateFormulaFlags(dv.fl[, "Flags"]) }
+                                 day.flags$Property == "CRAD")
+      if (nrow(dv.fl) > 0) { Flags <- paste(unique(dv.fl[, "Flags"]), collapse = ",") }
     }
 
     #print (paste0('E0:', E0, ', TMAX:', TMAX, ',TMIN:', TMIN))
@@ -2208,18 +2186,18 @@ Aggregation.ET0 <- function(station.data, hourly.flags, current.date, day.list)
     day.flags <- day.list[[2]]
 
     # retrieve all daily properties already calculate
-    TMAX    <- as.double(day.obs[1, "TX"])
-    TMIN    <- as.double(day.obs[1, "TN"])
-    MVP     <- as.double(day.obs[1, "MVP"])
-    FF      <- as.double(day.obs[1, "FF"])
-    ANGRAD  <- as.double(day.obs[1, "ANGRAD"])
-    Global.Radiation    <- as.double(day.obs[1, "CRAD"])
+    TMAX    <- as.numeric(day.obs[1, "TX"])
+    TMIN    <- as.numeric(day.obs[1, "TN"])
+    MVP     <- as.numeric(day.obs[1, "MVP"])
+    FF      <- as.numeric(day.obs[1, "FF"])
+    ANGRAD  <- as.numeric(day.obs[1, "ANGRAD"])
+    Global.Radiation    <- as.numeric(day.obs[1, "CRAD"])
 
     if (!is.na(TMAX) & !is.na(TMIN) & !is.na(MVP) & !is.na(FF) &!is.na(Global.Radiation) & !is.na(ANGRAD))
     {
       # constants definitions
       C.Z <- 10.0
-      C.Gamma <- 0.665 * (1.0e-3);
+      C.Gamma <- 0.665 * (1.0e-3)
 
       # wind speed at 2 meter
       FF2 <- (FF * 4.87) / log( (67.8 * C.Z) - 5.42)
@@ -2236,38 +2214,38 @@ Aggregation.ET0 <- function(station.data, hourly.flags, current.date, day.list)
       }
 
       # retrieve the station altitude
-      station.altitude <- as.double(as.character(station.coord$Altitude))
+      station.altitude <- as.numeric(station.coord$Altitude)
 
-      Patm <- 101.3 * ( ((293-(0.0065*station.altitude))/293) ^ 5.26);
+      Patm <- 101.3 * ( ((293-(0.0065*station.altitude))/293) ^ 5.26)
       C.Gamma <- C.Gamma * Patm
 
-      delta <- 4098 * (0.6108 * exp( (17.27 * TMean) / (237.3 + TMean) ) );
-      delta <- delta / ( (TMean + 237.3) ^ 2);
+      delta <- 4098 * (0.6108 * exp( (17.27 * TMean) / (237.3 + TMean) ) )
+      delta <- delta / ((TMean + 237.3) ^ 2)
 
       eTMax = 0.6108 * exp( (17.27 * TMAX) / (237.3 + TMAX) )
       eTMin = 0.6108 * exp( (17.27 * TMIN) / (237.3 + TMIN) )
-      ES = (eTMax + eTMin) / 2;
+      ES = (eTMax + eTMin) / 2
 
-      EA = MVP / 10;
+      EA = MVP / 10.0;
 
       # calculate Boltzmann values
-      BoltzmannTMax <- 4.903 * (1.0e-9) * ((TMAX + 273.16) ^ 4);
-      BoltzmannTMin <- 4.903 * (1.0e-9) * ((TMIN + 273.16) ^ 4);
+      BoltzmannTMax <- 4.903 * (1.0e-9) * ((TMAX + 273.16) ^ 4)
+      BoltzmannTMin <- 4.903 * (1.0e-9) * ((TMIN + 273.16) ^ 4)
 
       # calculate radiation values
-      ClearSkyRadiation <- (0.75 + (0.00002 * station.altitude)) * ANGRAD;
-      Rnl <- ((BoltzmannTMax + BoltzmannTMin) / 2) * (0.34 - (0.14 * (EA ^ as.double(0.5))));
+      ClearSkyRadiation <- (0.75 + (0.00002 * station.altitude)) * ANGRAD
+      Rnl <- ((BoltzmannTMax + BoltzmannTMin) / 2) * (0.34 - (0.14 * (EA ^ 0.5)))
 
       # calculate Penmann Evapotraspiration
       if (ClearSkyRadiation != 0)
       {
-        Rnl <- Rnl * (1.35 * (Global.Radiation/ClearSkyRadiation) - 0.35);
+        Rnl <- Rnl * (1.35 * (Global.Radiation/ClearSkyRadiation) - 0.35)
 
-        Rn <- (0.77 * (Global.Radiation/1000.0)) - Rnl;
+        Rn <- (0.77 * (Global.Radiation/1000.0)) - Rnl
 
-        ET0 <- (0.408 * delta * Rn) + (C.Gamma * (900/(TMean + 273)) * FF2 * (ES - EA));
+        ET0 <- (0.408 * delta * Rn) + (C.Gamma * (900/(TMean + 273)) * FF2 * (ES - EA))
 
-        ET0 <- ET0 / (delta + C.Gamma * (1 + (0.34*FF2)) );
+        ET0 <- ET0 / (delta + C.Gamma * (1 + (0.34*FF2)) )
 
         # reset value if negative
         if (ET0 < 0)
@@ -2286,7 +2264,7 @@ Aggregation.ET0 <- function(station.data, hourly.flags, current.date, day.list)
                         day.flags$Property == "MVP" |
                         day.flags$Property == "ANGRAD" |
                         day.flags$Property == "CRAD")
-      if (nrow(dv.fl) > 0) { Flags <- AggregateFormulaFlags(dv.fl[, "Flags"]) }
+      if (nrow(dv.fl) > 0) { Flags <- paste(unique(dv.fl[, "Flags"]), collapse = ",") }
     }
 
     #print (paste0('Station:', station.data[1, "Station"], ',Global.Radiation:', Global.Radiation, ',ET0:', ET0, ', TMAX:', TMAX, ',TMIN:', TMIN))
@@ -2505,31 +2483,32 @@ Aggregation.DayLength <- function(station.coord, current.date)
     jDay <- as.numeric(as.character(format(current.date, "%j")))
 
     # calculate the solar constant J/m2/s
-    SolarConstant <- 1370 * (1.0 + 0.033 * cos(2.0 * pi * jDay / 365.0))
-    #print ('SolarConstant:', SolarConstant)
+    SolarConstant <- 1370.0 * (1.0 + 0.033 * cos(2.0 * pi * jDay / 365.0))
+    #print (paste0('SolarConstant:', SolarConstant))
 
     # calculate the solar declination
-    SolarDeclination <- -asin( sin(23.45 * pi / 180) * cos( 2.0 * pi * (jDay + 10) / 365.0))
-    #print ('SolarDeclination:', SolarDeclination)
+    SolarDeclination <- -asin( sin(23.45 * pi / 180.0) * cos( 2.0 * pi * (jDay + 10.0) / 365.0))
+    #print (paste0('SolarDeclination:', SolarDeclination))
 
     num.Latitude <- as.double(as.character(station.coord[1, "Latitude"]))
     SinLD <- sin(SolarDeclination) * sin( num.Latitude * pi/180)
     CosLD <- cos(SolarDeclination) * cos( num.Latitude * pi/180)
-    dAob <- SinLD / CosLD
-    #print ('SinLD:', SinLD, ', CosLD:', CosLD)
 
-    # calculate Astronomical Day Length & ANGOT Radation
-    DayLength <- 0
-    if (abs(dAob) < 1)
+    dAob <- SinLD / CosLD
+    #print (paste0('SinLD:', SinLD, ', CosLD:', CosLD))
+
+    # calculate Astronomical Day Length
+    DayLength <- 0.0
+    if (abs(dAob) < 1.0)
     {
       DayLength <- 12.0 * (1.0 + 2.0 * asin(dAob) / pi);
     }
-    else if (dAob > 1)
+    else if (dAob > 1.0)
     {
-      DayLength <- 24
+      DayLength <- 24.0
     }
 
-    #print (paste0('Station:', station.coord[1, "StationNumber"], ', SinLD:', SinLD, ', CosLD:', CosLD))
+    #print (paste0('DayLength:', DayLength))
 
     return (data.frame( DayLength, SinLD, CosLD, SolarConstant))
   }
